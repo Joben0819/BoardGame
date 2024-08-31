@@ -1,0 +1,212 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  &[data-theme='brownGold'] {
+    .headerTab {
+      ul {
+        color: #888888;
+        background: #fff !important;
+      }
+    }
+    .activeTab {
+      color: #fff;
+      background: #735c4b;
+      border: #735c4b solid 0.01rem;
+    }
+  }
+  &[data-theme='yellowWhite'] {
+    .headerTab {
+      ul {
+        color: #fff;
+        background: #000 !important;
+      }
+    }
+    .activeTab {
+      color: #511a00;
+      background: #ffc400;
+      border: #fff7ca solid 0.01rem;
+    }
+  }
+  &[data-theme='greenYellow'] {
+    .headerTab {
+      ul {
+        color: #511a00;
+        background: #fff !important;
+      }
+    }
+    .activeTab {
+      color: #511a00;
+      background: linear-gradient(to bottom, #ffffff, #face13, #face13, #e39300);
+      border: #fffae9 solid 0.01rem;
+    }
+  }
+  &[data-theme='skyBlue'] {
+    .headerTab {
+      ul {
+        color: #888888;
+        background: #fff !important;
+      }
+    }
+    .activeTab {
+      color: #fff;
+      background: linear-gradient(to left, #15d9f8, #037dfb);
+      border: #fff7ca00 solid 0.01rem;
+    }
+  }
+  &[data-theme='darkBlue'] {
+    .headerTab {
+      ul {
+        color: #fff;
+        background: #00000080 !important;
+      }
+    }
+    .activeTab {
+      color: #fff;
+      background: linear-gradient(to top, #162752, #29468d);
+      border: #fff7ca00 solid 0.01rem;
+    }
+  }
+  &[data-theme='redGold'] {
+    .headerTab {
+      ul {
+        color: #fff;
+        background: linear-gradient(to left, #ff6b00, #af0100);
+      }
+    }
+    .activeTab {
+      color: #511a00;
+      background: linear-gradient(to right, #fceba5, #d5a93d);
+      border: #fff7ca solid 0.01rem;
+    }
+
+    .tableContainer {
+      :global {
+        table {
+          tbody {
+            tr {
+              td:first-child {
+                span {
+                  background: -webkit-linear-gradient(#6a1211, #6a1211);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='whiteGold'] {
+    .headerTab {
+      ul {
+        color: #435689;
+        background: #fff !important;
+      }
+    }
+    .activeTab {
+      color: #511a00;
+      background: linear-gradient(to right, #fceba5, #d5a93d);
+      border: #fff7ca solid 0.01rem;
+    }
+  }
+  .headerCont {
+    width: 95%;
+    height: 10%;
+    //   background-color: antiquewhite;
+  }
+
+  .tableCont {
+    display: flex;
+    overflow: hidden;
+    width: 95%;
+    // height: 100%;
+    flex: 1;
+    position: relative;
+  }
+
+  .headerTab {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    // margin-top: 0.1rem;
+    ul {
+      position: relative;
+      width: 100%;
+      list-style: none;
+      display: flex;
+      height: 100%;
+      background-color: #1a1a1a;
+      border-radius: 0.2rem;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        width: 100%;
+        padding: 0.04rem 0 0.05rem;
+        transition: 0.3s;
+        z-index: 2;
+      }
+
+      .activeNav {
+        position: absolute;
+        height: 100%;
+        pointer-events: none;
+        border-radius: 50px;
+      }
+    }
+  }
+
+  .tableContainer {
+    margin-top: 0.2rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  .tableOneWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .tableOne {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .tableTwo {
+    width: 95%;
+  }
+
+  .activeTab {
+    border-radius: 0.2rem;
+    color: #511a00;
+    background: linear-gradient(to left, #d5a93d, #fceba5);
+    border: #ffdd54 solid 0.01rem;
+  }
+
+  .activeText {
+    color: #511a00;
+  }
+}
+.pullToRefresh {
+  :global {
+    .ptr__pull-down > div {
+      p {
+        font-size: 0.15rem;
+        color: #f6da85;
+        text-align: center !important;
+      }
+    }
+  }
+}

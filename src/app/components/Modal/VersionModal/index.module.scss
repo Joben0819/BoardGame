@@ -1,0 +1,313 @@
+.overlay {
+  height: 100%;
+  width: 100%;
+  transform: translateZ(0);
+  z-index: 14 !important;
+  position: absolute;
+  top: 0;
+  font-size: 0.08rem;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .overlayClick {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.472);
+    z-index: 1;
+  }
+  .modalContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 1.8rem;
+    border-radius: 0.08rem;
+    overflow: hidden;
+    border: 2px solid #8d7c4f;
+    z-index: 2;
+    .modalBody {
+      //   height: 2.5rem;
+      flex: 1;
+      width: 100%;
+      position: relative;
+      padding: 0.35rem 0.15rem;
+      font-size: 0.13rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+      z-index: 1;
+      .notice {
+        font-size: 0.14rem;
+        color: #fff;
+        white-space: nowrap;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        .touristText {
+          color: #f2dd9d;
+        }
+      }
+
+      .buttonsContainer {
+        display: flex;
+        gap: 0.2rem;
+        .redirect,
+        .close {
+          width: 1.5rem;
+          height: 0.3rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 1rem;
+          cursor: pointer;
+        }
+        .redirect {
+          color: #fff;
+          position: relative;
+          overflow: hidden;
+          background: linear-gradient(180deg, #11D38A 0%, #018B57 100%);
+        }
+        .close {
+          color: #651D00;
+          background: linear-gradient(180deg, #FFE800 0%, #E38C00 100%);
+        }
+      }
+    }
+
+    //overlays for themes
+    &[data-theme="blackGold"] {
+      color: #f0cb5a;
+      .modalBody {
+        background: linear-gradient(
+          270deg,
+          #1f1e1b 0%,
+          #1e1b19 26.56%,
+          #262520 100%
+        );
+      }
+    }
+    &[data-theme="brownGold"] {
+      border: none;
+      .modalBody {
+        background: #fff;
+        .notice {
+          color: #888888;
+          .touristText {
+            color: #C4A994;
+          }
+        }
+        .withdraw {
+          color: #888888;
+          border: solid 0.01rem #888;
+          span {
+            background: #fff;
+          }
+          &::before {
+            background: none;
+          }
+        }
+        .phone {
+          color: #651D00;
+          background: linear-gradient(180deg, #FFE800 0%, #E38C00 100%);
+        }
+      }
+    }
+    &[data-theme="yellowWhite"] {
+      border: solid 0.01rem #FFC400;
+      .modalBody {
+        background: #FEFEFF;
+        .notice {
+          color: #C5915A;
+          .touristText {
+            color: #A11300;
+          }
+        }
+        .withdraw {
+          color: #0A0A0A;
+          border: solid 0.01rem #FFC400;
+          span {
+            background: #fff;
+          }
+          &::before {
+            background: none;
+          }
+        }
+        .phone {
+          color: #651D00;
+          background: linear-gradient(180deg, #FFE800 0%, #E38C00 100%);
+        }
+      }
+    }
+    &[data-theme="greenYellow"] {
+      border: none;
+      .modalBody {
+        background: #D6EAE4;
+        .notice {
+          color: #511A00;
+          .touristText {
+            color: #FACD12;
+          }
+        }
+        .withdraw {
+          color: #fff;
+          span {
+            background: #3B8675;
+          }
+          &::before {
+            background: linear-gradient(180deg, #DF8E00 0%, #FFEA01 100%);;
+          }
+        }
+        .phone {
+          color: #651D00;
+          background: linear-gradient(180deg, #FFE800 0%, #E38C00 100%);
+        }
+      }
+    }
+    &[data-theme="skyBlue"] {
+      border: none;
+      .modalBody {
+        background: #F4F6F9;
+        .notice {
+          color: #888888;
+          .touristText {
+            color: #0CA0E9;
+          }
+        }
+        .withdraw {
+          color: #888888;
+          border: solid 0.01rem #888;
+          span {
+            background: #fff;
+          }
+          &::before {
+            background: none;
+          }
+        }
+        .phone {
+          color: #651D00;
+          background: linear-gradient(180deg, #FFE800 0%, #E38C00 100%);
+        }
+      }
+    }
+    &[data-theme="darkBlue"] {
+      border: none;
+      padding: 0.01rem;
+      &::before{
+        content: "";
+        position: absolute;
+        border-radius: inherit;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        background: linear-gradient(150deg, #FFFFFF, #8AEAFF) border-box;
+        height: 100%;
+        width: 100%;
+      }
+      .modalBody {
+        border-radius: inherit;
+        background: linear-gradient(270deg, #29334B 0%, #4D6296 100%);
+        .notice {
+          color: #fff;
+          .touristText {
+            color: #F2DD9D;
+          }
+        }
+        .withdraw {
+          color: #fff;
+          border: solid 0.005rem #8AEAFF;
+          span {
+            background: transparent;
+          }
+          &::before {
+            background: none;
+          }
+        }
+        .phone {
+          background: linear-gradient(180deg, #FFFFFF 0%, #8AEAFF 100%);
+          span{ 
+            background: linear-gradient(180deg, #29468D 0%, #162752 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+          }
+        }
+      }
+    }
+    &[data-theme="redGold"] {
+      border: solid 0.01rem #8D7C4F;
+      .modalBody {
+        border-radius: inherit;
+        background: linear-gradient(90deg, #AF0100 0%, #FF6B00 100%);
+        .notice {
+          color: #fff;
+          .touristText {
+            color: #F2DD9D;
+          }
+        }
+        .withdraw {
+          color: #fff;
+          border: solid 0.005rem #FCF4C2;
+          span {
+            background: transparent;
+          }
+          &::before {
+            background: none;
+          }
+        }
+        .phone {
+          color: #651D00;
+          background: linear-gradient(180deg, #FFE800 0%, #E38C00 100%);
+        }
+      }
+    }
+    &[data-theme="whiteGold"] {
+      border: solid 0.005rem #8D7C4F;
+      .modalBody {
+        border-radius: inherit;
+        background: #DADCE7;
+        .notice {
+          color: #435689;
+          .touristText {
+            color: #FEA800;
+          }
+        }
+        .withdraw {
+          color: #fff;
+          padding: 0.002rem;
+          span {
+            background: #8f9095;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            border-radius: inherit;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            background: linear-gradient(150deg, #FFE5B7, #FCF4C2) border-box;
+            height: 100%;
+            width: 100%;
+          }
+        }
+        .phone {
+          color: #651D00;
+          background: linear-gradient(180deg, #FFE800 0%, #E38C00 100%);
+        }
+      }
+    }
+  }
+}

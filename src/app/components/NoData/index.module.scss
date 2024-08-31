@@ -1,0 +1,21 @@
+@import '/src/styles/_helpers.scss';
+
+.NoData_bgImageContainer {
+  @include flex-xy;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.Nodata {
+  width: 3rem;
+}
+
+.ImageLabel {
+  @include flex-xy;
+  font-size: 0.18rem;
+  width: 100%;
+  background: var(--nodata-bg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,43 @@
+@import '/src/styles/_helpers.scss';
+
+.washCodeSideBar {
+  background: linear-gradient(to left, #3c3a3b, #1a1a1a);
+  width: 20%;
+  height: 100%;
+  border: 0.004rem #b4a865 solid;
+}
+
+.sidebarTitle {
+  @include flex-xy;
+  flex-direction: column;
+  height: 0.58rem;
+  span {
+    background: -webkit-linear-gradient(#fff6c2, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 0.18rem;
+    font-weight: 900;
+  }
+}
+
+.sidebarTitleActive {
+  background: url("./../../../../Assets/img/Sidebar/btn-vipactive.png");
+  background-size: 100% 100%;
+  span {
+    background: -webkit-linear-gradient(#651d00, #651d00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.lineDivider {
+  background: linear-gradient(
+    to right,
+    #00000020,
+    #ffe800,
+    #e38c00,
+    #ffe800,
+    #00000020
+  );
+  width: 100%;
+  height: 0.005rem;
+}

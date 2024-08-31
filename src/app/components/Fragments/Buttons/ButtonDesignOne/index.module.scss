@@ -1,0 +1,60 @@
+.buttonDesignOne {
+  border-radius: 0.2rem;
+  color: #511a00;
+  font-size: 0.13rem;
+  font-weight: 600;
+  // margin-top: 0.15rem;
+  padding: 0.1rem;
+  text-align: center;
+  width: 100%;
+  align-items: center;
+  background: linear-gradient(180deg, #ffe800, #e38c00);
+  border: none;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  span{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -0.007rem;
+  }
+  &[data-theme="blackGold"] {
+    background: #1f1e1b;
+    background: linear-gradient(180deg, #ffe800, #e38c00);
+    border: none;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    span {
+      color: #511a00;
+    }
+  }
+  &[data-theme="brownGold"] {
+    color: #651d00;
+    background: linear-gradient(180deg, #ffe800, #e38c00);
+  }
+  &[data-theme="redGold"] {
+    color: #651d00 !important;
+    background: linear-gradient(180deg, #ffe800, #e38c00);
+  }
+  &[data-theme="darkBlue"] {
+    background: linear-gradient(180deg, #ffffff 0%, #8aeaff 100%);
+    span {
+      color: #162752;
+    }
+  }
+  &[bet-data="brown"] {
+    span {
+      color: #651d00 !important;
+    }
+  }
+  &[data-theme="whiteGold"] {
+    color: #461d09;
+    background: linear-gradient(180deg, #ffe800, #e38c00);
+    span {
+      color: #651d00;
+    }
+  }
+}

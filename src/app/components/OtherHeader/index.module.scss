@@ -1,0 +1,148 @@
+.other_header {
+  height: 0.4rem;
+  width: 100%;
+  background: var(--header-bg-inner) center/100% 100% no-repeat;
+  z-index: 13;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  .historyRecordButton {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    position: relative;
+    img {
+      margin-left: 0.1rem;
+      margin-right: 0.04rem;
+      width: 0.15rem;
+      height: 0.2rem;
+    }
+    .hrImage {
+      width: auto;
+      height: 50%;
+    }
+    > span {
+      font-size: 0.15rem;
+      background: linear-gradient(180deg, #ffffff 0%, #fce9c9 86.3%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+
+  &[data-theme='yellowWhite'] {
+    .Oh_title {
+      > div:nth-child(2) {
+        span {
+          background: -webkit-linear-gradient(#a11300, #a11300);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    .historyRecordButton {
+      img {
+        height: 0.15rem !important;
+      }
+      > span {
+        background: linear-gradient(180deg, #a11300 0%, #a11300 86.3%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+  &[data-theme='greenYellow'] {
+    .historyRecordButton {
+      > span {
+        background: linear-gradient(180deg, #ffffff 0%, #fffae9 0.01%, #face13 27.6%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+  &[data-theme='skyBlue'] {
+    .historyRecordButton {
+      > span {
+        background: linear-gradient(180deg, #ffffff 0%, #fce9c9 86.3%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+  &[data-theme='darkBlue'] {
+    .historyRecordButton {
+      > span {
+        background: linear-gradient(180deg, #ffffff 0%, #8aeaff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+  &[data-theme='whiteGold'] {
+    .historyRecordButton {
+      > span {
+        background: linear-gradient(180deg, #435689 0%, #435689 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+.Oh_title {
+  color: white;
+  position: relative;
+  height: 100%;
+  font-size: 0.25rem;
+  font-weight: 700;
+  margin-left: 0.15rem;
+  background: var(--common-text-unactive);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: context-menu;
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+  gap: 0.1rem;
+  top: -0.015rem;
+  span {
+    line-height: 100%;
+  }
+}
+
+.exit {
+  position: absolute;
+  z-index: 100;
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: rgba(23, 23, 23, 0.5);
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px white;
+  font-size: 0.1rem;
+}
+.exit2 {
+  transform: translateZ(0px);
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (orientation: portrait) {
+  .webViewOverrides {
+    background-size: auto 100% !important;
+    background-position: left center !important;
+    > div:first-child {
+      width: 0.7rem !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

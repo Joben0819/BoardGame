@@ -1,0 +1,11 @@
+.pullToRefresh {
+  :global {
+    .ptr__pull-down > div {
+      p {
+        font-size: 0.15rem;
+        color: #f6da85;
+        text-align: center !important;
+      }
+    }
+  }
+}

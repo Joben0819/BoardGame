@@ -1,0 +1,10 @@
+.rechargeWrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  .rechargeContent {
+    display: flex;
+    height: calc(100% - 0.4rem);
+  }
+}

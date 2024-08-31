@@ -1,0 +1,120 @@
+.modalOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: translateZ(0);
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  .modalWrapper {
+    position: relative;
+    width: 4rem;
+    font-size: 0.1rem;
+    background-image: url("../../../../assets/blackGold/login_register/login_reg_bg.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    .modalHeader {
+      background-image: url("../../../../assets/blackGold/login_register/header.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 0.4rem;
+      width: 100%;
+      span {
+        font-size: 0.2rem;
+        color: #511a00;
+        font-weight: 700;
+      }
+    }
+    .modalBody {
+      padding: 0.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.2rem;
+      position: relative;
+      > img {
+        width: 0.5rem;
+        height: 0.5rem;
+      }
+      span {
+        font-size: 0.15rem;
+        text-align: center;
+        color: white;
+      }
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../../../../assets/commons/button1.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 0.37rem;
+        width: 1.2rem;
+        span {
+          color: #511a00;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  &[data-theme="brownGold"]{
+    .modalWrapper{
+      .modalHeader{
+        background-image: url("../../../../assets/brownGold/login_register/header.png");
+      }
+    }
+  }
+  &[data-theme="yellowWhite"]{
+    .modalWrapper{
+      .modalHeader{
+        background-image: url("../../../../assets/yellowWhite/login_register/header.png");
+      }
+    }
+  }
+  &[data-theme="greenYellow"]{
+    .modalWrapper{
+      .modalHeader{
+        background-image: url("../../../../assets/greenYellow/login_register/header.png");
+      }
+    }
+  }
+  &[data-theme="skyBlue"]{
+    .modalWrapper{
+      .modalHeader{
+        background-image: url("../../../../assets/skyBlue/login_register/header.png");
+      }
+    }
+  }
+  &[data-theme="darkBlue"]{
+    .modalWrapper{
+      .modalHeader{
+        background-image: url("../../../../assets/darkBlue/login_register/header.png");
+      }
+    }
+  }
+  &[data-theme="redGold"]{
+    .modalWrapper{
+      .modalHeader{
+        background-image: url("../../../../assets/redGold/login_register/header.png");
+      }
+    }
+  }
+  &[data-theme="whiteGold"]{
+    .modalWrapper{
+      .modalHeader{
+        background-image: url("../../../../assets/whiteGold/login_register/header.png");
+      }
+    }
+  }
+}

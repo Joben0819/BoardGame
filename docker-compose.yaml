@@ -1,0 +1,10 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - ENVIRONMENT=${ENVIRONMENT}
+    ports:
+      - ${HOST_PORT}:${CONTAINER_PORT}
+    image: ${NAME}:${HOST_TAG}

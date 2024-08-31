@@ -1,0 +1,558 @@
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateZ(0);
+  z-index: 11;
+  background-color: #00000080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    font-size: 0.15rem;
+    color: white;
+    position: relative;
+    width: 4.08rem;
+
+    .header {
+      width: 100%;
+      height: 0.41rem;
+      position: relative;
+      z-index: 11;
+      background: url("../../../../assets/blackGold/other_modal/OtherModalHeader.png");
+      background-position: center center !important;
+      background-size: 100% 100% !important;
+      background-repeat: no-repeat !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.05rem 0.05rem 0 0;
+
+      .headerTitle {
+        color: #651d00;
+        font-size: 0.2rem;
+        font-weight: 900;
+      }
+
+      .closeBtn {
+        position: absolute;
+        background-image: url("../../../../assets/blackGold/other_modal/othermodal_xbtn.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 0.2rem;
+        height: 0.2rem;
+        right: 0.1rem;
+      }
+    }
+
+    // Add card container styles
+    .addCardContainer {
+      width: 100%;
+      position: relative;
+      z-index: 10;
+      background: #1f1e1b;
+      border: 0.01rem solid #8d7c4f;
+      border-radius: 0 0 0.05rem 0.05rem;
+      padding: 0.2rem 0.2rem;
+
+      // Body container styles
+      .bodyContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        :global {
+          .bindCardSelect__control {
+            position: relative;
+            margin: 0 !important;
+            height: 0.3rem;
+            width: 100%;
+            border-radius: 0.3rem;
+            border: none !important;
+            box-shadow: none;
+            display: flex;
+            align-items: center;
+            .bindCardSelect__value-container {
+              padding: 0 0.15rem;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              position: relative;
+              .bindCardSelect__single-value {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                > span {
+                  display: flex;
+                  align-items: center;
+                  font-size: 0.15rem !important;
+                }
+              }
+            }
+          }
+          .bindCardSelect__indicator {
+            outline: none;
+            border: none;
+            box-shadow: none;
+            svg {
+              width: 0.25rem;
+            }
+          }
+
+          .bindCardSelect__indicator-separator {
+            width: 0;
+            background-color: transparent !important;
+          }
+
+          .bindCardSelect__option {
+            > span {
+              display: flex;
+              align-items: center;
+              font-size: 0.15rem !important;
+            }
+          }
+        }
+
+        .inputFields {
+          width: 100%;
+          display: flex;
+          transform: translateZ(100);
+          position: relative;
+
+          ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            position: relative;
+            li {
+              width: 100%;
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              .selectContainer {
+                width: 2.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Button holder styles
+    .buttonHolder {
+      margin-top: 0.1rem;
+    }
+  }
+}
+
+//overlays for themes
+.wrapper {
+  &[data-theme="blackGold"] {
+    :global {
+      .bindCardSelect__control {
+        background-color: #000 !important;
+      }
+      .bindCardSelect__single-value {
+        > span {
+          color: #fff;
+        }
+      }
+
+      .bindCardSelect__option {
+        > span {
+          color: #fff;
+        }
+      }
+      .bindCardSelect__menu {
+        background-color: #1a1a1a !important;
+      }
+      .bindCardSelect__menu-list {
+        background-color: #1a1a1a !important;
+      }
+
+      .bindCardSelect__option--is-focused {
+        background-color: #2a2a2a !important;
+      }
+
+      .bindCardSelect__option--is-selected {
+        background-color: #2a2a2a !important;
+      }
+    }
+    .header {
+      background: url("../../../../assets/blackGold/other_modal/OtherModalHeader.png");
+    }
+  }
+  &[data-theme="brownGold"] {
+    .header {
+      background: url("../../../../assets/brownGold/other_modal/OtherModalHeader.png");
+      .headerTitle {
+        color: #511a00;
+      }
+      .closeBtn {
+        background-image: url("../../../../assets/brownGold/other_modal/othermodal_xbtn.png");
+      }
+    }
+    .addCardContainer {
+      background: #ffffff;
+      border: 0.01rem solid #f7ede7;
+      color: #000;
+    }
+    :global {
+      .bindCardSelect__control {
+        background-color: #ededed !important;
+        .bindCardSelect__value-container {
+          .bindCardSelect__single-value {
+            > span {
+              color: #000;
+            }
+          }
+        }
+      }
+      .bindCardSelect__menu {
+        background-color: #fff !important;
+      }
+      .bindCardSelect__option {
+        > span {
+          font-size: 0.15rem !important;
+          color: #888888;
+        }
+      }
+      .bindCardSelect__option--is-focused {
+        background-color: #f7ede7 !important;
+      }
+
+      .bindCardSelect__option--is-selected {
+        background-color: #f7ede7 !important;
+      }
+      .templated_inputHolder {
+        input {
+          background-color: #ededed;
+          color: #000;
+        }
+      }
+    }
+  }
+  &[data-theme="yellowWhite"] {
+    .header {
+      background: url("../../../../assets/yellowWhite/other_modal/OtherModalHeader.png");
+      .headerTitle {
+        color: #511a00;
+      }
+      .closeBtn {
+        background-image: url("../../../../assets/yellowWhite/other_modal/othermodal_xbtn.png");
+      }
+    }
+    .addCardContainer {
+      background: #fefeff;
+      border: 0.01rem solid #8d7c4f;
+      color: #a11300;
+    }
+    :global {
+      .bindCardSelect__control {
+        background-color: #ededed !important;
+        .bindCardSelect__value-container {
+          .bindCardSelect__single-value {
+            > span {
+              color: #bea288;
+            }
+          }
+        }
+      }
+      .bindCardSelect__menu {
+        background-color: #fff !important;
+      }
+      .bindCardSelect__option {
+        > span {
+          color: #bea288;
+        }
+      }
+      .bindCardSelect__option--is-focused {
+        background-color: #ebedf1 !important;
+      }
+
+      .bindCardSelect__option--is-selected {
+        background-color: #ebedf1 !important;
+      }
+      .templated_inputHolder {
+        input {
+          background-color: #ededed;
+          color: #bea288;
+        }
+      }
+    }
+  }
+  &[data-theme="greenYellow"] {
+    .header {
+      background: url("../../../../assets/greenYellow/other_modal/OtherModalHeader.png");
+      .headerTitle {
+        color: #511a00;
+      }
+      .closeBtn {
+        background-image: url("../../../../assets/greenYellow/other_modal/othermodal_xbtn.png");
+      }
+    }
+    .addCardContainer {
+      background: #d6eae4;
+      border: 0.01rem solid #8d7c4f;
+      color: #511a00;
+    }
+    :global {
+      .bindCardSelect__control {
+        background-color: #ffffff !important;
+        .bindCardSelect__value-container {
+          .bindCardSelect__single-value {
+            > span {
+              color: #511a00;
+            }
+          }
+        }
+      }
+      .bindCardSelect__menu {
+        background-color: #fff !important;
+      }
+      .bindCardSelect__option {
+        > span {
+          color: #511a00;
+        }
+      }
+      .bindCardSelect__option--is-focused {
+        background-color: #7ab9a9 !important;
+      }
+
+      .bindCardSelect__option--is-selected {
+        background-color: #7ab9a9 !important;
+      }
+      .templated_inputHolder {
+        input {
+          background-color: #ffffff;
+          color: #511a00;
+          caret-color: #000;
+        }
+      }
+    }
+  }
+  &[data-theme="skyBlue"] {
+    .header {
+      background: url("../../../../assets/skyBlue/other_modal/OtherModalHeader.png");
+      .headerTitle {
+        color: #fff;
+      }
+      .closeBtn {
+        background-image: url("../../../../assets/skyBlue/other_modal/othermodal_xbtn.png");
+      }
+    }
+    .addCardContainer {
+      background: #f4f6f9;
+      border: 0.01rem solid #f4f6f9;
+      color: #888888;
+    }
+    :global {
+      .bindCardSelect__control {
+        background-color: #ffffff !important;
+        .bindCardSelect__value-container {
+          .bindCardSelect__single-value {
+            > span {
+              color: #000;
+            }
+          }
+        }
+      }
+      .bindCardSelect__menu {
+        background-color: #fff !important;
+      }
+      .bindCardSelect__option {
+        > span {
+          color: #000;
+        }
+      }
+      .bindCardSelect__option--is-focused {
+        background-color: #f4f6f9 !important;
+      }
+
+      .bindCardSelect__option--is-selected {
+        background-color: #f4f6f9 !important;
+      }
+      .templated_inputHolder {
+        input {
+          background-color: #ffffff;
+          color: #000;
+          caret-color: #000;
+        }
+      }
+    }
+  }
+  &[data-theme="darkBlue"] {
+    .header {
+      background: url("../../../../assets/darkBlue/other_modal/OtherModalHeader.png");
+      .headerTitle {
+        background: linear-gradient(180deg, #29468d 0%, #162752 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+      .closeBtn {
+        background-image: url("../../../../assets/darkBlue/other_modal/othermodal_xbtn.png");
+      }
+    }
+    .addCardContainer {
+      background: linear-gradient(270deg, #29334b 0%, #4d6296 100%);
+      border: 0.01rem solid #8aeaff;
+      color: #ffffff;
+    }
+    :global {
+      .bindCardSelect__control {
+        background-color: #ffffff !important;
+        .bindCardSelect__value-container {
+          .bindCardSelect__single-value {
+            > span {
+              color: #4d6296;
+            }
+          }
+        }
+      }
+      .bindCardSelect__menu {
+        background-color: #4d6296 !important;
+      }
+      .bindCardSelect__option {
+        > span {
+          color: #fff;
+        }
+      }
+      .bindCardSelect__option--is-focused {
+        background-color: #29468d !important;
+      }
+
+      .bindCardSelect__option--is-selected {
+        background-color: #29468d !important;
+      }
+      .templated_inputHolder {
+        input {
+          background-color: #ffffff;
+          color: #4d6296;
+          caret-color: #4d6296;
+          &::placeholder {
+            color: #4d6296;
+          }
+        }
+      }
+    }
+  }
+  &[data-theme="redGold"] {
+    .header {
+      background: url("../../../../assets/redGold/other_modal/OtherModalHeader.png");
+      .headerTitle {
+        color: #511a00;
+      }
+      .closeBtn {
+        background-image: url("../../../../assets/redGold/other_modal/othermodal_xbtn.png");
+      }
+    }
+    .addCardContainer {
+      background: linear-gradient(90deg, #af0100 0%, #ff6b00 100%);
+      border: 0.01rem solid #8d7c4f;
+      color: #ffffff;
+    }
+    :global {
+      .bindCardSelect__control {
+        background-color: #ffffff !important;
+        .bindCardSelect__value-container {
+          .bindCardSelect__single-value {
+            > span {
+              color: #080000;
+            }
+          }
+        }
+      }
+      .bindCardSelect__menu {
+        background: linear-gradient(90deg, #f4e8e8 0%, #f1dbdb 100%) !important;
+      }
+      .bindCardSelect__option {
+        > span {
+          color: #080000;
+        }
+      }
+      .bindCardSelect__option--is-focused {
+        background: linear-gradient(90deg, #eed1d1 0%, #dec3c3 100%) !important;
+      }
+
+      .bindCardSelect__option--is-selected {
+        background: linear-gradient(90deg, #eed1d1 0%, #dec3c3 100%) !important;
+      }
+      .templated_inputHolder {
+        input {
+          background-color: #ffffff;
+          color: #080000;
+          caret-color: #080000;
+          &::placeholder {
+            color: #757575;
+          }
+        }
+      }
+    }
+  }
+  &[data-theme="whiteGold"] {
+    .header {
+      background: url("../../../../assets/whiteGold/other_modal/OtherModalHeader.png");
+      .headerTitle {
+        color: #511a00;
+      }
+      .closeBtn {
+        background-image: url("../../../../assets/whiteGold/other_modal/othermodal_xbtn.png");
+      }
+    }
+    .addCardContainer {
+      background: #dadce7;
+      border: 0.01rem solid #8d7c4f;
+      color: #435689;
+    }
+    :global {
+      .bindCardSelect__control {
+        background-color: #ffffff !important;
+        .bindCardSelect__value-container {
+          .bindCardSelect__single-value {
+            > span {
+              color: #435689;
+            }
+          }
+        }
+      }
+      .bindCardSelect__menu {
+        background-color: #f9f9f9 !important;
+      }
+      .bindCardSelect__option {
+        > span {
+          color: #435689;
+        }
+      }
+      .bindCardSelect__option--is-focused {
+        background-color: #ffeec3 !important;
+      }
+
+      .bindCardSelect__option--is-selected {
+        background-color: #ffeec3 !important;
+      }
+      .templated_inputHolder {
+        input {
+          background-color: #ffffff;
+          color: #435689;
+          caret-color: #435689;
+        }
+      }
+    }
+  }
+}
+// Alert container styles
+.alertContainer {
+  position: absolute;
+  top: 2.2rem;
+  left: 1.45rem;
+}

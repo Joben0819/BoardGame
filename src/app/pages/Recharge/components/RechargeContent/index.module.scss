@@ -1,0 +1,842 @@
+.contentWrapper {
+  flex: 1;
+  position: relative;
+  padding: 0.15rem 0.15rem 0.05rem 0.15rem;
+  // padding: 0.15rem 0.15rem 0.25rem 0.15rem;
+  overflow-y: auto;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: flex-start;
+  // align-items: center;
+  // gap: 0.1rem;
+
+  .panelRow {
+    display: flex;
+    gap: 0.11rem;
+    width: 100%;
+
+    //usdt
+    &[data-active='3'] {
+      padding: 0.12rem;
+    }
+
+    > div {
+      width: 50%;
+    }
+  }
+
+  .panel {
+    position: relative;
+    border-radius: 0.03rem;
+    width: 100%;
+    font-size: 0.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.1rem;
+    color: white;
+    margin-bottom: 0.1rem;
+
+    &[data-height='full'] {
+      height: 100%;
+    }
+
+    .button {
+      background: url('../../../../assets/commons/button1.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100% 100%;
+      font-size: 0.13rem;
+      border-radius: 0.2rem;
+      height: 0.35rem;
+      width: 1.2rem;
+      color: #511a00;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      background-size: cover;
+
+      span {
+        position: relative;
+        top: -0.01rem;
+      }
+    }
+
+    .bankDataList {
+      font-size: 0.1rem;
+      display: flex;
+      width: 100%;
+      padding: 0.1rem;
+      flex: 1;
+      gap: 0.1rem;
+    }
+
+    .form {
+      font-size: 0.12rem;
+      display: flex;
+      flex-direction: column;
+      padding: 0.1rem;
+      // gap: 0.1rem;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      .inputContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2rem;
+        margin-bottom: 0.1rem;
+
+        input {
+          caret-color: #fff;
+          width: 1.9rem;
+          height: 0.3rem;
+          padding: 0.1rem;
+          border: none;
+          background: #111111;
+          border-radius: 0.2rem;
+          color: white;
+          font-size: 0.12rem;
+        }
+
+        .button {
+          background: url('../../../../assets/commons/button1.png');
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+          font-size: 0.13rem;
+          border-radius: 0.2rem;
+          width: 1.2rem;
+          color: #511a00;
+          text-align: center;
+          height: 0.4rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: 700;
+        }
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 0.14rem;
+      }
+    }
+
+    .depositDetailsWrapper {
+      padding: 0.1rem 0.2rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      // gap: 0.1rem;
+      .detailsContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.1rem;
+        width: 100%;
+        font-size: 0.15rem;
+        .details {
+          display: flex;
+          gap: 0.1rem;
+
+          :nth-child(2) {
+            max-width: 1rem;
+            overflow-x: auto;
+          }
+        }
+        .copyButton {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: linear-gradient(to bottom, #ffe800, #e38c00);
+          font-size: 0.13rem;
+          border: none;
+          border-radius: 0.2rem;
+          color: #511a00;
+          width: 0.7rem;
+          height: 0.25rem;
+        }
+      }
+    }
+
+    .insctructionsWrapper {
+      display: flex;
+      flex-direction: column;
+      padding: 0.15rem;
+      font-size: 0.15rem;
+      color: #757575;
+      width: 100%;
+      font-size: 0.1rem;
+      p {
+        font-size: 0.113rem;
+      }
+
+      &[data-active='3'] {
+        background-color: #00000012 !important;
+        width: 45% !important;
+        border-radius: 0.05rem;
+        padding: 0.12rem;
+        font-size: 0.112rem;
+
+        &[data-theme='blackGold'] {
+          background: #000 !important;
+        }
+      }
+    }
+
+    .vipPayWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 0.1rem;
+      position: relative;
+      width: 100%;
+      gap: 0.1rem;
+      .walletBox {
+        width: 90%;
+        height: 1.2rem;
+        font-size: 0.15rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        > div:first-child {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 0.35rem;
+        }
+        > div:nth-child(2) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span {
+            font-size: 0.3rem;
+          }
+        }
+        > div:nth-child(3) {
+          display: flex;
+          flex: 1;
+          justify-content: center;
+          align-items: center;
+          .walletManagementButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.2rem;
+            color: white;
+            padding: 0.05rem;
+            width: 1.2rem;
+            height: 0.3rem;
+            background: linear-gradient(rgb(17, 211, 138), rgb(1, 139, 87));
+            border-bottom: none;
+          }
+        }
+      }
+
+      .vipPayInputField {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 0.5rem;
+        gap: 0.1rem;
+        > span {
+          width: 0.6rem;
+          font-size: 0.13rem;
+        }
+        input {
+          caret-color: #fff;
+          width: 3.2rem;
+          height: 0.3rem;
+          padding: 0.1rem;
+          border: none;
+          background: #111111;
+          border-radius: 0.2rem;
+          color: white;
+          font-size: 0.12rem;
+        }
+
+        .button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 1rem;
+          height: 0.35rem;
+          background: url('../../../../assets/commons/button1.png');
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+          font-size: 0.13rem;
+          font-weight: 700;
+          border-radius: 0.2rem;
+          color: #511a00;
+        }
+      }
+    }
+
+    .USDTWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      width: 55%;
+      gap: 0.1rem;
+      .inputSection {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 0.2rem;
+        .inputFieldsContainer {
+          width: 96%;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          gap: 0.1rem;
+          .inputContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: relative;
+
+            &:nth-of-type(1),
+            &:nth-of-type(2) {
+              > input:focus {
+                border: none !important;
+                outline: none !important;
+              }
+            }
+            > span {
+              font-size: 0.13rem;
+              color: white;
+            }
+            > input {
+              border-radius: 0.2rem;
+              border: none;
+              background-color: #1a1a1a;
+              font-size: 0.12rem;
+              caret-color: #fff;
+              color: white;
+              padding: 0.08rem 0.15rem;
+              // height: 0.2rem;
+              width: 81%;
+
+              &:nth-child(2) {
+                padding-right: 0.6rem;
+              }
+            }
+
+            .cloneButton {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              right: 0.1rem;
+              background: linear-gradient(180deg, #ffe800 0%, #e38c00 100%);
+              box-shadow: 0 1px 1px #ffffff;
+              border-radius: 0.15rem;
+              height: 0.2rem;
+              width: 0.4rem;
+              > span {
+                font-size: 0.1rem;
+                color: #651d00;
+              }
+            }
+          }
+
+          .tips {
+            font-size: 0.13rem;
+            color: #f0cb5a;
+          }
+
+          &[data-theme="whiteGold"] {
+            .inputContainer > span,
+            .tips {
+              color: #435689;
+            }
+          }
+        }
+        .QRContainer {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          flex-direction: column;
+          gap: 0.2rem;
+          .QRBox {
+            background-color: #fff;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 0.1rem;
+          }
+          .QRButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(180deg, #ffe800 0%, #e38c00 100%);
+            box-shadow: 0 1px 1px #ffffff;
+            border-radius: 0.15rem;
+            height: 0.2rem;
+            width: 100%;
+            > span {
+              font-size: 0.1rem;
+              color: #651d00;
+            }
+          }
+        }
+      }
+
+      .button {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1rem;
+        height: 0.5rem;
+        background-image: url('../../../../assets/commons/button1.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        > span {
+          position: relative;
+          top: -0.01rem;
+          color: #651d00;
+          font-size: 0.13rem;
+        }
+      }
+    }
+
+    .payChannelsList {
+      // padding: 0.1rem .29rem;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // width: 100%;
+      // flex-wrap: wrap;
+      font-size: 0.08rem;
+      // gap: 0.08rem;
+      // min-height: 0.5rem;
+      // padding-left: 0.4rem;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-row-gap: 10px;
+      grid-column-gap: 10px;
+      // background-color: #2196F3;
+      padding: 0.12rem 0 0.18rem 0;
+      width: 100%;
+    }
+    .channelSelectValueWrapper {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0.15rem;
+      width: 100%;
+      gap: 0.1rem;
+
+      .payChannelValues {
+        width: 90%;
+        overflow-y: auto;
+        height: 2rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-content: flex-start;
+        overflow-y: auto;
+        gap: 0.06rem;
+
+        &[data-display='flex'] {
+          display: flex;
+          justify-content: center;
+        }
+      }
+      .HELLO {
+        position: relative;
+        &::before {
+          position: absolute;
+          background: rgba(34, 34, 34, 0.5);
+          width: 100%;
+          content: '';
+          height: 100%;
+          border-radius: 25px;
+        }
+      }
+    }
+  }
+
+  //overlays for themes
+  &[data-theme='blackGold'] {
+    .panel {
+      background: #222222;
+      .walletBox {
+        background: linear-gradient(to top, #1a1a1a, #2c2c2c);
+        > div:nth-child(1) {
+          background: #444444;
+        }
+      }
+      .channelSelectValueWrapper {
+        .HELLO {
+          position: relative;
+          &::before {
+            position: absolute;
+            background: rgba(34, 34, 34, 0.5);
+            width: 100%;
+            content: '';
+            height: 100%;
+            border-radius: 3 5px;
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='brownGold'] {
+    .panel {
+      background: #fff;
+      color: #000;
+      .walletBox {
+        background: #f7ede7;
+        > div:nth-child(1) {
+          background: #c4a994;
+          span {
+            color: #fff;
+          }
+        }
+        > div:nth-child(2) {
+          span {
+            color: #735c4b;
+          }
+        }
+      }
+      input {
+        background: #ededed !important;
+        color: #000 !important;
+      }
+      .tips {
+        color: #c4a994;
+      }
+      .channelSelectValueWrapper {
+        .HELLO {
+          position: relative;
+          &::before {
+            position: absolute;
+            background: rgba(225, 225, 225, 0.5);
+            width: 100%;
+            content: '';
+            height: 100%;
+            border-radius: 35px;
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='yellowWhite'] {
+    .panel {
+      background: #fefeff;
+      color: #a11300;
+      .walletBox {
+        background: #ebedf1;
+        > div:nth-child(1) {
+          background: #ffc400;
+          span {
+            color: #fff;
+          }
+        }
+        > div:nth-child(2) {
+          span {
+            color: #c5915a;
+          }
+        }
+      }
+      input {
+        background: #ededed !important;
+        color: #000 !important;
+        &::placeholder {
+          color: #bea288;
+        }
+      }
+      .tips {
+        color: #a11300;
+      }
+      .insctructionsWrapper {
+        color: #c5915a;
+      }
+      .details {
+        span:nth-child(2) {
+          color: #c5915a;
+        }
+      }
+      .channelSelectValueWrapper {
+        .HELLO {
+          position: relative;
+          &::before {
+            position: absolute;
+            background: rgba(225, 225, 225, 0.5);
+            width: 100%;
+            content: '';
+            height: 100%;
+            border-radius: 35px;
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='greenYellow'] {
+    .panel {
+      background: #f2f2f2;
+      color: #511a00;
+      .walletBox {
+        background: #04a17a;
+        > div:nth-child(1) {
+          background: linear-gradient(101.37deg, #1c6d59 0%, #078f6d 47.4%, #0c604b 100%);
+          span {
+            color: #fff;
+          }
+        }
+        > div:nth-child(2) {
+          span {
+            color: #fff;
+          }
+        }
+        .walletManagementButton {
+          background: linear-gradient(180deg, #ffffff 0%, #ffe800 13.54%, #e39300 91.67%, #ffffff 100%) !important;
+          color: #511a00 !important;
+        }
+      }
+      input {
+        background: #fff !important;
+        color: #000 !important;
+      }
+      .tips {
+        color: #511a00;
+      }
+      .insctructionsWrapper {
+        color: #511a00;
+      }
+      .details {
+        span:nth-child(2) {
+          color: #511a00;
+        }
+      }
+      .channelSelectValueWrapper {
+        .HELLO {
+          position: relative;
+          &::before {
+            position: absolute;
+            background: rgba(225, 225, 225, 0.5);
+            width: 100%;
+            content: '';
+            height: 100%;
+            border-radius: 35px;
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='skyBlue'] {
+    .panel {
+      background: #fff;
+      color: #888888;
+      .walletBox {
+        background: #f4f6f9;
+        > div:nth-child(1) {
+          background: #0ca0e9;
+          span {
+            color: #fff;
+          }
+        }
+        > div:nth-child(2) {
+          span {
+            color: #0ca0e9;
+          }
+        }
+      }
+      input {
+        background: #f4f6f9 !important;
+        color: #000 !important;
+        &::placeholder {
+          color: #bbbbbb;
+        }
+      }
+      .tips {
+        color: #0ca0e9;
+      }
+      .channelSelectValueWrapper {
+        .HELLO {
+          position: relative;
+          &::before {
+            position: absolute;
+            background: rgba(225, 225, 225, 0.5);
+            width: 100%;
+            content: '';
+            height: 100%;
+            border-radius: 35px;
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='darkBlue'] {
+    .panel {
+      background: linear-gradient(90deg, #4d6296 0%, #8498c9 100%);
+      color: #fff;
+      .walletBox {
+        background: linear-gradient(90deg, #e1f5fe 0%, #ffffff 100%);
+        > div:nth-child(1) {
+          background: linear-gradient(180deg, #29468d 0%, #162752 100%);
+          span {
+            color: #fff;
+          }
+        }
+        > div:nth-child(2) {
+          span {
+            color: #4d6296;
+          }
+        }
+        .walletManagementButton {
+          background: linear-gradient(180deg, #8aeaff 0%, #4d6296 100%) !important;
+          color: #fff !important;
+        }
+      }
+      input {
+        background: #fff !important;
+        color: #000 !important;
+        &::placeholder {
+          color: #757575;
+        }
+      }
+      .tips {
+        color: #0ca0e9;
+      }
+      .insctructionsWrapper {
+        color: #fff;
+      }
+      .button {
+        background-image: url('../../../../assets/darkBlue/button1.png') !important;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100%;
+        color: #4d6296 !important;
+        padding-bottom: 0.05rem;
+      }
+      .copyButton {
+        background: linear-gradient(180deg, #ffffff 0%, #8aeaff 100%) !important;
+        color: #4d6296 !important;
+      }
+      .channelSelectValueWrapper {
+        .HELLO {
+          position: relative;
+          &::before {
+            position: absolute;
+            background: rgba(120, 141, 190, 0.5);
+            width: 100%;
+            content: '';
+            height: 100%;
+            border-radius: 35px;
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='redGold'] {
+    .panel {
+      background: linear-gradient(90deg, #fdf8f8 0%, #f7eeee 100%);
+      color: #080000;
+      .walletBox {
+        background: linear-gradient(90deg, #f4e8e8 0%, #f1dbdb 100%);
+        > div:nth-child(1) {
+          background: linear-gradient(270deg, #771818 0%, #af0100 100%);
+          span {
+            color: #fff;
+          }
+        }
+        > div:nth-child(2) {
+          span {
+            color: #47100f;
+          }
+        }
+      }
+      input {
+        background: linear-gradient(90deg, #f4e8e8 0%, #f1dbdb 100%) !important;
+        color: #000 !important;
+        &::placeholder {
+          color: #757575;
+        }
+      }
+      .tips {
+        color: #0ca0e9;
+      }
+      .insctructionsWrapper {
+        color: #080000;
+      }
+      .channelSelectValueWrapper {
+        .HELLO {
+          position: relative;
+          &::before {
+            position: absolute;
+            background: rgba(225, 225, 225, 0.5);
+            width: 100%;
+            content: '';
+            height: 100%;
+            border-radius: 35px;
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='whiteGold'] {
+    .panel {
+      background: #f9f9f9;
+      color: #435689;
+      .walletBox {
+        background: linear-gradient(271.73deg, #d5a93d 0%, #fff2c5 23.52%, #d5a93d 100.69%);
+        > div:nth-child(1) {
+          background: #d5a93d;
+          span {
+            color: #461d09;
+          }
+        }
+        > div:nth-child(2) {
+          span {
+            color: #461d09;
+          }
+        }
+      }
+      input {
+        background: #dadce7 !important;
+        color: #000 !important;
+        &::placeholder {
+          color: #757575;
+        }
+      }
+      .tips {
+        color: #435689;
+      }
+      .insctructionsWrapper {
+        color: #435689;
+      }
+      .channelSelectValueWrapper {
+        .HELLO {
+          position: relative;
+          &::before {
+            position: absolute;
+            background: rgba(225, 225, 225, 0.5);
+            width: 100%;
+            content: '';
+            height: 100%;
+            border-radius: 35px;
+          }
+        }
+      }
+    }
+  }
+}

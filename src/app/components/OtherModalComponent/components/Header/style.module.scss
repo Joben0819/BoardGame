@@ -1,0 +1,62 @@
+.headerContainer {
+  background-image: var(--setting-bg-header);
+  width: 100%;
+  height: 0.41rem;
+  position: relative;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  display: flex;
+  z-index: 1;
+  border-radius: 0.05rem 0.05rem 0 0;
+  align-items: center;
+
+  .headerTitle {
+    width: 100%;
+    .text {
+      color: var(--setting-header-title-text);
+      font-size: 0.2rem;
+      font-weight: 900;
+      text-align: center;
+    }
+  }
+
+  .closeBtn {
+    background-image: var(--close-modal-button);
+    position: absolute;
+    width: 10% !important;
+    text-align: center;
+    right: 0;
+    width: 0.2rem;
+    height: 0.2rem;
+    font-size: 0.3rem;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .logoContainer {
+    display: flex;
+    gap: 0.1rem;
+    align-items: center;
+
+    .logoIcon {
+      width: 0.94rem;
+      height: 0.34rem;
+      margin-left: 0.1rem;
+    }
+    .popLogo_99 {
+      color: #232023;
+      font-size: 0.19rem;
+      font-weight: 700;
+    }
+  }
+
+  .popLogo_1 {
+    background-image: var(--setting-pop-logo);
+    height: 0.3rem;
+    width: 1.5rem;
+    margin: 0.05rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

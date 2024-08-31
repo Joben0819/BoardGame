@@ -1,0 +1,68 @@
+.detailInputBox_wrapper {
+  font-size: 0.15rem;
+
+  .detailInputBox_container {
+    display: flex;
+    margin-bottom: 0.15rem;
+
+    .detailInputBoxLabel {
+      display: flex;
+      padding: 0.08rem;
+      width: 1.2rem;
+      height: 0.35rem;
+      font-size: 0.14rem;
+      border-bottom-left-radius: 0.04rem;
+      border-top-left-radius: 0.04rem;
+      color: var(--promotion-text-title);
+      background: var(--promotion-bg-title);
+      letter-spacing: 0.005rem;
+
+      .detailInputBox_imgHolder {
+        display: flex;
+        color: #757575;
+
+        img {
+          width: 0.2rem;
+          height: 0.2rem;
+          margin-right: 0.08rem;
+        }
+      }
+    }
+
+    .detailsInputHolder {
+      input {
+        width: 1.3rem;
+        height: 0.36rem;
+        background: var(--promotion-bg-input);
+        border: none;
+        border-radius: 0 0.04rem 0.04rem 0;
+        padding-left: 0.1rem;
+        font-size: 0.15rem;
+        color: var(--promotion-text-input);
+      }
+    }
+
+    .forDetailComponent {
+      width: 1.3rem;
+      height: 0.36rem;
+      background: #1a1a1a;
+      border: none;
+      border-bottom-right-radius: 0.04rem;
+      border-top-right-radius: 0.04rem;
+      padding-left: 0.1rem;
+    }
+
+    .justPlainInput {
+      width: 4.3rem;
+      height: 0.36rem;
+      background: #1a1a1a;
+      border: none;
+      border-bottom-right-radius: 0.04rem;
+      border-top-right-radius: 0.04rem;
+      padding-left: 0.1rem;
+      -webkit-opacity: 1;
+      opacity: 1;
+    }
+  }
+}
+

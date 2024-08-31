@@ -1,0 +1,27 @@
+@import '/src/styles/_helpers.scss';
+
+.captchaWrapper {
+  position: fixed !important;
+  @include flex-xy;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+:global {
+  #captchaContainer {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.backdrop {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.472);
+}

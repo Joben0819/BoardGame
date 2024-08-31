@@ -1,0 +1,155 @@
+@import "src/styles/_helpers.scss";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  gap: 0.2rem;
+  > div {
+    font-style: normal;
+    // padding: size(1.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: size(14);
+    &:nth-child(2) {
+      // border-right: 2px solid #00c286;
+    }
+  }
+  .player {
+    color: #00d0ff;
+    div:nth-child(1) {
+      height: size(12);
+      font-weight: 700;
+      font-size: size(10);
+    }
+    div:nth-child(2) {
+      font-weight: 400;
+      font-size: size(4);
+    }
+  }
+
+  .banker {
+    color: #ff5e59;
+    div:nth-child(1) {
+      height: size(12);
+      font-weight: 700;
+      font-size: size(10);
+    }
+    div:nth-child(2) {
+      font-weight: 400;
+      font-size: size(4);
+    }
+  }
+
+  .card {
+    height: auto;
+    width: size(5);
+    margin: 0 size(0.5) 0 size(0.5);
+    backface-visibility: hidden;
+  }
+
+  .divider {
+    height: 70%;
+    width: size(0.05);
+    border-right: 2px solid #00c286;
+  }
+
+  .playerCards {
+    display: flex;
+    flex-direction: column;
+    width: size(12);
+  }
+
+  .bankerCards {
+    display: flex;
+    flex-direction: column;
+    width: size(12);
+  }
+
+  .thirdCard {
+    position: relative;
+    height: size(6.7);
+    width: 100%;
+    top: -100%;
+    left: -100%;
+    transition: all 0.6s ease-in-out 1.6s;
+    img {
+      position: relative;
+      top: size(-1);
+      left: size(1.5);
+      transform: rotate(90deg);
+    }
+    .cardHolder {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      transform-style: preserve-3d;
+      transition: all 0.6s ease-in-out;
+      height: 100%;
+      width: size(8);
+      .front {
+        position: absolute;
+        transform: rotate3d(180, 180, 1, 180deg);
+      }
+      .back {
+        left: size(0.5);
+        position: absolute;
+      }
+    }
+
+    .unsetPreserve3d{
+      transform-style: unset;
+    }
+
+    .revealCard {
+      transform: rotate3d(0, 180, 1, 180deg);
+    }
+  }
+
+  .enterThirdCard {
+    top: 0;
+    left: 0;
+  }
+
+  .firstSecondCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1rem;
+    position: relative;
+    height: size(6.7);
+    width: 100%;
+    .cardHolder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      transform-style: preserve-3d;
+      transition: all 0.6s ease-in-out;
+      height: 100%;
+      width: 100%;
+      .front {
+        position: absolute;
+        transform: rotateY(180deg);
+      }
+      .back {
+        position: absolute;
+      }
+    }
+
+    .cardHolder:nth-child(2) {
+      transition: all 0.6s ease-in-out 0.6s;
+    }
+    
+    .unsetPreserve3d{
+      transform-style: unset;
+    }
+
+    .revealCard {
+      transform: rotateY(180deg);
+    }
+  }
+}

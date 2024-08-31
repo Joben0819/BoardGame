@@ -1,0 +1,759 @@
+.overlay {
+  background: rgba(0, 0, 0, 0.472);
+  height: 100%;
+  width: 100%;
+  transform: translateZ(0);
+  z-index: 13 !important;
+  position: fixed !important;
+  top: 0;
+  font-size: 0.08rem;
+  left: 0;
+  .reg_login_input_box {
+    width: 5rem;
+    height: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: #1f1e1b;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: 0.01rem solid #8d7c4f;
+    color: white;
+    font-size: 0.3rem;
+    border-radius: 0.08rem;
+    overflow: hidden;
+    .header_Auth {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: url('../../../assets/blackGold/login_register/header.png');
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position-y: -0.01rem !important;
+      color: #511a00;
+      font-weight: 900;
+      font-size: 0.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      .authButtons {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 0.15rem;
+        padding: 0.08rem;
+        width: 100%;
+        height: 0.5rem;
+
+        .activeBtn {
+          position: absolute;
+          width: 1.9rem;
+          height: 0.3rem;
+          left: 50%;
+        }
+
+        div {
+          width: 1.9rem;
+          position: relative;
+          z-index: 0;
+          padding: 0.1rem;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .authBtnActive {
+          border-radius: 10rem;
+          background: linear-gradient(to top, #facf6b, #fbeeb1);
+        }
+
+        .authBtnActive::before {
+          content: '';
+          position: absolute;
+          z-index: -1;
+          inset: 0;
+          padding: 0.01rem;
+          border-radius: 15rem;
+          background: var(--var-gradient);
+          -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box, linear-gradient(#fff 0 0);
+          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+        }
+      }
+      .authContent {
+        display: flex;
+        flex: 1;
+        position: relative;
+        height: 2.5rem;
+        .inputFields {
+          position: relative;
+          flex: 1;
+          width: 5rem;
+          height: 100%;
+          display: flex;
+          padding: 0.1rem;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 0.1rem;
+
+          center {
+            height: 0.3rem;
+            width: 3.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button {
+              width: 100%;
+              height: 100%;
+              border: none;
+            }
+            .submitButton {
+              padding: 0.06rem;
+              font-size: 0.11rem;
+              color: #651d00;
+              background: linear-gradient(to bottom, #ffe800, #e38c00);
+              border-bottom: 0.01rem white solid;
+              width: 3.5rem;
+              font-weight: 600;
+              border-radius: 15rem;
+            }
+            .submitButton_v2 {
+              padding: 0.06rem;
+              font-size: 0.11rem;
+              color: #651d00;
+              background: linear-gradient(to bottom, #ffe800, #e38c00);
+              // border-bottom: 0.01rem white solid;
+              width: 1.5rem;
+              font-weight: 600;
+              border-radius: 15rem;
+            }
+            .registerButton {
+              padding: 0.045rem;
+              font-size: 0.11rem;
+              color: #651d00;
+              background: linear-gradient(to bottom, #ffe800, #e38c00);
+              width: 3.5rem;
+              font-weight: 600;
+              border-bottom: 1px white solid;
+              border-radius: 15rem;
+            }
+          }
+          .authBorder {
+            width: 3.5rem;
+            border-radius: 10rem;
+            background: transparent;
+            position: relative;
+            z-index: 0;
+            height: 0.3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.09rem;
+
+            .eyeContainer {
+              display: flex;
+              justify-content: flex-end;
+              width: 0.2rem;
+              height: 0.2rem;
+
+              .eye {
+                height: auto;
+                width: 100%;
+              }
+            }
+            .label {
+              position: absolute;
+              left: -0.43rem;
+              font-size: 0.16rem;
+              color: white;
+              font-weight: 400;
+            }
+            div {
+              position: relative;
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+            .verificationCode {
+              section {
+                position: relative;
+                left: 0.02rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+              .verifyButton {
+                padding: 0.02rem;
+                font-weight: 600;
+                font-size: 0.11rem;
+                color: #651d00;
+                background: linear-gradient(to bottom, #ffe800, #e38c00);
+                width: 0.8rem;
+                border: none;
+                border-radius: 15rem;
+              }
+            }
+            .authLoginData {
+              flex: 1;
+              width: 100%;
+              background: transparent;
+              position: relative;
+              font-size: 0.14rem;
+              color: white;
+              outline: none;
+              border: none;
+              caret-color: #fff;
+
+              &:-webkit-autofill,
+              &:-webkit-autofill:hover,
+              &:-webkit-autofill:focus,
+              &:-webkit-autofill:active {
+                transition: background-color 5000s ease-in-out 0s;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: white !important;
+              }
+              // -webkit-text-fill-color: white !important;
+            }
+            .eyeCons {
+              position: relative;
+              right: 0;
+              height: 0.2rem;
+              width: 0.2rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              .eyeCon1 {
+                width: 100%;
+                height: auto;
+                position: absolute;
+              }
+
+              .eyeCon2 {
+                width: 100%;
+                height: auto;
+                position: absolute;
+              }
+            }
+          }
+          .additional_auth {
+            margin-left: 0.5rem !important;
+            width: 2.5rem !important;
+          }
+
+          .authBorder::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            inset: 0;
+            padding: 0.015rem;
+            border-radius: 15rem;
+            background: var(--var-gradient);
+            -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+          }
+          .loginOverlay {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex: 1;
+            padding: 0 0.1rem;
+            width: 100%;
+            // .mInfo {
+            //   position: relative;
+            //   top: 0;
+            //   left: 0;
+            //   p {
+            //     display: flex;
+            //     justify-content: center;
+            //     align-items: center;
+            //     gap: 0.08rem;
+            //   }
+            // }
+            .mInfo {
+              // position: absolute;
+              top: 2rem;
+              left: 0.15rem;
+              font-size: 0.15rem;
+              color: white;
+
+              img {
+                width: 0.16rem;
+              }
+
+              p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.08rem;
+              }
+            }
+
+            .aVersionLog {
+              // position: relative;
+              left: 3.75rem;
+              top: 0.5rem;
+              font-size: 0.15rem;
+              color: white;
+              .version1 {
+                color: #f9c423;
+              }
+            }
+          }
+          .aVersionLog2 {
+            position: relative;
+            font-size: 0.15rem;
+            color: white;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex: 1;
+            .version2 {
+              color: #f5c701;
+            }
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='brownGold'] {
+    .reg_login_input_box {
+      background: #ffffff;
+      .header_Auth {
+        background: url('../../../assets/brownGold/login_register/header.png');
+        .authButtons {
+          .authBtnActive {
+            background: linear-gradient(to top, #ffddb8, #ffeed6);
+          }
+        }
+        .authContent {
+          .inputFields {
+            background-color: #ffffff;
+            .loginOverlay {
+              .mInfo {
+                color: #888888;
+              }
+              .aVersionLog {
+                color: #c4a994;
+                .version1 {
+                  color: #c4a994;
+                }
+              }
+            }
+            .authBorder {
+              background: #ededed;
+              .authLoginData {
+                color: #000;
+                &:-webkit-autofill,
+                &:-webkit-autofill:hover,
+                &:-webkit-autofill:focus,
+                &:-webkit-autofill:active {
+                  transition: background-color 5000s ease-in-out 0s;
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: black !important;
+                }
+              }
+              &::before {
+                background: none;
+              }
+            }
+            .aVersionLog2 {
+              .version2 {
+                color: #c4a994;
+              }
+            }
+            .authLoginData {
+              caret-color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='yellowWhite'] {
+    .reg_login_input_box {
+      background: #fff;
+      .header_Auth {
+        background: url('../../../assets/yellowWhite/login_register/header.png');
+        .authButtons {
+          .authBtnActive {
+            background: #0a0a0a;
+            span {
+              color: #fff;
+            }
+            &::before {
+              content: none;
+            }
+          }
+        }
+        .authContent {
+          .inputFields {
+            background-color: #fff;
+            .loginOverlay {
+              .mInfo {
+                color: #a11300;
+              }
+              .aVersionLog {
+                color: #0a0a0a;
+                .version1 {
+                  color: #a11300;
+                }
+              }
+            }
+            .authBorder {
+              background: #ededed;
+              .authLoginData {
+                color: #000;
+                &:-webkit-autofill,
+                &:-webkit-autofill:hover,
+                &:-webkit-autofill:focus,
+                &:-webkit-autofill:active {
+                  transition: background-color 5000s ease-in-out 0s;
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: black !important;
+                }
+              }
+              &::before {
+                padding: 0.01rem;
+                // background: none;
+              }
+            }
+            .aVersionLog2 {
+              color: #0a0a0a;
+              .version2 {
+                color: #a11300;
+              }
+            }
+            .authLoginData {
+              caret-color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='greenYellow'] {
+    .reg_login_input_box {
+      background: #04a17a;
+      .header_Auth {
+        background: url('../../../assets/greenYellow/login_register/header.png');
+        .authButtons {
+          .authBtnActive {
+            background: linear-gradient(180deg, #ffffff 0%, #ffe800 13.54%, #e39300 91.67%, #ffffff 100%);
+            span {
+              color: #511a00;
+            }
+            &::before {
+              content: none;
+            }
+          }
+        }
+        .authContent {
+          .inputFields {
+            background-color: #04a17a;
+            .loginOverlay {
+              .mInfo {
+                color: #ffffff;
+              }
+              .aVersionLog {
+                color: #ffffff;
+                .version1 {
+                  color: #facd12;
+                }
+              }
+            }
+            .authBorder {
+              background: #ffffff;
+              .authLoginData {
+                color: #000;
+                &:-webkit-autofill,
+                &:-webkit-autofill:hover,
+                &:-webkit-autofill:focus,
+                &:-webkit-autofill:active {
+                  transition: background-color 5000s ease-in-out 0s;
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: black !important;
+                }
+              }
+              &::before {
+                padding: 0.01rem;
+                background: linear-gradient(270deg, #df8e00 0%, #ffea01 100%);
+                // background: none;
+              }
+            }
+            .aVersionLog2 {
+              color: #fff;
+              .version2 {
+                color: #facd12;
+              }
+            }
+            .authLoginData {
+              caret-color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='skyBlue'] {
+    .reg_login_input_box {
+      background: #f4f6f9;
+      .header_Auth {
+        background: url('../../../assets/skyBlue/login_register/header.png');
+        .authButtons {
+          color: #fff;
+          .authBtnActive {
+            background: #0081ca;
+            span {
+              color: #ffffff;
+            }
+            &::before {
+              content: none;
+            }
+          }
+        }
+        .authContent {
+          .inputFields {
+            background-color: #f4f6f9 !important;
+
+            .loginOverlay {
+              .mInfo {
+                color: #888888;
+              }
+              .aVersionLog {
+                color: #888888;
+                .version1 {
+                  color: #0ca0e9;
+                }
+              }
+            }
+            .authBorder {
+              background: #ffffff;
+              .authLoginData {
+                color: #000;
+                &:-webkit-autofill,
+                &:-webkit-autofill:hover,
+                &:-webkit-autofill:focus,
+                &:-webkit-autofill:active {
+                  transition: background-color 5000s ease-in-out 0s;
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: black !important;
+                }
+              }
+              &::before {
+                background: none;
+              }
+            }
+            .aVersionLog2 {
+              color: #888888;
+              .version2 {
+                color: #0ca0e9;
+              }
+            }
+            .authLoginData {
+              caret-color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='darkBlue'] {
+    .reg_login_input_box {
+      background: linear-gradient(270deg, #29334b 0%, #4d6296 100%);
+      .header_Auth {
+        background: url('../../../assets/darkBlue/login_register/header.png');
+        .authButtons {
+          color: #162752;
+          .authBtnActive {
+            background: linear-gradient(90deg, #e1f5fe 0%, #ffffff 100%);
+            span {
+              color: #162752;
+            }
+            &::before {
+              content: none;
+            }
+          }
+        }
+        .authContent {
+          .inputFields {
+            background: linear-gradient(270deg, #29334b 0%, #4d6296 100%);
+            .loginOverlay {
+              .mInfo {
+                color: #fff;
+              }
+              .aVersionLog {
+                color: #fff;
+                .version1 {
+                  color: #f9c423;
+                }
+              }
+            }
+            .authBorder {
+              background: #ededed;
+              .authLoginData {
+                color: #000;
+                &:-webkit-autofill,
+                &:-webkit-autofill:hover,
+                &:-webkit-autofill:focus,
+                &:-webkit-autofill:active {
+                  transition: background-color 5000s ease-in-out 0s;
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: black !important;
+                }
+              }
+              &::before {
+                background: none;
+              }
+            }
+            .aVersionLog2 {
+              color: #fff;
+              .version2 {
+                color: #f9c423;
+              }
+            }
+            .authLoginData {
+              caret-color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='redGold'] {
+    .reg_login_input_box {
+      background: linear-gradient(90deg, #af0100 0%, #ff6b00 100%);
+      .header_Auth {
+        background: url('../../../assets/redGold/login_register/header.png');
+        .authButtons {
+          color: #511a00;
+          .authBtnActive {
+            background: linear-gradient(90deg, #fdf8f8 0%, #f7eeee 100%);
+            span {
+              color: #511a00;
+            }
+            &::before {
+              content: none;
+            }
+          }
+        }
+        .authContent {
+          .inputFields {
+            background: linear-gradient(90deg, #af0100 0%, #ff6b00 100%);
+            .loginOverlay {
+              .mInfo {
+                color: #fff;
+              }
+              .aVersionLog {
+                color: #fff;
+                .version1 {
+                  color: #f9c423;
+                }
+              }
+            }
+            .authBorder {
+              background: #ededed;
+              .authLoginData {
+                color: #000;
+                &:-webkit-autofill,
+                &:-webkit-autofill:hover,
+                &:-webkit-autofill:focus,
+                &:-webkit-autofill:active {
+                  transition: background-color 5000s ease-in-out 0s;
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: black !important;
+                }
+              }
+              &::before {
+                background: none;
+              }
+            }
+            .aVersionLog2 {
+              color: #fff;
+              .version2 {
+                color: #f9c423;
+              }
+            }
+            .authLoginData {
+              caret-color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='whiteGold'] {
+    .reg_login_input_box {
+      background: #dadce7;
+      .header_Auth {
+        background: url('../../../assets/redGold/login_register/header.png');
+        .authButtons {
+          color: #511a00;
+          .authBtnActive {
+            background: linear-gradient(206.77deg, #fcf0b9 16.76%, #dba733 83.24%);
+            span {
+              color: #511a00;
+            }
+            &::before {
+              content: none;
+            }
+          }
+        }
+        .authContent {
+          .inputFields {
+            background: #dadce7;
+            .loginOverlay {
+              .mInfo {
+                color: #435689;
+              }
+              .aVersionLog {
+                color: #435689;
+                .version1 {
+                  color: #d5a93d;
+                }
+              }
+            }
+            .authBorder {
+              background: #ededed;
+              .authLoginData {
+                color: #000;
+                &:-webkit-autofill,
+                &:-webkit-autofill:hover,
+                &:-webkit-autofill:focus,
+                &:-webkit-autofill:active {
+                  transition: background-color 5000s ease-in-out 0s;
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: black !important;
+                }
+              }
+              &::before {
+                background: none;
+              }
+            }
+            .aVersionLog2 {
+              color: #435689;
+              .version2 {
+                color: #d5a93d;
+              }
+            }
+            .authLoginData {
+              caret-color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}

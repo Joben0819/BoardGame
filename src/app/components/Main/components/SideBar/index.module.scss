@@ -1,0 +1,99 @@
+.sidebarWrapper {
+  position: relative;
+  width: 1.62rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--home-bg-sidebar) center / 100% 101% no-repeat;
+  .title {
+    position: relative;
+    background: var(--home-bg-title-sidebar) center / contain no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.08rem;
+    width: 98%;
+    height: 0.5rem;
+    img {
+      content: var(--home-title-sidebar);
+      height: 0.23rem;
+      width: auto;
+    }
+  }
+
+  .list {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.18rem;
+    .pullToRefresh {
+      :global {
+        .ptr__pull-down > div {
+          p {
+            font-size: 0.15rem;
+            color: #f6da85;
+            text-align: center !important;
+          }
+        }
+      }
+    }
+    .sidebarSwiper {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      overflow-y: auto;
+      .sideBarItemContainer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.18rem;
+        height: 0.6rem;
+        width: 100%;
+        cursor: pointer;
+        .sideBarItem {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          text-align: right;
+          .icon {
+            height: 0.3rem;
+            width: auto;
+            margin-left: 0.175rem;
+          }
+          span {
+            flex: 1;
+            background: var(--home-text-unactive);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            margin-right: 0.24rem;
+            font-weight: 600;
+            cursor: pointer;
+          }
+          &.sidebarItemActive {
+            background: var(--home-bg-active) center / cover no-repeat;
+            span {
+              background: var(--home-text-active);
+              -webkit-text-fill-color: transparent;
+              -webkit-background-clip: text;
+            }
+          }
+        }
+        img {
+          width: 100%;
+          height: 0.008rem;
+        }
+      }
+    }
+  }
+}

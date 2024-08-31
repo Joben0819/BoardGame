@@ -1,0 +1,41 @@
+.clearPage_wrapper {
+  color: white;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  .helpPage_wrapper {
+    font-size: 0.15rem;
+    overflow-y: auto;
+    width: 100%;
+    color: white;
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      // gap: 0.05rem;
+    }
+    li {
+      width: 100%;
+      list-style-type: none;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.pullToRefresh {
+  :global {
+    .ptr__pull-down > div {
+      p {
+        font-size: 0.15rem;
+        color: #f6da85;
+        text-align: center !important;
+      }
+    }
+
+    .ptr__children {
+      overflow: scroll;
+    }
+  }
+}

@@ -1,0 +1,252 @@
+.withdrawPageWrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  .withdrawContentWrapper {
+    display: flex;
+    height: calc(100% - 0.4rem);
+
+    .withdrawContents {
+      display: flex;
+      flex: 1;
+    }
+    &[data-theme="blackGold"] {
+      :global {
+        .copyOrder_button {
+          border: #72728f 0.001rem solid;
+          span {
+            background: -webkit-linear-gradient(#757575, #757575);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+    }
+    &[data-theme="brownGold"] {
+      :global {
+        .copyOrder_button {
+          border: #72728f 0.004rem solid;
+          span {
+            background: -webkit-linear-gradient(#757575, #757575);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+        .textcolorgreen {
+          color: #42f166;
+          background: -webkit-linear-gradient(#42f166, #42f166);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .textcolorred {
+          background: -webkit-linear-gradient(#ff0000, #ff0000);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .textcolor75 {
+            background: -webkit-linear-gradient(#888888, #888888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &[data-theme="yellowWhite"] {
+      :global {
+        .orderNo_value {
+          > span {
+            background: -webkit-linear-gradient(#a11300, #a11300) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+          }
+        }
+        .textcolorgreen {
+          color: #42f166;
+          background: -webkit-linear-gradient(#42f166, #42f166);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .textcolorred {
+          background: -webkit-linear-gradient(#ff0000, #ff0000);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .textcolor75 {
+            background: -webkit-linear-gradient(#C5915A, #C5915A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        table {
+          tbody tr:nth-child(odd) {
+            background: #f1f1f1;
+          }
+          tbody tr:nth-child(even) {
+            background: #fefeff;
+          }
+          span {
+            font-size: 0.15rem;
+          }
+        }
+        .copyOrder_button {
+          background: #0a0a0a;
+          border: 1px solid #72728f;
+          span {
+            font-size: 0.1rem;
+            background: -webkit-linear-gradient(#ffc400, #ffc400);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+    }
+    &[data-theme="greenYellow"] {
+      :global {
+        .copyOrder_button {
+          background: #3b8675;
+          border: 1px solid #df8e00;
+          span {
+            background: -webkit-linear-gradient(#fff, #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+        .textcolorgreen {
+          color: #42f166;
+          background: -webkit-linear-gradient(#42f166, #42f166);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .textcolorred {
+          background: -webkit-linear-gradient(#ff0000, #ff0000);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .textcolor75 {
+            background: -webkit-linear-gradient(#6B6B6B, #6B6B6B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &[data-theme="skyBlue"] {
+      :global {
+        .copyOrder_button {
+          background: transparent;
+          border: 1px solid #72728f;
+          span {
+            background: -webkit-linear-gradient(#757575, #757575);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+        .textcolorgreen {
+          color: #42f166;
+          background: -webkit-linear-gradient(#42f166, #42f166);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .textcolorred {
+          background: -webkit-linear-gradient(#ff0000, #ff0000);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .textcolor75 {
+            background: -webkit-linear-gradient(#888888, #888888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &[data-theme="darkBlue"] {
+      :global {
+        .copyOrder_button {
+          background: transparent;
+          border: 1px solid #fff;
+          span {
+            background: -webkit-linear-gradient(#fff, #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+        .textcolorgreen {
+          color: #42f166;
+          background: -webkit-linear-gradient(#42f166, #42f166);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .textcolorred {
+          background: -webkit-linear-gradient(#ff0000, #ff0000);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .textcolor75 {
+            background: -webkit-linear-gradient(#fefeff, #fefeff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &[data-theme="redGold"] {
+      :global {
+        .copyOrder_button {
+          background: transparent;
+          border: 1px solid #72728f;
+          span {
+            background: -webkit-linear-gradient(#72728f, #72728f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+        .textcolorgreen {
+          color: #42f166;
+          background: -webkit-linear-gradient(#42f166, #42f166);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .textcolorred {
+          background: -webkit-linear-gradient(#ff0000, #ff0000);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .textcolor75 {
+            background: -webkit-linear-gradient(#757575, #757575);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &[data-theme="whiteGold"] {
+      :global {
+        .copyOrder_button {
+          background: rgba(68, 68, 68, 0.5);
+          border: none;
+          span {
+            background: -webkit-linear-gradient(#fff, #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+        .textcolorgreen {
+          color: #42f166;
+          background: -webkit-linear-gradient(#42f166, #42f166);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .textcolorred {
+          background: -webkit-linear-gradient(#ff0000, #ff0000);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+}

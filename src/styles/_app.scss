@@ -1,0 +1,170 @@
+@import '/src/styles/_helpers.scss';
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pleaseRotate {
+  position: absolute;
+  @include flex-xy;
+  flex-direction: column;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(0);
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+
+  .phone {
+    height: 1rem;
+    width: 2rem;
+    border: 3px solid white;
+    border-radius: 10px;
+    animation: rotate 1.5s ease-in-out infinite alternate;
+  }
+
+  .message {
+    @include flex-xy;
+    flex-direction: column;
+    color: white;
+    font-size: 0.3rem;
+    margin-top: 0.8rem;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .pleaseRotate {
+    display: none;
+  }
+}
+
+.settingsCon {
+  background-color: #f9d57a;
+}
+
+.gearIcon {
+  position: absolute;
+  top: 0.03rem;
+  right: 0.275rem;
+  width: 0.2rem;
+}
+
+.gearText {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.23rem;
+  width: 0.3rem;
+}
+
+// ________________________________ Modal Component _____________________________________
+
+.overlay {
+  background: rgba(0, 0, 0, 0.472);
+  height: 100%;
+  width: 100%;
+  transform: translateZ(0);
+  z-index: 12 !important;
+  position: absolute !important;
+  top: 0;
+  font-size: 0.08rem;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer {
+  background-image: url('../app/assets/commons/login_bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 4.9rem;
+  height: 3rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+  .closeBtn {
+    padding: 0.1rem;
+    font-size: 0.12rem;
+    float: right;
+    color: grey;
+  }
+
+  .btnContainer {
+    ul {
+      list-style: none;
+      display: flex;
+      position: relative;
+      top: 2.54rem;
+      left: 0.75rem;
+      li {
+        margin-left: 0.12rem;
+        img {
+          width: 1.06rem;
+        }
+      }
+    }
+  }
+}

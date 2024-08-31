@@ -1,0 +1,17 @@
+.withdrawalRecordWrapper {
+  flex: 1;
+  position: relative;
+  padding: 0.1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.1rem;
+  font-size: 0.15rem;
+}
+
+.noDataContainer{
+  height: 100%;
+  width: 100%;
+}

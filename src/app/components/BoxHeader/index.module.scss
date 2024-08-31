@@ -1,0 +1,22 @@
+@import '/src/styles/_helpers.scss';
+
+.wrapper {
+  font-weight: 700;
+
+  .header {
+    width: 100%;
+    height: 0.3rem;
+    border: none;
+    border-bottom: var(--security-header-border) 0.01rem solid;
+    background: var(--security-header-bg);
+    font-size: 0.15rem;
+  }
+
+  .titleHolder {
+    @include flex-xy;
+    width: 1.2rem;
+    height: 0.3rem;
+    color: var(--security-title-text);
+    background: var(--security-title-bg);
+  }
+}

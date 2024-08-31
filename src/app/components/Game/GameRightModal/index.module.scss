@@ -1,0 +1,538 @@
+.overlay {
+  background: rgba(0, 0, 0, 0.472);
+  height: 100%;
+  width: 100%;
+  transform: translateZ(0);
+  z-index: 10 !important;
+  position: absolute !important;
+  top: 0;
+  font-size: 0.08rem;
+  left: 0;
+
+  .gameRightModalContainer {
+    color: white;
+    width: 4rem;
+    margin-top: 0.4rem;
+    height: calc(100% - 0.4rem);
+    background: #161616;
+    float: right;
+    border-radius: 0.08rem;
+    border: solid #313149 0.004rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: auto;
+  }
+
+  .gameRightModalTimer {
+  }
+
+  .gameDetailHeader {
+    // background:#0786FE;
+    width: 4rem;
+    height: 0.65rem;
+    text-align: center;
+    padding-top: 0.33rem;
+
+    .gameDetailTitle {
+      font-size: 0.25rem;
+      font-weight: 700;
+    }
+
+    .gameDetailSub {
+      font-size: 0.15rem;
+      display: flex;
+      // justify-content: space-between;
+      align-items: center;
+      margin-top: 0.08rem;
+      justify-content: center;
+      // padding: 0 0.5rem 0 0.3rem;
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      > span > div {
+        margin-left: 0.2rem;
+
+        svg {
+          display: none;
+        }
+
+        .timer {
+          color: #11d38a;
+        }
+      }
+    }
+  }
+
+  .gameDetailBody {
+    //   background:#11D38A;
+    width: 4rem;
+    height: 1.9rem;
+    padding-top: 0.25rem;
+    .gameDetailsBetHistory {
+      width: 3.7rem;
+      margin-left: 0.15rem;
+      height: 1.8rem;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  .gameDetailBetRecord {
+    font-size: 0.15rem;
+    display: flex;
+    height: 0.3rem;
+    padding: 0.03rem 0.06rem;
+    // background:rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.01rem;
+
+    .betRecordName {
+      width: 3rem;
+    }
+
+    .betRecordAmount {
+      width: 1rem;
+    }
+  }
+
+  .gameDetailFooter {
+    width: 3.8rem;
+    height: 1rem;
+    padding: 0.15rem 0.1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .gameDetailFooterInformation {
+    background: #2c2c2c;
+    width: 3.7rem;
+    position: relative;
+    border-radius: 0.08rem;
+    padding: 0.05rem;
+  }
+
+  .gameDetailEndMostContainer {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 0.05rem;
+  }
+
+  .coinPurseHolder {
+    position: absolute;
+    left: 0.2rem;
+    top: 0.1rem;
+  }
+
+  .gameDetailsButtonHolder {
+    // margin-top: 0.1rem;
+    // margin-left: 2.8rem;
+  }
+
+  .gameDetailMultiplierContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0.3rem;
+    width: 100%;
+    padding: 0.025rem 0;
+    margin-top: 0.05rem;
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 0.1rem;
+      li {
+        > div {
+          padding: 0 !important;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    &[data-theme="darkBlue"]{
+      :global{
+        ul{
+          li{
+            > div {
+              color: #fff;
+              background: #00000070;
+              border: #fff solid 0.004rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .importWhite {
+    background: -webkit-linear-gradient(#ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .importBlack {
+    background: -webkit-linear-gradient(#000000, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .lotteryChipsImage {
+    width: 0.25rem;
+    height: 0.25rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    font-size: 0.15rem;
+    background: url("./../../../assets//commons/lotteryAssets/lotteryBall.png");
+    text-align: center;
+    text-justify: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: black;
+    margin: 0.15rem 0.025rem;
+  }
+
+  .BetRecordModal_mainWrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .betRecordBody {
+    background: #1a1a1a;
+    width: 4rem;
+    height: 3rem;
+    border: solid 0.004rem #cfae79;
+    border-radius: 0.04rem;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+  }
+
+  .betRecordHeader {
+    margin-top: -0.05rem;
+    background: url("./../../../assets/blackGold/header/header_bg.png");
+    background-size: cover;
+    width: 4rem;
+    height: 0.52rem;
+    border-top-left-radius: 0.03rem;
+    border-top-right-radius: 0.03rem;
+    display: flex;
+    color: #651d00;
+    -webkit-text-fill-color: #651d00 !important;
+
+    .xButton {
+      font-size: 0.15rem;
+      color: #511a00;
+      margin-left: 0.7rem;
+      margin-top: 0.16rem;
+    }
+  }
+
+  .betRecordContent {
+    width: 3.8rem;
+    height: 2rem;
+    padding: 0.1rem;
+
+    li {
+      list-style: none;
+    }
+
+    // background:pink;
+  }
+
+  .bet1 {
+    background: #222222;
+    color: white;
+  }
+  .bet2 {
+    background: #000;
+    color: white;
+  }
+
+  &[data-theme="brownGold"] {
+    background: rgba(0, 0, 0, 0.472);
+
+    .gameRightModalContainer {
+      color: #888888;
+      background: #ededed;
+      .gameDetailTitle{
+        color: #735C4B;
+      }
+    }
+
+    .gameDetailFooterInformation {
+      background: #ffffff;
+      color: #000000;
+    }
+
+    .gameDetailYellowText {
+      color: #c4a994 !important;
+    }
+
+    .bet2 {
+      background: #f7ede7;
+      color: #000000;
+    }
+
+    .bet1 {
+      background: #ffffff;
+      color: #000000;
+    }
+
+    :global {
+      .coinInput2 {
+        &::before {
+          background: rgba(0, 0, 0, 0.5);
+          -webkit-mask: unset;
+        }
+        input {
+          z-index: 1;
+          background: linear-gradient(
+            180deg,
+            #fee587 0%,
+            #ffb02b 100%
+          ) !important;
+          -webkit-background-clip: text !important;
+          -webkit-text-fill-color: transparent !important;
+        }
+      }
+    }
+  }
+  &[data-theme="yellowWhite"] {
+    background: rgba(0, 0, 0, 0.472);
+    .betRecordAmount {
+      color: #a11300 !important;
+    }
+    .bet2 {
+      background: #fefeff;
+      color: #c5915a;
+    }
+    .bet1 {
+      background: #ffffff00;
+      color: #c5915a;
+    }
+
+    .gameRightModalContainer {
+      color: #c5915a;
+      background: #ebedf1;
+      .gameDetailTitle{
+        color: #0a0a0a;
+      }
+    }
+
+    .gameDetailFooterInformation {
+      background: #fefeff;
+      color: #c5915a;
+    }
+
+    .gameDetailYellowText {
+      color: #a11300 !important;
+    }
+
+    .gameDetailSub {
+      :global {
+        .timer {
+          .value {
+            color: #0a0a0a;
+          }
+        }
+      }
+    }
+
+    .coinPurseHolder {
+      :global {
+        .coinpurse_wrapper {
+          .coinInput2 {
+            &::before {
+              background: linear-gradient(to top, #DEC18C, #FFEDA7);
+            }
+            input {
+              background: #EBEDF1 !important;
+              color: #a11300 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  &[data-theme="greenYellow"] {
+    background: rgba(0, 0, 0, 0.472);
+    .bet1 {
+      background: #7ab9a9;
+      color: #511a00;
+    }
+    .bet2 {
+      background: #f2f2f2;
+      color: #511a00;
+    }
+    .gameRightModalContainer {
+      color: #511a00;
+      background: #d6eae4;
+    }
+
+    .gameDetailFooterInformation {
+      background: linear-gradient(to top, #00a57b, #0e9473);
+      color: #ffffff !important;
+    }
+
+    .gameDetailYellowText {
+      color: #facd12 !important;
+    }
+  }
+  &[data-theme="skyBlue"] {
+    background: rgba(0, 0, 0, 0.472);
+    .bet2 {
+      background: #fefeff;
+      color: #000000;
+    }
+    .bet1 {
+      background: #ffffff00;
+      color: #000000;
+    }
+    .gameDetailTitle {
+      color: #0ca0e9;
+      padding-bottom: 0.15rem;
+    }
+    .gameRightModalContainer {
+      color: #888888;
+      background: #f4f6f9;
+    }
+
+    .gameDetailFooterInformation {
+      background: #ffffff;
+      color: #888888;
+    }
+
+    .gameDetailYellowText {
+      color: #0ca0e9 !important;
+    }
+    :global {
+      .coinInput2 {
+        &::before {
+          background: none;
+          -webkit-mask: unset;
+        }
+        input {
+          color: #ffe800 !important;
+        }
+      }
+    }
+  }
+  &[data-theme="darkBlue"] {
+    background: rgba(0, 0, 0, 0.472);
+    .bet1 {
+      background: #f7ede700;
+      color: white;
+    }
+    .bet2 {
+      background: #ffffff;
+      color: #29468d;
+    }
+    .gameRightModalContainer {
+      color: #ffffff;
+      background: linear-gradient(to right, #29334b, #4d6296);
+    }
+
+    .gameDetailFooterInformation {
+      background: linear-gradient(to top, #8aeaff, #ffffff);
+      color: #ffffff;
+    }
+
+    .gameDetailYellowText {
+      color: #29468d !important;
+    }
+  }
+  &[data-theme="redGold"] {
+    background: rgba(0, 0, 0, 0.472);
+
+    .bet1 {
+      background: linear-gradient(to right, #f6eeee, #fdf8f8);
+      color: #080000;
+    }
+    .bet2 {
+      background: linear-gradient(to left, #f4e8e8, #f1dbdb);
+      color: #080000;
+    }
+
+    .gameRightModalContainer {
+      color: #080000;
+
+      background: #c9bebe;
+    }
+
+    .gameRightModalContainer {
+      .gameDetailTitle{
+        color: #6A1211;
+      }
+    }
+
+    .gameDetailFooterInformation {
+      background: linear-gradient(to right, #af0100, #ff6b00);
+      color: #fff;
+    }
+  }
+  &[data-theme="whiteGold"] {
+    background: rgba(0, 0, 0, 0.472);
+
+    .gameRightModalContainer {
+      color: #435689;
+      background: #dadce7;
+    }
+    .gameDetailYellowText {
+      color: #435689 !important;
+    }
+
+    .gameDetailFooterInformation {
+      background: #f9f9f9;
+      color: #fff;
+    }
+
+    .bet2 {
+      background: #f9f9f9;
+      color: #435689;
+    }
+    .bet1 {
+      background: #ffeec3;
+      color: #435689;
+    }
+
+    .gameRightModalContainer {
+      .gameDetailTitle{
+        color: #1D2D61;
+      }
+      .gameDetailSub{
+        :global {
+          .value{
+            color: #06B100;
+          }
+        }
+      }
+      .betRecordAmount {
+        color: #06B100 !important;
+      }
+    }
+    
+    .coinPurseHolder{
+      :global {
+        input {
+          color: #fff !important;
+        }
+      }
+    }
+  }
+}

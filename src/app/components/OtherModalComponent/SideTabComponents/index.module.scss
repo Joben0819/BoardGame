@@ -1,0 +1,80 @@
+.otherModal_sideActive {
+    width: 2rem;
+    padding: 0.1rem;
+    font-weight: 900;
+    margin-bottom: 0.05rem;
+    background: url("../../../assets/blackGold/other_modal/OtherActiveTab.png");
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    color: #511a00;
+  &[data-theme="brownGold"]{
+    background: url("../../../assets/brownGold/other_modal/OtherActiveTab.png");
+  }&[data-theme="yellowWhite"]{
+    background: url("../../../assets/yellowWhite/other_modal/OtherActiveTab.png");
+    color: #0A0A0A;
+  }
+  &[data-theme="greenYellow"]{
+    background: url("../../../assets/greenYellow/other_modal/OtherActiveTab.png");
+  }
+  &[data-theme="skyBlue"]{
+    background: url("../../../assets/skyBlue/other_modal/OtherActiveTab.png");
+  }
+  &[data-theme="darkBlue"]{
+    background: url("../../../assets/darkBlue/other_modal/OtherActiveTab.png");
+  }
+  &[data-theme="redGold"]{
+    background: url("../../../assets/redGold/other_modal/OtherActiveTab.png");
+  }
+  &[data-theme="whiteGold"]{
+    background: url("../../../assets/whiteGold/other_modal/OtherActiveTab.png");
+  }
+}
+.otherModal_sidetab {
+    width: 2rem;
+    padding: 0.1rem;
+    font-weight: 900;
+    margin-bottom: 0.05rem;
+    background: url("../../../assets/blackGold/other_modal/OtherInactiveTab.png");
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    &[data-theme="brownGold"]{
+        background: url("../../../assets/brownGold/other_modal/OtherInactiveTab.png");
+        color: white;
+    }&[data-theme="yellowWhite"]{
+      background: url("../../../assets/yellowWhite/other_modal/OtherInactiveTab.png");
+      color: #FFC400;
+    }
+    &[data-theme="greenYellow"]{
+      background: url("../../../assets/greenYellow/other_modal/OtherInactiveTab.png");
+      color: white;
+    }
+    &[data-theme="skyBlue"]{
+      background: url("../../../assets/skyBlue/other_modal/OtherInactiveTab.png");
+      color: white;
+    }
+    &[data-theme="darkBlue"]{
+      background: url("../../../assets/darkBlue/other_modal/OtherInactiveTab.png");
+      color: white;
+    }
+    &[data-theme="redGold"]{
+      background: url("../../../assets/redGold/other_modal/OtherInactiveTab.png");
+      color: white;
+    }
+    &[data-theme="whiteGold"]{
+      background: url("../../../assets/whiteGold/other_modal/OtherInactiveTab.png");
+      color: #435689;
+    }
+}
+
+.homeNoticesTab{
+  position: relative;
+  s{
+    position: absolute;
+    left: 0.05rem;
+    top: 0.04rem;
+    width: 0.07rem;
+    height: 0.07rem;
+    border-radius: 0.07rem;
+    background-color: red;
+  }
+}

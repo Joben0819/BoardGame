@@ -1,0 +1,842 @@
+@import '/src/styles/_helpers.scss';
+
+.container {
+  width: 100%;
+  height: 99.9%;
+  font-weight: 700;
+  &[data-theme='brownGold'] {
+    .bettingRecord_roundedTabs {
+      .bettingRecord_roundtabActive {
+        color: white;
+      }
+    }
+  }
+  &[data-theme='skyBlue'] {
+    .bettingRecord_roundedTabs {
+      .bettingRecord_roundtabActive {
+        color: #fff;
+      }
+    }
+  }
+  &[data-theme='darkBlue'] {
+    .bettingRecord_roundedTabs {
+      .bettingRecord_roundtabActive {
+        span {
+          background: -webkit-linear-gradient(#fff, #8aeaff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.bettingRecord_wrapper {
+  width: 100%;
+  height: 100%;
+  font-size: 0.15rem;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  :global {
+    .NoData_bgImageContainer {
+      height: unset;
+      flex: 1;
+    }
+  }
+}
+
+.bettingRecord_roundedTabs {
+  margin: 0.05rem 0;
+  width: 100%;
+  height: 0.35rem;
+  border-radius: 2rem;
+  position: relative;
+  background: var(--record-roundedTabs-bg);
+  color: var(--record-roundedTabs-color);
+  overflow-x: scroll;
+  white-space: nowrap;
+  overflow: scroll;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size: 0.12rem !important;
+  overflow-y: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  ul {
+    position: relative;
+    list-style: none;
+    display: flex;
+    height: 100%;
+
+    li {
+      @include flex-xy;
+      z-index: 3;
+    }
+
+    .liActive {
+      width: 100%;
+      border-radius: 10rem;
+      background: transparent;
+      position: relative;
+      z-index: 3;
+      height: 100%;
+      margin-bottom: 0.04rem;
+    }
+
+    .activeNav {
+      position: absolute;
+      height: 100%;
+      width: 0.9rem;
+      border-radius: 10rem;
+      pointer-events: none;
+      z-index: 1;
+
+      &::after {
+        content: '';
+        width: 98%;
+        position: absolute;
+        z-index: 2;
+        inset: 0;
+        padding: 0.015rem;
+        border-radius: 15rem;
+        background: var(--record-activeNav-after-bg);
+        -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box, linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+      }
+
+      div {
+        height: 100%;
+        width: 100%;
+        background: var(--record-activeNav-bg);
+      }
+    }
+  }
+
+  .bettingRecord_roundtab {
+    @include flex-xy;
+    font-size: 0.14rem;
+    width: 0.9rem;
+    height: 100%;
+    border-radius: 2rem;
+  }
+
+  .bettingRecord_roundtabActive {
+    @include flex-xy;
+    font-size: 0.14rem;
+    width: 0.9rem;
+    height: 100%;
+    color: #511a00;
+    border-radius: 2rem;
+  }
+}
+
+.bettingRecord_dropdownContainer {
+  width: 100%;
+  display: flex;
+
+  .bettingRecord_dropdownLabel {
+    @include flex-xy;
+    width: 0.85rem;
+    color: var(--record-dropdownLabel-color);
+  }
+
+  .bettingRecordDropdown {
+    select {
+      width: 1rem;
+      height: 0.3rem;
+      margin-top: 0.05rem;
+      padding: 0.06rem;
+      color: #757575;
+      background: #2c2c2c;
+      border-radius: 0.03rem;
+      font-size: 0.15rem;
+
+      option {
+        color: white;
+        border-radius: none;
+        background: #222222;
+      }
+    }
+    .css-13cymwt-control {
+      box-shadow: none !important;
+    }
+    &[data-theme='blackGold'] {
+      :global {
+        .vipSelectdd__control {
+          @include flex-xy;
+          max-width: 1rem;
+          min-width: 0.8rem;
+          height: 0.25rem;
+          border-style: none;
+          border: none !important;
+          border-radius: 0;
+          text-align: center;
+          font-size: 0.1rem;
+          &:focus {
+            outline: none;
+            border: none;
+          }
+        }
+
+        .vipSelectdd__indicators {
+          @include flex-xy;
+          width: 0.2rem;
+          svg {
+            width: 0.2rem;
+          }
+        }
+
+        .vipSelectdd__indicator-separator {
+          display: none;
+        }
+
+        .vipSelectdd__menu-list {
+        }
+        .vipSelectdd {
+        }
+
+        .vipSelectdd__value-container {
+        }
+
+        .vipSelectdd__indicators {
+        }
+
+        .vipSelectdd__single-value {
+        }
+
+        .vipSelectdd__option {
+          @include flex-xy;
+          max-width: 1rem;
+          min-width: 0.8rem;
+          height: 0.2rem;
+          border-style: none;
+          border: none !important;
+          text-align: center;
+          font-size: 0.1rem !important;
+        }
+      }
+    }
+    &[data-theme='brownGold'] {
+      :global {
+        .vipSelectdd__control {
+          @include flex-xy;
+          max-width: 1rem;
+          min-width: 0.8rem;
+          height: 0.25rem;
+          border-style: none;
+          border: none !important;
+          border-radius: 0;
+          color: #ffffff !important;
+          text-align: center;
+          background-color: #c4a994 !important;
+
+          font-size: 0.1rem;
+          &:focus {
+            outline: none;
+            border: none;
+          }
+        }
+
+        .vipSelectdd__indicators {
+          @include flex-xy;
+          width: 0.2rem;
+          svg {
+            color: #fff !important;
+            width: 0.2rem;
+          }
+        }
+
+        .vipSelectdd__indicator-separator {
+          display: none;
+        }
+
+        .vipSelectdd__menu-list {
+          color: white;
+          background-color: #fdf8f8 !important;
+        }
+        .vipSelectdd {
+          color: #fff !important;
+          background-color: #c4a994 !important;
+        }
+
+        .vipSelectdd__value-container {
+          color: #fff !important;
+          background-color: #c4a994 !important;
+          border: none;
+        }
+
+        .vipSelectdd__indicators {
+          background-color: #c4a994 !important;
+          border: none;
+        }
+
+        .vipSelectdd__single-value {
+          color: #fff !important;
+        }
+
+        .vipSelectdd__option {
+          @include flex-xy;
+          max-width: 1rem;
+          min-width: 0.8rem;
+          height: 0.2rem;
+          border-style: none;
+          border: none !important;
+
+          color: #888888;
+          text-align: center;
+          background-color: #fff !important;
+          font-size: 0.1rem !important;
+        }
+        .vipSelectdd__option--is-focused {
+          background-color: #f4f4e8 !important;
+        }
+        .vipSelectdd__option--is-selected {
+          color: #511a00;
+          background-color: #c4a994 !important;
+        }
+      }
+    }
+    &[data-theme='yellowWhite'] {
+      :global {
+        .vipSelectdd__control {
+          @include flex-xy;
+          max-width: 1rem;
+          min-width: 0.8rem;
+          height: 0.25rem;
+          border-style: none;
+          border: none !important;
+          border-radius: 0;
+          color: #757575 !important;
+          text-align: center;
+          background-color: #ffffff !important;
+
+          font-size: 0.1rem;
+          &:focus {
+            outline: none;
+            border: none;
+          }
+        }
+
+        .vipSelectdd__indicators {
+          @include flex-xy;
+          width: 0.2rem;
+          svg {
+            color: #757575 !important;
+            width: 0.2rem;
+          }
+        }
+
+        .vipSelectdd__indicator-separator {
+          display: none;
+        }
+
+        .vipSelectdd__menu-list {
+          color: white;
+          background-color: #fdf8f8 !important;
+        }
+        .vipSelectdd {
+          color: #757575 !important;
+          background-color: #ffffff !important;
+        }
+
+        .vipSelectdd__value-container {
+          color: #757575 !important;
+          background-color: #ffffff !important;
+          border: none;
+        }
+
+        .vipSelectdd__indicators {
+          background-color: #ffffff !important;
+          border: none;
+        }
+
+        .vipSelectdd__single-value {
+          color: #757575 !important;
+        }
+
+        .vipSelectdd__option {
+          @include flex-xy;
+          max-width: 1rem;
+          min-width: 0.8rem;
+          height: 0.2rem;
+          border-style: none;
+          border: none !important;
+
+          color: #c5915a;
+          text-align: center;
+          background-color: #fdf8f8 !important;
+          font-size: 0.1rem !important;
+        }
+        .vipSelectdd__option--is-focused {
+          background-color: #f4f4e8 !important;
+        }
+        .vipSelectdd__option--is-selected {
+          color: #511a00;
+          background-color: #e9cb7b !important;
+        }
+      }
+    }
+    &[data-theme='greenYellow'] {
+      :global {
+        .vipSelectdd__control {
+          @include flex-xy;
+          max-width: 1rem;
+          min-width: 0.8rem;
+          height: 0.25rem;
+          border-style: none;
+          border: none !important;
+          border-radius: 0;
+          color: #bebebe !important;
+          text-align: center;
+          background-color: #008463 !important;
+
+          font-size: 0.1rem;
+          &:focus {
+            outline: none;
+            border: none;
+          }
+        }
+
+        .vipSelectdd__indicators {
+          @include flex-xy;
+          width: 0.2rem;
+          svg {
+            color: #bebebe !important;
+            width: 0.2rem;
+          }
+        }
+
+        .vipSelectdd__indicator-separator {
+          display: none;
+        }
+
+        .vipSelectdd__menu-list {
+          color: white;
+          background-color: #17a07e !important;
+        }
+        .vipSelectdd {
+          color: #435689 !important;
+          background-color: #008463 !important;
+        }
+
+        .vipSelectdd__value-container {
+          color: #435689 !important;
+          background-color: #008463 !important;
+          border: none;
+        }
+
+        .vipSelectdd__indicators {
+          background-color: #008463 !important;
+          border: none;
+        }
+
+        .vipSelectdd__single-value {
+          color: #bebebe !important;
+        }
+
+        .vipSelectdd__option {
+          @include flex-xy;
+          max-width: 1rem;
+          min-width: 0.8rem;
+          height: 0.2rem;
+          border-style: none;
+          border: none !important;
+
+          color: #fff;
+          text-align: center;
+          background-color: #008463 !important;
+          font-size: 0.1rem !important;
+        }
+        .vipSelectdd__option--is-focused {
+          background-color: #28b995 !important;
+        }
+        .vipSelectdd__option--is-selected {
+          color: #17a07e;
+          background-color: #fff !important;
+        }
+      }
+    }
+    &[data-theme='skyBlue'] {
+      :global {
+        .vipSelectdd__control {
+          @include flex-xy;
+          max-width: 1rem;
+          min-width: 0.8rem;
+          height: 0.25rem;
+          border-style: none;
+          border: none !important;
+          border-radius: 0;
+          color: #435689 !important;
+          text-align: center;
+          background-color: #0ca0e9 !important;
+
+          font-size: 0.1rem;
+          &:focus {
+            outline: none;
+            border: none;
+          }
+        }
+
+        .vipSelectdd__indicators {
+          @include flex-xy;
+          width: 0.2rem;
+          svg {
+            color: #fff !important;
+            width: 0.2rem;
+          }
+        }
+
+        .vipSelectdd__indicator-separator {
+          display: none;
+        }
+
+        .vipSelectdd__menu-list {
+          color: white;
+          background-color: #fff !important;
+        }
+        .vipSelectdd {
+          color: #435689 !important;
+          background-color: #0ca0e9 !important;
+        }
+
+        .vipSelectdd__value-container {
+          color: #435689 !important;
+          background-color: #0ca0e9 !important;
+          border: none;
+        }
+
+        .vipSelectdd__indicators {
+          background-color: #0ca0e9 !important;
+          border: none;
+        }
+
+        .vipSelectdd__single-value {
+          color: #fff !important;
+        }
+
+        .vipSelectdd__option {
+          @include flex-xy;
+          max-width: 1rem;
+          min-width: 0.8rem;
+          height: 0.2rem;
+          border-style: none;
+          border: none !important;
+          color: #888888;
+          text-align: center;
+          background-color: #fff !important;
+          font-size: 0.1rem !important;
+        }
+        .vipSelectdd__option--is-focused {
+          background-color: #d1fdfd !important;
+        }
+        .vipSelectdd__option--is-selected {
+          color: #fff;
+          background-color: #7bcae9 !important;
+        }
+      }
+    }
+    &[data-theme='darkBlue'] {
+      :global {
+        .vipSelectdd__control {
+          @include flex-xy;
+          max-width: 1rem;
+          min-width: 0.8rem;
+          height: 0.25rem;
+          border-style: none;
+          border: none !important;
+          border-radius: 0;
+          color: #435689 !important;
+          text-align: center;
+          background: linear-gradient(#8498c9, #4d6296) !important;
+          font-size: 0.1rem;
+          &:focus {
+            outline: none;
+            border: none;
+          }
+        }
+
+        .vipSelectdd__indicators {
+          @include flex-xy;
+          width: 0.2rem;
+          svg {
+            color: #fff !important;
+            width: 0.2rem;
+          }
+        }
+
+        .vipSelectdd__indicator-separator {
+          display: none;
+        }
+
+        .vipSelectdd__menu-list {
+          color: white;
+          background: linear-gradient(to left, #29334b, #4d6296) !important;
+        }
+        .vipSelectdd {
+          color: #435689 !important;
+          background: linear-gradient(#8498c9, #4d6296) !important;
+        }
+
+        .vipSelectdd__value-container {
+          color: #435689 !important;
+          background: transparent;
+          border: none;
+        }
+
+        .vipSelectdd__indicators {
+          background: linear-gradient(#8498c9, #4d6296) !important;
+          border: none;
+        }
+
+        .vipSelectdd__single-value {
+          color: #fff !important;
+        }
+
+        .vipSelectdd__option {
+          @include flex-xy;
+          max-width: 1rem;
+          min-width: 0.8rem;
+          height: 0.2rem;
+          border-style: none;
+          border: none !important;
+
+          color: #fff;
+          text-align: center;
+          background: linear-gradient(to left, #29334b, #4d6296) !important;
+          font-size: 0.1rem !important;
+        }
+        .vipSelectdd__option--is-focused {
+          background: linear-gradient(to left, #415175, #5c74af) !important;
+        }
+        .vipSelectdd__option--is-selected {
+          color: #415175;
+          background: linear-gradient(to left, #cdd3df, #c7d5f8) !important;
+        }
+      }
+    }
+
+    &[data-theme='redGold'] {
+      :global {
+        .vipSelectdd__control {
+          @include flex-xy;
+          max-width: 1rem;
+          min-width: 0.8rem;
+          height: 0.25rem;
+          border-style: none;
+          border: none !important;
+          border-radius: 0;
+          color: white;
+          text-align: center;
+          background-color: #645f5f !important;
+          font-size: 0.1rem;
+        }
+
+        .vipSelectdd__indicators {
+          @include flex-xy;
+          width: 0.2rem;
+          svg {
+            color: white;
+            width: 0.2rem;
+          }
+        }
+
+        .vipSelectdd__indicator-separator {
+          display: none;
+        }
+
+        .vipSelectdd__menu-list {
+          color: white;
+          background-color: #fdf8f8 !important;
+        }
+        .vipSelectdd {
+          color: white;
+          background-color: #645f5f !important;
+        }
+
+        .vipSelectdd__value-container {
+          color: white;
+          background-color: #645f5f !important;
+          border: none;
+        }
+
+        .vipSelectdd__indicators {
+          background-color: #645f5f !important;
+          border: none;
+        }
+
+        .vipSelectdd__single-value {
+          color: white !important;
+        }
+
+        .vipSelectdd__option {
+          @include flex-xy;
+          max-width: 1rem;
+          min-width: 0.8rem;
+          height: 0.2rem;
+          border-style: none;
+          border: none !important;
+          color: #080000;
+          text-align: center;
+          background-color: #fdf8f8 !important;
+          font-size: 0.1rem !important;
+        }
+        .vipSelectdd__option--is-focused {
+          background-color: #f4e8e8 !important;
+        }
+        .vipSelectdd__option--is-selected {
+          background-color: #dfafaf !important;
+        }
+      }
+    }
+    &[data-theme='whiteGold'] {
+      :global {
+        .vipSelectdd__control {
+          @include flex-xy;
+          max-width: 1rem;
+          min-width: 0.8rem;
+          height: 0.25rem;
+          border-style: none;
+          border: none !important;
+          border-radius: 0;
+          color: #435689 !important;
+          text-align: center;
+          background-color: #ffffff !important;
+
+          font-size: 0.1rem;
+          &:focus {
+            outline: none;
+            border: none;
+          }
+        }
+
+        .vipSelectdd__indicators {
+          @include flex-xy;
+          width: 0.2rem;
+          svg {
+            color: #435689 !important;
+            width: 0.2rem;
+          }
+        }
+
+        .vipSelectdd__indicator-separator {
+          display: none;
+        }
+
+        .vipSelectdd__menu-list {
+          color: white;
+          background-color: #fdf8f8 !important;
+        }
+        .vipSelectdd {
+          color: #435689 !important;
+          background-color: #ffffff !important;
+        }
+
+        .vipSelectdd__value-container {
+          color: #435689 !important;
+          background-color: #ffffff !important;
+          border: none;
+        }
+
+        .vipSelectdd__indicators {
+          background-color: #ffffff !important;
+          border: none;
+        }
+
+        .vipSelectdd__single-value {
+          color: #435689 !important;
+        }
+
+        .vipSelectdd__option {
+          @include flex-xy;
+          max-width: 1rem;
+          min-width: 0.8rem;
+          height: 0.2rem;
+          border-style: none;
+          border: none !important;
+          color: #435689;
+          text-align: center;
+          background-color: #fdf8f8 !important;
+          font-size: 0.1rem !important;
+        }
+        .vipSelectdd__option--is-focused {
+          background-color: #f4f4e8 !important;
+        }
+        .vipSelectdd__option--is-selected {
+          background-color: #ddc78af5 !important;
+        }
+      }
+    }
+  }
+}
+
+.bettingRecord_headerRow {
+  width: 6.2rem;
+  height: 0.3rem;
+  margin-left: 0.2rem;
+  border-radius: 0.03rem;
+  background: linear-gradient(to bottom, #2c2c2c, #1a1a1a);
+
+  ul {
+    list-style: none;
+    display: flex;
+
+    li {
+      color: #cdcaca;
+      width: 2rem;
+      text-align: center;
+      margin-top: 0.05rem;
+    }
+  }
+}
+
+.tableHolder {
+  // margin: 0.05rem 0;
+  min-height: 0.28rem;
+  height: auto;
+}
+
+.noDataWrapper {
+  height: calc(100% - 0.28rem);
+  width: 100%;
+  position: relative;
+}
+
+.NoData_bgImageContainer {
+  @include flex-xy;
+  flex-direction: column;
+  height: 70%;
+  width: 100%;
+  img {
+    width: 60%;
+  }
+
+  .betting_ImageLabel {
+    font-size: 0.18rem;
+    background: -webkit-linear-gradient(#ffffff, #fff6c2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.pullToRefresh {
+  :global {
+    .ptr__pull-down > div {
+      p {
+        font-size: 0.15rem;
+        color: #f6da85;
+        text-align: center !important;
+      }
+    }
+    .ptr__children {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden !important;
+    }
+  }
+}

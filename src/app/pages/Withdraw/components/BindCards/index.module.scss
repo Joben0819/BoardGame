@@ -1,0 +1,166 @@
+.bindCardWrapper {
+  flex: 1;
+  position: relative;
+  padding: 0.1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.1rem;
+  height: 100%;
+  .bankCard {
+    background: #222222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.1rem;
+    padding: 0.12rem;
+    width: 100%;
+    .bankDetails {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      height: 100%;
+      font-size: 0.15rem;
+      color: white;
+      gap: 0.1rem;
+      img {
+        height: 0.25rem;
+        width: 0.25rem;
+      }
+    }
+
+    span {
+      color: white;
+      font-size: 0.15rem;
+    }
+
+    > img {
+      height: 0.2rem;
+      width: auto
+    }
+  }
+
+  //overlays for themes
+  &[data-theme="brownGold"]{
+    .bankCard{
+      background: #C4A994;
+      span{
+        color: #FFF;
+      }
+      .bankDetails{
+        color: #FFF;
+        span{
+          color: #FFF;
+        }
+      }
+    }
+  }
+  &[data-theme="yellowWhite"]{
+    .bankCard{
+      background: #0A0A0A;
+      span{
+        color: #FFF;
+      }
+      .bankDetails{
+        color: #FFC400;
+        span{
+          color: #FFC400;
+        }
+      }
+    }
+  }
+  &[data-theme="greenYellow"]{
+    .bankCard{
+      background: #0E9473;
+      span{
+        color: #FFF;
+      }
+      .bankDetails{
+        color: #FACE13;
+        span{
+          color: #FACE13;
+        }
+      }
+    }
+  }
+  &[data-theme="skyBlue"]{
+    .bankCard{
+      background: #0CA0E9;
+      span{
+        color: #FFF;
+      }
+      .bankDetails{
+        color: #FFF;
+        span{
+          color: #FFF;
+        }
+      }
+    }
+  }
+  &[data-theme="darkBlue"]{
+    .bankCard{
+      background: linear-gradient(90deg, #4D6296 0%, #8498C9 100%);
+      span{
+        color: #FFFFFF;
+      }
+      .bankDetails{
+        color: #FFFFFF;
+        span{
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+  &[data-theme="redGold"]{
+    .bankCard{
+      background: linear-gradient(90deg, #FDF8F8 0%, #F7EEEE 100%);
+      span{
+        color: #080000;
+      }
+      .bankDetails{
+        color: #080000;
+        span{
+          color: #080000;
+        }
+      }
+    }
+  }
+  &[data-theme="whiteGold"]{
+    .bankCard{
+      background: #E9CB7B;
+      span{
+        color: #461D09;
+      }
+      .bankDetails{
+        color: #461D09;
+        span{
+          color: #461D09;
+        }
+      }
+    }
+  }
+}
+
+.mainWrapper{
+  width: 100%;
+
+  :global {
+    .ptr__pull-down--pull-more {
+      display: none !important;
+    }
+
+    // .lds-ellipsis div {
+    //   height: 0.1rem !important;
+    //   width: 0.1rem !important;
+    //   background-color: #ffffff;
+    // }
+
+    // .ptr {
+    //   height: 100% !important;
+    //   overflow: visible;
+    // }
+  }
+}

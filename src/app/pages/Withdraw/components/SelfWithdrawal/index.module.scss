@@ -1,0 +1,495 @@
+.selfWithdrawalWrapper {
+  flex: 1;
+  position: relative;
+  padding: 0.1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.1rem;
+
+  .panel {
+    position: relative;
+    border-radius: 0.03rem;
+    width: 100%;
+    font-size: 0.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.1rem;
+
+    .inputField {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0.1rem;
+      gap: 0.1rem;
+      input {
+        caret-color: #fff;
+        height: 0.3rem;
+        padding: 0.1rem;
+        font-size: 0.1rem;
+        width: 100%;
+        color: #fff;
+        background: #1a1a1a;
+        border: none;
+      }
+
+      > div:last-child {
+        display: flex;
+        width: 100%;
+        span {
+          color: #757575;
+        }
+      }
+    }
+
+    .selectBindCardList {
+      width: 100%;
+      position: relative;
+      .bankCard {
+        font-size: 0.15rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0.1rem;
+        .bankDetails {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.1rem;
+          img {
+            width: 0.2rem;
+            height: 0.2rem;
+          }
+        }
+        .toggle {
+          width: 0.2rem;
+          height: 0.2rem;
+          border-radius: 100%;
+          background: #1f1e1b;
+          border: #dec18c 0.004rem solid;
+        }
+
+        .toggleSelected {
+          background: linear-gradient(to top, #ff9900, #fee78a);
+        }
+      }
+
+      .selectedCard {
+        background: rgb(44, 44, 44);
+      }
+    }
+
+    .addCard {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.1rem;
+      margin-bottom: 0.1rem;
+      img {
+        width: 0.2rem;
+        height: 0.2rem;
+      }
+      span {
+        font-size: 0.15rem;
+      }
+    }
+
+    .withdrawButtonWrapper {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.1rem;
+      .withdrawButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("../../../../assets/commons/button1.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        height: 0.4rem;
+        width: 1.2rem;
+        span {
+          position: relative;
+          top: -0.01rem;
+          font-size: 0.12rem;
+          font-weight: 700;
+          color: #511a00;
+        }
+      }
+
+      > div:first-child {
+        display: flex;
+        gap: 0.2rem;
+        position: relative;
+        .details {
+          border-radius: 0.04rem;
+          overflow: hidden;
+          display: flex;
+          span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          > span:nth-child(1) {
+            background-color: #363636;
+            width: 0.8rem;
+            height: 0.26rem;
+          }
+
+          > span:nth-child(2) {
+            background-color: #1a1a1a;
+            width: 0.8rem;
+            height: 0.26rem;
+          }
+        }
+      }
+    }
+  }
+
+  //overlays for theme feature
+  &[data-theme="blackGold"] {
+    .panel {
+      background: #222222;
+      color: white;
+    }
+  }
+  &[data-theme="brownGold"] {
+    .panel {
+      background: #fff;
+      color: #888;
+      input {
+        border-radius: 0.04rem;
+        background: #ededed !important;
+        color: #000 !important;
+        caret-color: #000;
+      }
+      .inputField {
+        > div {
+          > span {
+            color: #c4a994;
+          }
+        }
+      }
+      .details {
+        > span:nth-child(1) {
+          background-color: #c4a994 !important;
+          color: #fff;
+        }
+
+        > span:nth-child(2) {
+          background-color: #ededed !important;
+          color: #888;
+        }
+      }
+      .bankCard {
+        .toggle {
+          background: rgba(0, 0, 0, 0.5);
+        }
+      }
+      .selectedCard {
+        background: #c4a994;
+        color: #fff;
+        .toggleSelected {
+          background: linear-gradient(198.78deg, #fee78a 8.63%, #ff9900 91.88%);
+        }
+      }
+    }
+  }
+  &[data-theme="yellowWhite"] {
+    .panel {
+      background: #fefeff;
+      color: #c5915a;
+      input {
+        border-radius: 0.04rem;
+        background: #ebedf1 !important;
+        color: #000 !important;
+        caret-color: #000;
+      }
+      .inputField {
+        > div {
+          > span {
+            color: #757575;
+          }
+        }
+      }
+      .details {
+        > span:nth-child(1) {
+          background-color: #0a0a0a !important;
+          color: #ffc400;
+        }
+
+        > span:nth-child(2) {
+          background-color: #ebedf1 !important;
+          color: #bea288;
+        }
+      }
+      .bankCard {
+        .toggle {
+          background: #000;
+        }
+      }
+      .selectedCard {
+        background: #0a0a0a;
+        color: #ffc400;
+        .toggleSelected {
+          background: linear-gradient(198.78deg, #fee78a 8.63%, #ff9900 91.88%);
+        }
+      }
+    }
+  }
+  &[data-theme="greenYellow"] {
+    .panel {
+      background: #f2f2f2;
+      color: #511a00;
+      input {
+        border-radius: 0.04rem;
+        background: #ffffff !important;
+        color: #000 !important;
+        caret-color: #000;
+      }
+      .inputField {
+        > div {
+          > span {
+            color: #511a00;
+          }
+        }
+      }
+      .details {
+        > span:nth-child(1) {
+          background-color: #68b2a0 !important;
+          color: #fff;
+        }
+
+        > span:nth-child(2) {
+          background-color: #fff !important;
+          color: #bebebe;
+        }
+      }
+      .bankCard {
+        .toggle {
+          background: rgba(0, 0, 0, 0.5);
+        }
+      }
+      .selectedCard {
+        background: #0e9473;
+        color: #face13;
+        .toggleSelected {
+          background: linear-gradient(269.55deg, #df8e00 6.04%, #ffea01 78.13%);
+        }
+      }
+    }
+  }
+  &[data-theme="skyBlue"] {
+    .panel {
+      background: #f4f6f9;
+      color: #888888;
+      input {
+        border-radius: 0.04rem;
+        background: #ffffff !important;
+        color: #000 !important;
+        caret-color: #000;
+      }
+      .inputField {
+        > div {
+          > span {
+            color: #0ca0e9;
+          }
+        }
+      }
+      .details {
+        > span:nth-child(1) {
+          background-color: #0ca0e9 !important;
+          color: #fff;
+        }
+
+        > span:nth-child(2) {
+          background-color: #fff !important;
+          color: #888888;
+        }
+      }
+      .bankCard {
+        .toggle {
+          background: rgba(0, 0, 0, 0.25);
+        }
+      }
+      .selectedCard {
+        background: #0ca0e9;
+        color: #fff;
+        .toggleSelected {
+          background: linear-gradient(198.78deg, #fee78a 8.63%, #ff9900 91.88%);
+        }
+      }
+    }
+  }
+  &[data-theme="darkBlue"] {
+    .panel {
+      background: linear-gradient(90deg, #4d6296 0%, #8498c9 100%);
+      color: #fff;
+      input {
+        border-radius: 0.04rem;
+        background: #ffffff !important;
+        color: #000 !important;
+        caret-color: #000;
+        &::placeholder {
+          color: #4d6296;
+        }
+      }
+      .inputField {
+        > div {
+          > span {
+            color: #d7e8f0;
+          }
+        }
+      }
+      .details {
+        > span:nth-child(1) {
+          background: linear-gradient(
+            180deg,
+            #29468d 0%,
+            #162752 100%
+          ) !important;
+          color: #fff;
+        }
+
+        > span:nth-child(2) {
+          background-color: #fff !important;
+          color: #4d6296;
+        }
+      }
+      .bankCard {
+        .toggle {
+          background: rgba(0, 0, 0, 0.25);
+          border: #8aeaff 0.004rem solid;
+        }
+      }
+      .selectedCard {
+        background: linear-gradient(270deg, #29334b 0%, #4d6296 100%);
+        color: #fff;
+        .toggleSelected {
+          background: linear-gradient(180deg, #ffffff 0%, #8aeaff 100%);
+        }
+      }
+    }
+    .withdrawButton {
+      background: url("./../../../../assets/darkBlue/button1.png") !important;
+      background-size: 100% 100% !important;
+      span {
+        color: #4d6296 !important;
+      }
+    }
+  }
+  &[data-theme="redGold"] {
+    .panel {
+      background: linear-gradient(90deg, #fdf8f8 0%, #f7eeee 100%);
+      color: #080000;
+      input {
+        border-radius: 0.04rem;
+        background: linear-gradient(90deg, #f4e8e8 0%, #f1dbdb 100%) !important;
+        color: #000 !important;
+        caret-color: #000;
+        &::placeholder {
+          color: #757575;
+        }
+      }
+      .inputField {
+        > div {
+          > span {
+            color: #080000;
+          }
+        }
+      }
+      .details {
+        > span:nth-child(1) {
+          background: linear-gradient(
+            180deg,
+            #6a1211 0%,
+            #47100f 100%
+          ) !important;
+          color: #fff;
+        }
+
+        > span:nth-child(2) {
+          background: linear-gradient(
+            90deg,
+            #f4e8e8 0%,
+            #f1dbdb 100%
+          ) !important;
+          color: #0a0a0a;
+        }
+      }
+      .bankCard {
+        .toggle {
+          background: rgba(0, 0, 0, 0.5);
+        }
+      }
+      .selectedCard {
+        background: linear-gradient(90deg, #f8e7e7 0%, #f1dfdf 100%);
+        color: #080000;
+        .toggleSelected {
+          background: linear-gradient(180deg, #fee78a 0%, #ff9900 100%);
+        }
+      }
+    }
+  }
+  &[data-theme="whiteGold"] {
+    .panel {
+      background: #f9f9f9;
+      color: #435689;
+      input {
+        border-radius: 0.04rem;
+        background: #dadce7 !important;
+        color: #000 !important;
+        caret-color: #000;
+        &::placeholder {
+          color: #757575;
+        }
+      }
+      .inputField {
+        > div {
+          > span {
+            color: #435689;
+          }
+        }
+      }
+      .details {
+        > span:nth-child(1) {
+          background: #e9cb7b !important;
+          color: #461d09;
+        }
+
+        > span:nth-child(2) {
+          background: #dadce7 !important;
+          color: #757575;
+        }
+      }
+      .bankCard {
+        .toggle {
+          background: rgba(0, 0, 0, 0.5);
+        }
+      }
+      .selectedCard {
+        background: #e9cb7b;
+        color: #461d09;
+        .toggleSelected {
+          background: linear-gradient(180deg, #fee78a 0%, #ff9900 100%);
+        }
+      }
+    }
+  }
+}
+
+.addCardsCont {
+  margin: 0.2rem 0;
+  display: flex;
+  gap: 0.3rem;
+}

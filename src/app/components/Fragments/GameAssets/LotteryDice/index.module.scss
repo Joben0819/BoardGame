@@ -1,0 +1,176 @@
+.diceCircle {
+  position: relative;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 2rem;
+  border: solid 0.03rem #11d38a;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .diceContent {
+    width: 100%;
+    height: 100%;
+    font-size: 0.13rem;
+    line-height: 0.13rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.diceActive {
+  position: relative;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 2rem;
+  border: solid 0.03rem #11d38a;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .diceContent {
+    width: 100%;
+    height: 100%;
+    font-size: 0.13rem;
+    line-height: 0.13rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.diceLabel {
+  // background-color: #11D38A;
+  width: 0.55rem;
+  padding-top: 0.05rem;
+  text-align: center;
+  font-size: 0.16rem;
+}
+
+.lotteryDiceSelector {
+  &[data-theme="blackGold"] {
+    .diceCircle {
+      border: solid 0.03rem #11d38a;
+      background: #ffffff00;
+      color: #fff;
+    }
+    .diceActive {
+      border: solid 0.03rem #11d38a;
+      background: #11d38a;
+      color: #fff;
+    }
+    .diceLabel {
+      color: #fff;
+    }
+  }
+  &[data-theme="brownGold"] {
+    .diceCircle {
+      border: solid 0.03rem #11d38a;
+      background: #fff;
+      color: #11d38a;
+    }
+    .diceActive {
+      border: solid 0.03rem #11d38a;
+      background: #11d38a;
+      color: #fff;
+    }
+    .diceLabel {
+      color: #000000;
+    }
+  }
+  &[data-theme="yellowWhite"] {
+    .diceCircle {
+      border: solid 0.03rem #11d38a;
+
+      color: #a11300;
+    }
+    .diceActive {
+      border: solid 0.03rem #11d38a;
+      background: #11d38a;
+      color: #fff;
+    }
+    .diceLabel {
+      color: #000000;
+    }
+  }
+  &[data-theme="greenYellow"] {
+    .diceCircle {
+      border: solid 0.03rem #11d38a;
+
+      color: #fff;
+    }
+    .diceActive {
+      border: solid 0.03rem #11d38a;
+      background: #11d38a;
+      color: #fff;
+    }
+    .diceLabel {
+      color: #fff;
+    }
+  }
+  &[data-theme="skyBlue"] {
+    .diceCircle {
+      border: solid 0.03rem #11d38a;
+      background: #fff;
+      color: #11d38a;
+    }
+    .diceActive {
+      border: solid 0.03rem #11d38a;
+      background: #11d38a;
+      color: #fff;
+    }
+    .diceLabel {
+      color: #000000;
+    }
+  }
+  &[data-theme="darkBlue"] {
+    .diceCircle {
+      border: solid 0.015rem #ffe800;
+      background: #fff;
+      color: #29468d;
+    }
+    .diceActive {
+      border: none;
+      background: linear-gradient(to top, #e38c00, #ffe800);
+      color: #29468d;
+    }
+    .diceLabel {
+      color: #29468d;
+    }
+  }
+  &[data-theme="redGold"] {
+    .diceCircle {
+      border: solid 0.03rem #11d38a;
+      background: #fff;
+      color: #11d38a;
+    }
+    .diceActive {
+      border: solid 0.03rem #11d38a;
+      background: #11d38a;
+      color: #fff;
+    }
+    .diceLabel {
+      color: #000000;
+    }
+  }
+
+  &[data-theme="whiteGold"] {
+    .diceCircle {
+      border: solid 0.03rem #11d38a;
+
+      color: #435689;
+    }
+    .diceActive {
+      border: solid 0.03rem #11d38a;
+      background: #11d38a;
+      color: #fff;
+    }
+    .diceLabel {
+      color: #29468d;
+    }
+  }
+}

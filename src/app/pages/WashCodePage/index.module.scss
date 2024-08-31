@@ -1,0 +1,30 @@
+.washCodePage {
+  font-size: 0.15rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: calc(100% - 0.4rem);
+  //   background: brown;
+}
+
+.mainContent {
+  overflow: auto;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  align-items: flex-start;
+  // justify-items: center;
+  justify-content: center;
+  padding: 0.1rem;
+
+  &[data-theme="yellowWhite"] {
+    background: #fefeff;
+  }
+}

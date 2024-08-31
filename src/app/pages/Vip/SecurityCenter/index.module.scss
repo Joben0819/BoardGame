@@ -1,0 +1,309 @@
+.container {
+  width: 100%;
+  // height: 100%;
+  font-weight: 600;
+  // margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  .sc_yellowText {
+    font-weight: 400;
+    text-align: center;
+  }
+  .sc_phoneCheckInputHolder {
+    input {
+      -webkit-opacity: 1;
+      opacity: 1;
+    }
+  }
+  &[data-theme='brownGold'] {
+    .securityCenter_inputBox {
+      background: #fff;
+    }
+    .sc_phoneCheckInputHolder {
+      input {
+        background: #ededed !important;
+      }
+    }
+    .sc_phoneCheckLabel {
+      color: #fff;
+      background-color: #c4a994;
+    }
+    .sc_yellowText {
+      color: #c4a994;
+    }
+  }
+  &[data-theme='yellowWhite'] {
+    .securityCenter_inputBox {
+      background: #fff;
+    }
+    .sc_phoneCheckInputHolder {
+      input {
+        color: #bea288;
+        background: #ebedf1 !important;
+      }
+    }
+    .sc_phoneCheckLabel {
+      color: #ffc400;
+      background-color: #0a0a0a;
+    }
+    .sc_yellowText {
+      color: #a11300;
+    }
+  }
+  &[data-theme='greenYellow'] {
+    .securityCenter_inputBox {
+      background: #f2f2f2;
+    }
+    .sc_phoneCheckInputHolder {
+      input {
+        color: #757575;
+        background: #ffffff !important;
+      }
+    }
+    .sc_phoneCheckLabel {
+      color: #fff;
+      background-color: #3b8675;
+    }
+    .sc_yellowText {
+      color: #511a00;
+    }
+  }
+  &[data-theme='skyBlue'] {
+    .securityCenter_inputBox {
+      background: #f4f6f9;
+    }
+    .sc_phoneCheckInputHolder {
+      input {
+        color: #636363;
+        background: #ffffff !important;
+      }
+    }
+    .sc_phoneCheckLabel {
+      color: #fff;
+      background: #0ca0e9;
+    }
+    .sc_yellowText {
+      color: #0ca0e9;
+    }
+  }
+  &[data-theme='darkBlue'] {
+    .securityCenter_inputBox {
+      background: linear-gradient(to left, #8498c9, #4d6296);
+    }
+    .sc_phoneCheckInputHolder {
+      input {
+        color: #29468d;
+        background: #ffffff !important;
+      }
+    }
+    .sc_phoneCheckLabel {
+      color: #fff;
+      background: #29468d;
+    }
+    .sc_yellowText {
+      color: #fff;
+    }
+  }
+  &[data-theme='redGold'] {
+    .securityCenter_inputBox {
+      background: linear-gradient(to left, #fdf8f8, #f6eeee);
+    }
+    .sc_phoneCheckInputHolder {
+      input {
+        color: #00000080;
+        background: linear-gradient(to left, #f1dbdb, #f4e8e8) !important;
+      }
+    }
+    .sc_phoneCheckLabel {
+      color: #fff;
+      background: linear-gradient(to left, #ff6b00, #af0100);
+    }
+    .sc_yellowText {
+      color: #080000;
+    }
+  }
+  &[data-theme='whiteGold'] {
+    .securityCenter_inputBox {
+      background: #f9f9f9;
+    }
+    .sc_phoneCheckInputHolder {
+      input {
+        color: #646363;
+        background: #dadce7 !important;
+      }
+    }
+    .sc_phoneCheckLabel {
+      color: #461d09;
+      background: #e9cb7b;
+    }
+    .sc_yellowText {
+      color: #435689;
+    }
+  }
+
+  .securityCenter_wrapper {
+    width: 100%;
+  }
+  .securityCenter_inputBox {
+    width: 100%;
+
+    border-radius: 0.08rem;
+    overflow: scroll;
+    background: #222222;
+    font-size: 0.15rem;
+  }
+
+  .securityCenter_header {
+    width: 100%;
+    height: 0.3rem;
+    border: none;
+    border-bottom: #525252 0.00001rem solid;
+    font-size: 0.15rem;
+
+    .securityCenter_titleHolder {
+      width: 0.9rem;
+      height: 0.3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #222222, #444444);
+    }
+  }
+
+  .securityCenter_buttonHolder {
+    // margin:auto;
+
+    width: 6.4rem;
+
+    button {
+      font-size: 0.15rem;
+      margin-top: 0.2rem;
+      margin-left: 2.5rem;
+      // background: url("./img/btn-y\ 4.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 1rem;
+      height: 0.3rem;
+      border: none;
+      color: #511a00;
+    }
+  }
+
+  .securityCenterWrapper {
+    min-height: 2.5rem;
+    padding: 0 0 0.2rem;
+  }
+
+  .securityCenter_phoneCheckContainer {
+    display: flex;
+    margin: 0.2rem 0.2rem 0.1rem;
+  }
+
+  .sc_phoneCheckLabel {
+    display: flex;
+    padding: 0.08rem;
+    width: 1rem;
+    height: 0.35rem;
+    border-bottom-left-radius: 0.04rem;
+    border-top-left-radius: 0.04rem;
+    color: #757575;
+    background-color: #363636;
+
+    .sc_pcimageHolder {
+      display: flex;
+      color: #757575;
+
+      img {
+        width: 0.15rem;
+        height: 0.2rem;
+        margin-right: 0.08rem;
+      }
+    }
+    span {
+      display: flex;
+      align-items: center;
+      line-height: 0.35rem;
+    }
+  }
+
+  .sc_phoneCheckInputHolder {
+    width: 100%;
+    input {
+      width: 4.3rem;
+      width: 100%;
+      height: 0.36rem;
+      background: #1a1a1a;
+      border: none;
+      border-bottom-right-radius: 0.04rem;
+      border-top-right-radius: 0.04rem;
+      padding-left: 0.1rem;
+    }
+  }
+
+  // components
+  .detailInputBox_wrapper {
+    font-size: 0.15rem;
+  }
+
+  .detailInputBox_container {
+    display: flex;
+    margin-bottom: 0.15rem;
+  }
+
+  .detailInputBoxLabel {
+    display: flex;
+    padding: 0.08rem;
+    width: 01.4rem;
+    height: 0.35rem;
+    font-size: 0.14rem;
+    border-bottom-left-radius: 0.04rem;
+    border-top-left-radius: 0.04rem;
+    color: white;
+    background-color: #363636;
+    letter-spacing: 0.005rem;
+
+    .detailInputBox_imgHolder {
+      display: flex;
+      color: #757575;
+
+      img {
+        width: 0.2rem;
+        height: 0.2rem;
+        margin-right: 0.08rem;
+      }
+    }
+  }
+
+  .detailsInputHolder {
+    input {
+      width: 1.3rem;
+      height: 0.36rem;
+      background: #1a1a1a;
+      border: none;
+      border-bottom-right-radius: 0.04rem;
+      border-top-right-radius: 0.04rem;
+      padding-left: 0.1rem;
+      font-size: 0.15rem;
+    }
+  }
+
+  .forDetailComponent {
+    width: 1.3rem;
+    height: 0.36rem;
+    background: #1a1a1a;
+    border: none;
+    border-bottom-right-radius: 0.04rem;
+    border-top-right-radius: 0.04rem;
+    padding-left: 0.1rem;
+  }
+
+  .justPlainInput {
+    width: 4.3rem;
+    height: 0.36rem;
+    background: #1a1a1a;
+    border: none;
+    border-bottom-right-radius: 0.04rem;
+    border-top-right-radius: 0.04rem;
+    padding-left: 0.1rem;
+  }
+}

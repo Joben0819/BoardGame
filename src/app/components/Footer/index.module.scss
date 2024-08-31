@@ -1,0 +1,113 @@
+@import '/src/styles/_helpers.scss';
+
+.container {
+  @include flex-xy(flex-start, center);
+  color: white;
+  font-size: 0.15rem;
+  width: 100%;
+  height: 0.4rem;
+}
+
+.img3 {
+  position: relative;
+  @include flex-xy(space-between, center);
+  background: var(--footer-bg-img);
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat;
+  height: 0.423rem;
+}
+
+.footerlists {
+  position: relative;
+  @include flex-xy(space-between, center);
+  font-size: 0.04rem;
+  color: white;
+  list-style: none;
+  width: 63%;
+  padding: 0 0.2rem;
+  height: 100%;
+  li {
+    @include flex-xy;
+    width: 0.3rem;
+    > div {
+      position: relative;
+      @include flex-xy;
+      flex-direction: column;
+      img {
+        width: 0.2rem;
+        height: auto;
+      }
+      .text {
+        font-size: 0.09rem;
+        font-weight: 600;
+        background: var(--footer-text-list);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .moreModal_overlay {
+        width: 1.9rem;
+        height: 0.6rem;
+        position: absolute;
+        top: -0.6rem;
+        left: -0.85rem;
+      }
+    }
+  }
+}
+
+.Buttons {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  top: 0.025rem;
+  .withdraw {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .greenBtn {
+      width: 1.144rem;
+      height: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .withdrawBg {
+      padding-left: 0.04rem;
+      width: 0.46rem;
+      height: 0.32rem;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .other {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .yellowBtn {
+      width: 1.194rem;
+      height: 0.5rem;
+      position: relative;
+      z-index: 0;
+    }
+
+    .yellowBg {
+      padding: 0 0 0 0.12rem;
+      width: 0.36rem;
+      height: 0.36rem;
+      position: absolute;
+      top: -0.04rem;
+      z-index: 1;
+      padding-bottom: 0.04rem;
+    }
+  }
+}
+
+@media screen and (max-height: 320px) and (orientation: landscape) {
+  .Buttons {
+    top: 0.1rem;
+  }
+}

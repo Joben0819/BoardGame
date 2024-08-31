@@ -1,0 +1,319 @@
+@import '/src/styles/_helpers.scss';
+
+.container {
+  color: white;
+  font-size: 0.15rem;
+  padding-bottom: 0.1rem;
+  font-weight: 600;
+  &[data-theme='brownGold'] {
+    background: #fff;
+    input {
+      caret-color: #ffffff;
+      width: 5.4rem;
+      color: #888888 !important;
+      height: 0.3rem;
+      font-size: 0.15rem;
+      padding: 0.08rem 0.06rem 0.07rem 0.12rem;
+      background: #ededed !important;
+      border: none;
+      border-radius: 0.2rem;
+    }
+    .inputFields {
+      .withButton {
+        .buttonHolder {
+          background: #ededed;
+        }
+      }
+    }
+    .yellowText {
+      color: #c4a994;
+    }
+  }
+  &[data-theme='yellowWhite'] {
+    background: #fff;
+    input {
+      caret-color: #ffffff;
+      width: 5.4rem;
+      color: #bea288 !important;
+      height: 0.3rem;
+      font-size: 0.15rem;
+      padding: 0.08rem 0.06rem 0.07rem 0.12rem;
+      background: #ebedf1 !important;
+      border: none;
+      border-radius: 0.2rem;
+    }
+    .inputFields {
+      .withButton {
+        .buttonHolder {
+          background: #ebedf1;
+        }
+      }
+    }
+    .yellowText {
+      color: #a11300;
+    }
+  }
+  &[data-theme='greenYellow'] {
+    background: #f2f2f2;
+    input {
+      caret-color: #ffffff;
+      width: 5.4rem;
+      color: #511a00 !important;
+      height: 0.3rem;
+      font-size: 0.15rem;
+      padding: 0.08rem 0.06rem 0.07rem 0.12rem;
+      background: #fff !important;
+      border: none;
+      border-radius: 0.2rem;
+    }
+    .inputFields {
+      .withButton {
+        .buttonHolder {
+          background: #fff;
+          button {
+          }
+        }
+      }
+    }
+    .yellowText {
+      color: #511a00;
+    }
+  }
+  &[data-theme='skyBlue'] {
+    background: #f4f6f9;
+    input {
+      caret-color: #ffffff;
+      width: 5.4rem;
+      color: #888 !important;
+      height: 0.3rem;
+      font-size: 0.15rem;
+      padding: 0.08rem 0.06rem 0.07rem 0.12rem;
+      background: #ffffff !important;
+      border: none;
+      border-radius: 0.2rem;
+    }
+    .inputFields {
+      .withButton {
+        .buttonHolder {
+          background: #ffffff;
+        }
+      }
+    }
+    .yellowText {
+      color: #0ca0e9;
+    }
+  }
+  &[data-theme='darkBlue'] {
+    background: linear-gradient(to left, #8498c9, #4d6296);
+    input {
+      caret-color: #ffffff;
+      width: 5.4rem;
+      color: #29468d !important;
+      height: 0.3rem;
+      font-size: 0.15rem;
+      padding: 0.08rem 0.06rem 0.07rem 0.12rem;
+      background: #fff !important;
+      border: none;
+      border-radius: 0.2rem;
+    }
+    .inputFields {
+      .withButton {
+        .buttonHolder {
+          background: #fff;
+          button {
+            background: linear-gradient(to bottom, #fff, #8aeaff);
+          }
+        }
+      }
+    }
+    .yellowText {
+      color: #d7e8f0;
+    }
+  }
+  &[data-theme='redGold'] {
+    background: linear-gradient(to left, #fdf8f8, #f6eeee);
+    input {
+      caret-color: #fff;
+      width: 5.4rem;
+      color: #000 !important;
+      height: 0.3rem;
+      font-size: 0.15rem;
+      padding: 0.08rem 0.06rem 0.07rem 0.12rem;
+      background: linear-gradient(to left, #f1dbdb, #f4e8e8) !important;
+      border: none;
+      border-radius: 0.2rem;
+    }
+    .inputFields {
+      .withButton {
+        .buttonHolder {
+          background: #f1dbdb;
+        }
+      }
+    }
+    .yellowText {
+      color: #080000;
+    }
+  }
+  &[data-theme='whiteGold'] {
+    background: #f9f9f9;
+    input {
+      caret-color: #fff;
+      width: 5.4rem;
+      color: #757575;
+      height: 0.3rem;
+      font-size: 0.15rem;
+      padding: 0.08rem 0.06rem 0.07rem 0.12rem;
+      background: #dadce7 !important;
+      border: none;
+      border-radius: 0.2rem;
+    }
+    .inputFields {
+      .withButton {
+        .buttonHolder {
+          background: #dadce7;
+        }
+      }
+    }
+    .yellowText {
+      color: #435689;
+    }
+  }
+
+  &[data-theme='blackGold'] {
+    input {
+      caret-color: #ffffff;
+      width: 5.4rem;
+      color: #fff !important;
+      height: 0.3rem;
+      font-size: 0.15rem;
+      padding: 0.08rem 0.06rem 0.07rem 0.12rem;
+      background: #000 !important;
+      border: none;
+      border-radius: 0.2rem;
+    }
+    .inputFields {
+      .withButton {
+        .buttonHolder {
+          button {
+            background: linear-gradient(to bottom, #ffe800, #e38c00) !important;
+          }
+        }
+      }
+    }
+    .yellowText {
+      color: #ffc400;
+    }
+  }
+
+  .inputFields {
+    width: 5.55rem;
+    height: 2.5rem;
+    margin: 0.2rem 0 0 0.3rem;
+
+    ul {
+      list-style: none;
+
+      li {
+        position: relative;
+        margin-bottom: 0.08rem;
+      }
+
+      input {
+        caret-color: #fff;
+        width: 5.4rem;
+        color: #757575;
+        height: 0.3rem;
+        font-size: 0.15rem;
+        padding: 0.08rem 0.06rem 0.07rem 0.12rem;
+        background: #1a1a1a;
+        border: none;
+        border-radius: 0.2rem;
+      }
+      .eyePatch {
+        @include flex-xy;
+        position: absolute;
+        right: 0.25rem;
+        top: 0.05rem;
+        width: 0.2rem;
+        height: 0.2rem;
+        cursor: pointer;
+
+        .eye {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .withButton {
+      display: flex;
+
+      input {
+        width: 4.7rem;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      .buttonHolder {
+        width: 0.7rem;
+
+        background: #000;
+        border-top-right-radius: 0.2rem;
+        border-bottom-right-radius: 0.2rem;
+        &[data-theme='darkBlue'] {
+          button {
+            color: #29468d;
+          }
+        }
+        button {
+          margin-top: 0;
+          height: 0.2rem;
+          width: 0.6rem;
+          border-radius: 0.2rem;
+          background: linear-gradient(to bottom, #ffe800, #e38c00);
+          border: none;
+          color: #511a00;
+          font-size: 0.1rem;
+        }
+      }
+    }
+  }
+
+  .yellowText {
+    width: 100%;
+    font-size: 0.1rem;
+    color: #f0cb5a;
+    display: flex;
+    justify-content: center;
+  }
+
+  .buttonHolder {
+    @include flex-xy;
+  }
+  .buttonBind {
+    margin-top: 0.1rem;
+    display: flex;
+
+    width: 0.7rem;
+    height: 0.32rem;
+    &[data-theme='darkBlue'] {
+      background: url('../../../assets/darkBlue/button1.png');
+      background-size: 100% 100%;
+      align-items: center;
+      justify-content: center;
+      color: #29468d;
+    }
+    background: url('../../../assets/commons/button1.png');
+    background-size: 100% 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.12rem;
+    padding-bottom: 0.04rem;
+    color: #511a00;
+    font-weight: 900;
+  }
+}

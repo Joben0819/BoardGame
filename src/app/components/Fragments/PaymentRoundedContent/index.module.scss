@@ -1,0 +1,54 @@
+.payment_roundedContent {
+  font-size: 0.1rem;
+
+  background: #00000080;
+  border: #dec18c solid 0.004rem;
+  border-radius: 0.2rem;
+  width: 1.5rem;
+  text-align: center;
+  height: 0.25rem;
+  padding-top: 0.04rem;
+  
+  &[bet-data="dblue"] {
+    color: #fff;
+    background: #00000070;
+    border: #fff solid 0.004rem;
+  }
+  &[data-theme="blackGold"] {
+    background: #00000080;
+    border: #dec18c solid 0.004rem;
+  }
+  &[data-theme="brownGold"] {
+    color: #000000;
+    background: #f7ede7;
+    border: #c4a994 solid 0.004rem;
+  }
+  &[data-theme="yellowWhite"] {
+    color: #c5915a;
+    background: #ebedf1;
+    border: #dec18c solid 0.004rem;
+  }
+  &[data-theme="greenYellow"] {
+    color: #fff;
+    background: #00000080;
+    border: #ffea01 solid 0.004rem;
+  }
+  &[data-theme="skyBlue"] {
+    color: #29468d;
+    background: #fff;
+    border: #8aeaff solid 0.004rem;
+  }
+  &[data-theme="darkBlue"] {
+    color: #0ca0e9;
+    background: #f4f6f9;
+    border: #8aeaff solid 0.004rem;
+  }
+  &[data-theme="redGold"] {
+    background: #00000080;
+    border: #dec18c solid 0.004rem;
+  }
+  &[data-theme="whiteGold"] {
+    background: #00000080;
+    border: #dec18c solid 0.004rem;
+  }
+}

@@ -1,0 +1,27 @@
+.lowerDetails_oneBox {
+  display: flex;
+  font-size: 0.15rem;
+  height: 0.65rem;
+  background-color: var(--promotion-lower-bg);
+  border-radius: 0.04rem;
+  flex-direction: column;
+  padding: 0.1rem;
+
+  .lowerDetails_yellowText {
+    text-align: center;
+    font-size: 0.2rem;
+    min-width: 0.8rem;
+    height: 0.33rem;
+    font-weight: 500;
+    background: var(--promotion-lower-title);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .lowerDetails_whiteText {
+    color: var(--promotion-lower-sub);
+    text-align: center;
+    font-size: 0.1rem;
+  }
+}
+

@@ -1,0 +1,54 @@
+.giftBoxModal_overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  transform: translateZ(0);
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.7);
+  .giftBoxModal_wrapper {
+    font-size: 0.3rem;
+    position: relative;
+    width: 5.1rem;
+    height: 3.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateZ(0);
+    &[data-theme='blackGold'] {
+      color: white;
+      .pButtonContain {
+        .wbButton {
+          background: linear-gradient(to bottom, #ffe800, #e38c00) !important;
+        }
+      }
+    }
+
+    .otherModal_container {
+      width: 100%;
+      top: -0.05rem;
+      height: 2.47rem;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      border-radius: 0 0 0.04rem 0.04rem;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .otherModal_sideTabs {
+      position: absolute;
+      left: -0.45rem;
+      top: 0.5rem;
+      z-index: -2;
+      font-size: 0.15rem;
+    }
+  }
+}

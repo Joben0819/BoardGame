@@ -1,0 +1,60 @@
+@import "src/styles/_helpers.scss";
+
+.wrapper {
+  display: flex;
+  .chipHolderBg {
+    background-image: url("../../../../../assets/commons/baccarat/chips-holder.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: size(5);
+    width: size(55);
+    flex: 1;
+  }
+
+  .chipsContainer {
+    position: relative;
+    top: size(-5);
+    overflow: hidden;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    gap: size(0.8);
+    img {
+      cursor: pointer;
+      position: relative;
+      top: size(2.5);
+      width: size(7.5);
+      height: size(7.5);
+      filter: brightness(50%);
+      transition: all ease-in-out 0.5s;
+    }
+    .isActive {
+      filter: brightness(100%);
+      top: size(0);
+    }
+  }
+
+  .selectChipsBtn {
+    position: absolute;
+    right: size(3);
+    bottom: size(0.05);
+    background-image: url("../../../../../assets/commons/baccarat/select-chips-btn.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    height: size(7);
+    width: size(16);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    span {
+      position: relative;
+      top: size(-0.76);
+      font-weight: 100;
+      font-size: size(2);
+      line-height: size(2);
+      text-shadow: 0 1px 2px #ff5d25;
+    }
+  }
+}

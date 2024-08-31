@@ -1,0 +1,285 @@
+.modalSafeBox_wrapper {
+  width: 3.55rem;
+  position: absolute;
+  border-radius: 0.08rem;
+  overflow: hidden;
+  .mdsContainerHeader {
+    height: 0.301rem;
+    background: url('../../../assets/blackGold/login_register/header.png');
+    background-repeat: no-repeat;
+    color: #511a00;
+    font-size: 0.18rem;
+    // padding-top: 0.05rem;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    background-size: cover !important;
+    > img {
+      margin-top: 0;
+      margin-right: 0.08rem;
+    }
+  }
+  .mdsHeaderTitle {
+    width: 100%;
+    display: flex;
+    margin-left: 0.1rem;
+    align-items: center;
+    margin-left: 1.32rem;
+  }
+  .modalSafeBoxContainer {
+    width: 3.55rem;
+    height: 2.15rem;
+    background: #1f1e1b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.1rem;
+
+    border: solid 0.004rem #8d7c4f;
+
+    .safeBox_input {
+      input {
+        width: 0.5rem;
+        font-size: 0.18rem;
+        background: transparent;
+        border: none;
+        border-bottom: solid 1px #777777;
+        // margin-top: 0.1rem;
+        margin-left: 0.3rem;
+        color: white;
+        text-align: center;
+      }
+    }
+    .buttonBox {
+      margin: 0 0.2rem;
+
+      button {
+        width: 0.625rem;
+        height: 0.25rem;
+        font-size: 0.15rem;
+        color: #651d00;
+        background: url('../../../assets/blackGold/safeBox/safeboxButton.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: none;
+        margin: 0.075rem;
+        font-weight: Bolder;
+      }
+
+      .safeReset {
+        background: url('../../../assets/blackGold/safeBox/safeReset.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 0.06rem;
+      }
+
+      .safeEnterDisabled {
+        background: url('../../../assets/blackGold/safeBox/safeEnter.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 0.06rem;
+      }
+
+      .safeEnter {
+        background: url('../../../assets/blackGold/safeBox/safeEnter.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 0.06rem;
+      }
+    }
+  }
+  .safeBox_textResult {
+    color: white;
+    font-size: 0.15rem;
+    margin-top: 0.1rem;
+    text-align: center;
+  }
+  &[data-theme='brownGold'] {
+    .mdsContainerHeader {
+      background: url('../../../assets/brownGold/login_register/header.png');
+    }
+    .modalSafeBoxContainer {
+      background: white;
+      border: none;
+      color: white;
+
+      .safeBox_input {
+        input {
+          width: 0.5rem;
+          font-size: 0.18rem;
+          background: transparent;
+          border: none;
+          border-bottom: solid 0.1px #777777;
+          // margin-top: 0.2rem;
+          margin-left: 0.3rem;
+          color: black;
+          text-align: center;
+        }
+      }
+    }
+  }
+  &[data-theme='yellowWhite'] {
+    .mdsContainerHeader {
+      background: url('../../../assets/yellowWhite/login_register/header.png');
+    }
+    .modalSafeBoxContainer {
+      background: white;
+      border: none;
+      color: #a11300;
+      .safeBox_input {
+        input {
+          width: 0.5rem;
+          font-size: 0.18rem;
+          background: transparent;
+          border: none;
+          border-bottom: solid 1px #0a0a0a;
+          // margin-top: 0.2rem;
+          margin-left: 0.3rem;
+          color: black;
+          text-align: center;
+        }
+      }
+    }
+  }
+  &[data-theme='greenYellow'] {
+    .mdsContainerHeader {
+      background: url('../../../assets/greenYellow/login_register/header.png');
+    }
+    .modalSafeBoxContainer {
+      background: #04a17a;
+      border: none;
+      color: #face13;
+      .safeBox_input {
+        input {
+          width: 0.5rem;
+          font-size: 0.18rem;
+          background: transparent;
+          border: none;
+          border-bottom: solid 1px #ffffff;
+          // margin-top: 0.2rem;
+          margin-left: 0.3rem;
+          color: #ffffff;
+          text-align: center;
+        }
+      }
+    }
+  }
+  &[data-theme='skyBlue'] {
+    .mdsContainerHeader {
+      background: url('../../../assets/skyBlue/login_register/header.png');
+      color: #ffffff;
+    }
+    .modalSafeBoxContainer {
+      background: #ffffff;
+      border: none;
+      color: #888888;
+      .safeBox_input {
+        input {
+          width: 0.5rem;
+          font-size: 0.18rem;
+          background: transparent;
+          border: none;
+          border-bottom: solid 0.1px #888888;
+          // margin-top: 0.2rem;
+          margin-left: 0.3rem;
+          color: #000000;
+          text-align: center;
+        }
+      }
+    }
+  }
+  &[data-theme='darkBlue'] {
+    .mdsContainerHeader {
+      background: url('../../../assets/darkBlue/login_register/header.png');
+      color: #29468d;
+    }
+    .modalSafeBoxContainer {
+      background: linear-gradient(to right, #4d6296, #29334b);
+      border: solid 2px linear-gradient(to right, #ffffff, #8aeaff) !important;
+      color: #ffffff;
+      .safeBox_input {
+        input {
+          width: 0.5rem;
+          font-size: 0.18rem;
+          background: transparent;
+          border: none;
+          border-bottom: solid 1px #d7e8f0;
+          // margin-top: 0.2rem;
+          margin-left: 0.3rem;
+          color: #ffffff;
+          text-align: center;
+        }
+      }
+
+      .buttonBox {
+        button {
+          color: #162752;
+          background: url('../../../assets/darkBlue/safeBox/safeboxButton.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+
+        .safeReset {
+          background: url('../../../assets/darkBlue/safeBox/safeReset.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          color: #7e1215;
+        }
+
+        .safeEnter {
+          background: url('../../../assets/darkBlue/safeBox/safeEnter.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          color: #3c3c3c;
+        }
+      }
+    }
+  }
+  &[data-theme='redGold'] {
+    .mdsContainerHeader {
+      background: url('../../../assets/redGold/login_register/header.png');
+    }
+    .modalSafeBoxContainer {
+      background: linear-gradient(to right, #af0100, #ff6b00);
+      border: solid 2px linear-gradient(to right, #ffffff, #8aeaff) !important;
+      color: #ffffff;
+      .safeBox_input {
+        input {
+          width: 0.5rem;
+          font-size: 0.18rem;
+          background: transparent;
+          border: none;
+          border-bottom: solid 1px #fdf8f8;
+          // margin-top: 0.2rem;
+          margin-left: 0.3rem;
+          color: #ffffff;
+          text-align: center;
+        }
+      }
+    }
+  }
+  &[data-theme='whiteGold'] {
+    .mdsContainerHeader {
+      background: url('../../../assets/whiteGold/login_register/header.png');
+    }
+    .modalSafeBoxContainer {
+      background: #dadce7;
+      border: none;
+      color: #1d2d61;
+      .safeBox_input {
+        input {
+          width: 0.5rem;
+          font-size: 0.18rem;
+          background: transparent;
+          border: none;
+          border-bottom: solid 1px #461d09;
+          // margin-top: 0.2rem;
+          margin-left: 0.3rem;
+          color: #1d2d61;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

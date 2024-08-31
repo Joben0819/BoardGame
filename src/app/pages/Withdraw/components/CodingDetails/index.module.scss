@@ -1,0 +1,57 @@
+.codingDetailsWrapper {
+  flex: 1;
+  position: relative;
+  padding: 0.1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.1rem;
+  font-size: 0.15rem;
+  color: white;
+  
+  &[data-theme="yellowWhite"]{
+    table {
+       thead {
+        tr {
+          th {
+            color: #FFC400;
+          }
+        }
+       }
+    }
+  }
+}
+.noDataOverride{
+  height: 100%;
+  width: 100%;
+  > div {
+    height: 100%;
+    position: relative;
+  }
+  :global{
+    .noDataContainer{
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+  }
+}
+.noDataWrapper{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.pullToRefresh {
+  :global {
+    .ptr__pull-down > div {
+      p {
+        font-size: 0.15rem;
+        color: #f6da85;
+        text-align: center !important;
+      }
+    }
+  }
+}

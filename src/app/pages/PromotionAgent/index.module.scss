@@ -1,0 +1,28 @@
+.wrapper {
+  font-size: 0.15rem;
+  color: white;
+  display: flex;
+  height: calc(100% - 0.4rem);
+  // align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+.contentWrapper {
+  height: 100%;
+  overflow-y: scroll;
+  padding: 0.1rem;
+}
+@for $i from 0 through 100 {
+  .wd#{$i} {
+    width: #{$i}#{"%"} !important;
+  }
+  .hg#{$i} {
+    height: #{$i}#{"%"} !important;
+  }
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

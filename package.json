@@ -1,0 +1,101 @@
+{
+  "name": "board-game",
+  "version": "3.8.14.1",
+  "private": true,
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/react-transition-group": "^1.1.8",
+    "assert": "^2.0.0",
+    "axios": "^1.2.1",
+    "buffer": "^6.0.3",
+    "constants-browserify": "^1.0.0",
+    "framer-motion": "^10.0.1",
+    "howler": "^2.2.3",
+    "jsencrypt": "^3.3.2",
+    "million": "^2.5.13",
+    "path-browserify": "^1.0.1",
+    "react": "^18.2.0",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-convert-image": "^0.5.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-countdown-circle-timer": "^3.1.0",
+    "react-device-detect": "^2.2.3",
+    "react-dom": "^18.2.0",
+    "react-draggable": "^4.4.5",
+    "react-full-screen": "^1.1.1",
+    "react-html-parser": "^2.0.2",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-qr-code": "^2.0.11",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.4.3",
+    "react-scripts": "5.0.1",
+    "react-select": "^5.7.2",
+    "react-share": "^4.4.1",
+    "react-simple-pull-to-refresh": "^1.3.3",
+    "react-svga": "^0.1.6",
+    "react-table": "^7.8.0",
+    "react-transition-group": "^4.4.5",
+    "redux-persist": "^6.0.0",
+    "sass": "^1.56.1",
+    "swiper": "^8.4.5",
+    "url": "^0.11.1",
+    "use-mobile-detect-hook": "^1.0.5",
+    "vm-browserify": "^1.1.2",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "8801": "set REACT_APP_SITE=8801&& node copy-file.js 8801 && react-scripts start",
+    "8802": "set REACT_APP_SITE=8802&&  node copy-file.js 8802 && react-scripts start",
+    "8803": "set REACT_APP_SITE=8803&&  node copy-file.js 8803 && react-scripts start",
+    "dev-8801": "export REACT_APP_SITE=8801 && cp public/8801.html public/index.html && cp public/8801.json public/manifest.json && react-scripts start",
+    "dev-8802": "export REACT_APP_SITE=8802 && cp public/8802.html public/index.html && cp public/8802.json public/manifest.json && react-scripts start",
+    "dev-8803": "export REACT_APP_SITE=8803 && cp public/8803.html public/index.html && cp public/8803.json public/manifest.json && react-scripts start",
+    "b-8801": "set REACT_APP_SITE=8801&& node copy-file.js 8801 && react-scripts build",
+    "b-8802": "set REACT_APP_SITE=8802&&  node copy-file.js 8802 && react-scripts build",
+    "b-8803": "set REACT_APP_SITE=8803&&  node copy-file.js 8803 && react-scripts build",
+    "build-8801": "export REACT_APP_SITE=8801 && cp public/8801.html public/index.html && cp public/8801.json public/manifest.json && react-scripts build",
+    "build-8802": "export REACT_APP_SITE=8802 && cp public/8802.html public/index.html && cp public/8802.json public/manifest.json && react-scripts build",
+    "build-8803": "export REACT_APP_SITE=8803 && cp public/8803.html public/index.html && cp public/8803.json public/manifest.json && react-scripts build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "client": ""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.js",
+          "**/*.jsx"
+        ],
+        "rules": {
+          "react-hooks/exhaustive-deps": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.12.3",
+    "cross-env": "^7.0.3"
+  }
+}

@@ -1,0 +1,31 @@
+.searchBg {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: var(--home-bg-search) center / 100% 100% no-repeat;
+  padding: 0.05rem 0.1rem;
+  img {
+    height: 0.11rem;
+    width: 0.11rem;
+  }
+  input[type="text"] {
+    width: 100%;
+    font-size: 0.1rem;
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--home-input-search);
+    outline: none;
+    border: none;
+    caret-color: #fff;
+  }
+  input[type="text"]::placeholder {
+    color: var(--home-placeholder-search);
+  }
+  input[type="text"]:focus::placeholder {
+    color: transparent;
+  }
+}

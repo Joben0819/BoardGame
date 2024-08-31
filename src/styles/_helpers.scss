@@ -1,0 +1,13 @@
+@use 'sass:math';
+
+@function size($value) {
+  $remValue: calc($value / 16) + rem;
+  @return $remValue;
+}
+
+//Use @include flex-xy; if you intended to use flex with all side center only
+@mixin flex-xy($justify-content: center, $align-items: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}

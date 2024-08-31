@@ -1,0 +1,252 @@
+.selfServiceContainer {
+  width: 100%;
+  // height: 100%;
+  //   background: blue;
+  &[data-theme="brownGold"] {
+    .footer {
+      background: #fff;
+    }
+
+    .infoCont {
+      .infoKey {
+        color: #fff;
+        background: #c4a994;
+      }
+      .infoValue {
+        color: #888888;
+        background: #ededed;
+      }
+    }
+  }
+
+  &[data-theme="yellowWhite"] {
+    .footer {
+      background: #ebedf1;
+    }
+
+    .infoCont {
+      .infoKey {
+        color: #ffc400;
+        background: #0a0a0a;
+      }
+      .infoValue {
+        color: #bea288;
+        background: #fff;
+      }
+    }
+  }
+  &[data-theme="greenYellow"] {
+    .footer {
+      background: #0e9473;
+    }
+
+    .infoCont {
+      .infoKey {
+        background: #3b8675;
+      }
+      .infoValue {
+        color: #bebebe;
+        background: #fff;
+      }
+    }
+  }
+  &[data-theme="skyBlue"] {
+    .footer {
+      background: #fff;
+    }
+
+    .infoCont {
+      .infoKey {
+        background: #0ca0e9;
+      }
+      .infoValue {
+        color: #888888;
+        background: #f4f6f9;
+      }
+    }
+  }
+  &[data-theme="darkBlue"] {
+    .footer {
+      background: linear-gradient(to top, #162752, #29468d);
+    }
+
+    .infoCont {
+      .infoKey {
+        color: #fff;
+        background: #00000080;
+      }
+      .infoValue {
+        color: #00000080;
+        background: #fff;
+      }
+    }
+
+    .button {
+      background: linear-gradient(to top, #8aeaff, #ffffff);
+
+      span {
+        color: #29468d;
+      }
+    }
+  }
+  &[data-theme="redGold"] {
+    .footer {
+      background: linear-gradient(to left, #ff6b00, #af0100);
+    }
+
+    .infoCont {
+      .infoKey {
+        color: #fff;
+        background: #00000080;
+      }
+      .infoValue {
+        color: #080000;
+        background: #fff;
+      }
+    }
+  }
+  &[data-theme="whiteGold"] {
+    .footer {
+      background: #e9cb7b;
+    }
+
+    .infoCont {
+      .infoKey {
+        color: #461d09;
+        background: #d5a93d;
+      }
+      .infoValue {
+        color: #757575;
+        background: #fff;
+      }
+    }
+  }
+  .wrapper {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .tableContainer {
+    position: relative;
+    height: 3rem;
+    width: 95%;
+    .loading {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+    }
+    table {
+      height: 100%;
+    }
+  }
+
+  .footer {
+    margin-top: 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 0.5rem;
+    background: #222;
+    border-radius: 0.04rem;
+    font-size: 0.13rem;
+  }
+
+  .infoCont {
+    width: 85%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    .infoKey {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 0.3rem;
+      width: 1.1rem;
+      background-color: #444444;
+      float: left;
+      border-top-left-radius: 0.03rem;
+      border-bottom-left-radius: 0.03rem;
+    }
+    .infoValue {
+      display: flex;
+      align-items: center;
+      padding-left: 0.1rem;
+      height: 0.3rem;
+      width: 1rem;
+      background-color: #000;
+      float: left;
+      border-top-right-radius: 0.03rem;
+      border-bottom-right-radius: 0.03rem;
+    }
+  }
+
+  .buttonCont {
+    // width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, #e38c00, #ffe800);
+    height: 0.3rem;
+    width: 0.7rem;
+    border-radius: 0.2rem;
+    padding: 0.05rem;
+    span {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #651d00;
+    }
+  }
+}
+
+.pullToRefresh {
+  :global {
+    .ptr__pull-down > div {
+      p {
+        font-size: 0.15rem;
+        color: #f6da85;
+        text-align: center !important;
+      }
+    }
+
+    .noDataContainer {
+      top: 0;
+    }
+
+  }
+}
+
+.tableContainer {
+  :global {
+    table {
+      &[data-theme="darkBlue"] {
+        tbody {
+          tr {
+            td:nth-child(2),
+            td:nth-child(3),
+            td:nth-child(4) {
+              span {
+                background: linear-gradient(180deg, #ffffff 0%, #f9c423 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

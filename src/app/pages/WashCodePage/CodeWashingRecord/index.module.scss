@@ -1,0 +1,36 @@
+.container {
+  height: 100%;
+  width: 95%;
+  position: relative;
+}
+
+.tableCont {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  .washCodeTableWrapper {
+    height: 100%;
+    
+  }
+  .noDataWrapper {
+    height: 100%;
+    :global {
+      .noDataContainer {
+        top: 0.28rem;
+      }
+    }
+  }
+}
+
+.pullToRefresh {
+  :global {
+    .ptr__pull-down > div {
+      p {
+        font-size: 0.15rem;
+        color: #f6da85;
+        text-align: center !important;
+      }
+    }
+  }
+}

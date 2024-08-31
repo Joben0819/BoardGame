@@ -1,0 +1,713 @@
+@import '/src/styles/_helpers.scss';
+
+.gameStart_mainWrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  color: white;
+
+  .gsp_headerContainer {
+    top: 0;
+    height: 0.4rem;
+    width: 100%;
+  }
+  .gameStart_mainContentWrapper {
+    font-size: 0.15rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    height: calc(100% - 0.4rem);
+    position: relative;
+    .gameStart_leftMainContent {
+      margin: 0;
+      width: 1.8rem;
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+      background-image: linear-gradient(to bottom right, #1f1e1b, #1f1e1b);
+
+      .endoPeriod_container {
+        @include flex-xy;
+        background: #2f2f2f;
+
+        .endoPeriodLabelCont {
+          @include flex-xy(flex-end, center);
+        }
+
+        .countdownCircleCont {
+          @include flex-xy;
+          background: #25241f;
+          width: 0.6rem;
+          height: 0.6rem;
+          margin: 0.04rem;
+          border-radius: 100%;
+
+          > div {
+            @include flex-xy;
+            width: 100% !important;
+            height: 100% !important;
+
+            svg {
+              width: 0.5rem !important;
+              height: 0.5rem !important;
+            }
+
+            .timer {
+              @include flex-xy;
+
+              span {
+                font-size: 0.09rem;
+              }
+            }
+          }
+        }
+      }
+
+      .currentPeriod_section {
+        @include flex-xy;
+        flex-direction: column;
+
+        .currentPeriod_labelContainer {
+          margin: 0.06rem 0 0.04rem 0;
+          > div {
+            @include flex-xy;
+          }
+        }
+
+        .currentPeriod_dateContainer {
+          @include flex-xy;
+          padding: 0 0 0.1rem 0;
+          border-bottom: 1px solid #444;
+
+          .cp_dateRectangle {
+            background: #2f2f2f;
+            width: 1.5rem;
+            text-align: center;
+            border-radius: 0.2rem;
+            font-size: 0.18rem;
+            > div {
+              @include flex-xy;
+              height: 100%;
+              padding: 0.04rem;
+            }
+          }
+        }
+      }
+
+      .previousResultContainer {
+        @include flex-xy;
+        flex-direction: column;
+        border-bottom: 1px solid #444;
+        margin: 0 0.1rem 0 0.1rem;
+
+        .previousResultLabelContainer {
+          margin: 0.06rem 0 0.04rem 0;
+          height: 0.2rem;
+        }
+
+        .previousResultDiceContaineer {
+          @include flex-xy;
+          width: 100%;
+
+          .previousDiceContainer {
+            @include flex-xy;
+            background: #2c2c2c;
+            height: 0.6rem;
+            width: 1.5rem;
+            margin: 0 0 0.1rem 0;
+            border-radius: 0.06rem;
+            overflow-x: scroll;
+            overflow-y: hidden;
+
+            > div {
+              @include flex-xy;
+            }
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
+
+            ul {
+              list-style: none;
+              display: flex;
+            }
+            .importWhite {
+              background: -webkit-linear-gradient(#ffffff, #ffffff);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+            .lotteryChipsImage {
+              @include flex-xy;
+              width: 0.25rem;
+              height: 0.25rem;
+              align-content: center;
+              justify-items: center;
+              font-size: 0.15rem;
+              background: url("../../assets/commons/lotteryAssets/lotteryBall.png");
+              text-align: center;
+              text-justify: center;
+              background-size: contain;
+              background-repeat: no-repeat;
+              color: black;
+              margin: 0.15rem 0.025rem;
+            }
+          }
+        }
+
+        img {
+          width: 0.25rem;
+          height: auto;
+          margin-left: 0.05rem;
+        }
+
+        .opf_historyButton {
+          width: 85%;
+          padding: 0 0 0.1rem 0.1rem;
+        }
+      }
+
+      .onePointFast_historyContainer {
+        @include flex-xy;
+        padding: 0.1rem;
+        flex: 1;
+
+        .opf_rechargeButton {
+          @include flex-xy;
+
+          > div {
+            margin: 0 !important;
+          }
+        }
+      }
+    }
+    .gameStart_rightMainContent {
+      flex: 1;
+      .lotteryDice_mainWrapper {
+        @include flex-xy(flex-start, center);
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        padding: 0.1rem;
+        .lotteryDiceSelectHeader {
+          background: #1f1e1b;
+          height: 0.47rem;
+          width: 100%;
+          position: relative;
+          border-radius: 2rem;
+
+          ul {
+            @include flex-xy(space-between, center);
+            list-style: none;
+            width: 100%;
+            li {
+              width: 2rem;
+              padding: 0.125rem;
+              text-align: center;
+            }
+          }
+          .activeDicelottery {
+            border-radius: 2rem;
+            padding: 0.125rem;
+            color: #511a00;
+            font-weight: 700;
+
+            background: linear-gradient(to bottom, #fbeeb1, #facf6b);
+          }
+        }
+        .lotteryDiceSelectContent {
+          height: calc(100% - 1.2rem);
+          margin-top: 0.1rem;
+          width: 100%;
+          margin-bottom: 0.1rem;
+          ul {
+            @include flex-xy(flex-start, flex-start);
+            flex: 1;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            overflow-y: scroll;
+            gap: 0 0.48rem;
+            width: 100%;
+            &::-webkit-scrollbar {
+              display: none;
+            }
+
+            li {
+              padding: 0.1rem;
+            }
+          }
+        }
+        .lotteryDiceFooterSection {
+          @include flex-xy;
+          background: #1f1e1b;
+          width: 6.1rem;
+          height: 0.55rem;
+          border-radius: 0.08rem;
+          .lotteryDiceFooterSelection {
+            @include flex-xy;
+            width: 100%;
+            min-height: 0.3rem;
+            position: relative;
+
+            ul {
+              @include flex-xy;
+              list-style: none;
+              gap: 0.1rem;
+              li {
+                @include flex-xy;
+              }
+            }
+            .madeMyVerticalDivider {
+              height: 0.35rem;
+              margin-left: 0.004rem;
+              width: 0.01rem;
+              background: #000000;
+              border: 0.004rem solid #444444;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &[data-theme="brownGold"] {
+    .gameStart_mainContentWrapper {
+      .gameStart_leftMainContent {
+        background-image: linear-gradient(
+          to bottom right,
+          #432b0a,
+          #634126
+        ) !important;
+        .previousResultContainer {
+          border-bottom: 1px solid #6f4a22;
+          .previousDiceContainer {
+            background: #6f4a22 !important;
+          }
+        }
+        .currentPeriod_section {
+          .cp_dateRectangle {
+            background-color: #6f4a22 !important;
+          }
+        }
+        .endoPeriod_container {
+          background: #6f4a22 !important;
+          .countdownCircleCont {
+            background: #653f1f !important;
+          }
+        }
+      }
+    }
+    .lotteryDice_mainWrapper {
+      .lotteryDiceSelectHeader {
+        background: linear-gradient(to right, #fff, #fff) !important;
+        color: #888888;
+        .activeDicelottery {
+          color: #fff !important;
+          background: linear-gradient(to left, #735c4b, #735c4b) !important;
+        }
+      }
+
+      .lotteryDiceFooterSection {
+        background: #fefeff !important;
+
+        .inputUrBet {
+          background: #ededed !important;
+          color: #000 !important;
+        }
+        .lotteryDiceFooterSelection {
+          .madeMyVerticalDivider {
+            background: #000000;
+            border: 0.004rem solid #ededed;
+          }
+        }
+      }
+    }
+    .currentPeriod_dateContainer {
+      border-bottom: 1px solid #6f4a22 !important;
+    }
+  }
+
+  &[data-theme="yellowWhite"] {
+    .gameStart_mainContentWrapper {
+      .gameStart_leftMainContent {
+        background: linear-gradient(to right, #ffc400, #ffffff);
+        border-right: 0.01rem #ffc400 solid;
+        .previousResultContainer {
+          .previousDiceContainer {
+            background: #0a0a0a !important;
+          }
+          border-bottom: #ffc400 solid 0.005rem;
+        }
+        .currentPeriod_section {
+          .cp_dateRectangle {
+            color: #fff;
+            background-color: #0a0a0a !important;
+          }
+        }
+        .endoPeriod_container {
+          background: #0a0a0a;
+          .countdownCircleCont {
+            background: #25241f;
+          }
+        }
+      }
+    }
+
+    .lotteryDice_mainWrapper {
+      .lotteryDiceSelectHeader {
+        background: linear-gradient(to right, #000, #000) !important;
+        color: #fbfbff;
+        .activeDicelottery {
+          color: #511a00 !important;
+          background: linear-gradient(to left, #ffc400, #ffc400) !important;
+          border: #ffc400 solid 0.01rem;
+        }
+      }
+
+      .lotteryDiceFooterSection {
+        background: #fefeff !important;
+
+        .lotteryDiceFooterSelection {
+          ul {
+            li {
+              .inputUrBet {
+                color: #c5915a !important;
+                background: #ebedf1 !important;
+                border: #ffc400 solid 0.008rem !important;
+              }
+            }
+          }
+          .madeMyVerticalDivider {
+            background: #000000;
+            border: 0.004rem solid #ededed;
+          }
+        }
+      }
+    }
+    .currentPeriod_dateContainer {
+      border-bottom: 1px solid #ffc400 !important;
+    }
+  }
+  &[data-theme="greenYellow"] {
+    background: linear-gradient(
+      101.37deg,
+      #1c6d59 0%,
+      #078f6d 47.4%,
+      #0c604b 100%
+    );
+    .gameStart_mainContentWrapper {
+      .gameStart_leftMainContent {
+        background: linear-gradient(to right, #06362d, #055848, #007658);
+        border-right: 0.01rem #0e9473 solid;
+        .previousResultContainer {
+          .previousDiceContainer {
+            background: #0e9473 !important;
+          }
+          border-bottom: #0e9473 solid 0.005rem;
+        }
+        .currentPeriod_section {
+          .cp_dateRectangle {
+            color: #fff;
+            background-color: #0e9473 !important;
+          }
+        }
+        .endoPeriod_container {
+          background: #0e9473;
+          .countdownCircleCont {
+            background: #25241f;
+          }
+        }
+      }
+    }
+
+    .lotteryDice_mainWrapper {
+      .lotteryDiceSelectHeader {
+        background: linear-gradient(to right, #ffffff, #ffffff) !important;
+        color: #511a00;
+        .activeDicelottery {
+          color: #511a00;
+          background: linear-gradient(
+            to bottom,
+            #ffffff,
+            #ffc400,
+            #e39300
+          ) !important;
+          border: #ffe89b solid 0.01rem;
+        }
+      }
+
+      .lotteryDiceFooterSection {
+        background: #0e9473 !important;
+        box-shadow: 0 0.01rem 0.01rem rgba(0, 0, 0, 0.25);
+        border-radius: 0.05;
+        .lotteryDiceFooterSelection {
+          .madeMyVerticalDivider {
+            border: 0.004rem solid #ededed;
+          }
+        }
+        ul {
+          li:nth-child(7) {
+            .madeMyVerticalDivider {
+              border: 0.004rem solid #fff !important;
+            }
+          }
+          li:nth-child(8) {
+            input {
+              background: rgba(0, 0, 0, 0.5) !important;
+            }
+          }
+        }
+      }
+    }
+    .currentPeriod_dateContainer {
+      border-bottom: 1px solid #0e9473 !important;
+    }
+
+    .endoPeriodLabelCont {
+      > div {
+        background: linear-gradient(
+          180deg,
+          #ffffff 0%,
+          #fffae9 0.01%,
+          #face13 27.6%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+    }
+  }
+  &[data-theme="skyBlue"] {
+    .gameStart_mainContentWrapper {
+      .gameStart_leftMainContent {
+        background: linear-gradient(to right, #0081ca, #0081ca);
+        border-right: 0.01rem #0071a9 solid;
+        .previousResultContainer {
+          .previousDiceContainer {
+            background: #0071a9 !important;
+          }
+          border-bottom: #3beaff solid 0.005rem;
+        }
+        .currentPeriod_section {
+          .cp_dateRectangle {
+            color: #fff;
+            background-color: #0071a9 !important;
+          }
+        }
+        .endoPeriod_container {
+          background: #0071a9;
+          .countdownCircleCont {
+            background: #0081ca;
+          }
+        }
+      }
+    }
+
+    .lotteryDice_mainWrapper {
+      .lotteryDiceSelectHeader {
+        background: linear-gradient(to right, #fff, #fff) !important;
+        color: #888888;
+        .activeDicelottery {
+          color: #fff !important;
+          background: linear-gradient(to left, #15d9f8, #037dfb) !important;
+          border: #3beaff solid 0.01rem;
+        }
+      }
+
+      .lotteryDiceFooterSection {
+        background: #f9f9f9 !important;
+
+        .lotteryDiceFooterSelection {
+          .madeMyVerticalDivider {
+            background: #000000;
+            border: 0.004rem solid #ededed;
+          }
+        }
+      }
+    }
+    .currentPeriod_dateContainer {
+      border-bottom: 1px solid #3beaff !important;
+    }
+  }
+  &[data-theme="darkBlue"] {
+    .gameStart_mainContentWrapper {
+      .gameStart_leftMainContent {
+        background: linear-gradient(to left, #29334b, #4d6296) !important;
+        border-right: 0.01rem #0e9473 solid;
+        .previousResultContainer {
+          .previousDiceContainer {
+            background: #00000080 !important;
+          }
+          border-bottom: #444444 solid 0.005rem;
+        }
+        .currentPeriod_section {
+          .cp_dateRectangle {
+            color: #4d6296;
+            background-color: #fff !important;
+          }
+        }
+        .endoPeriod_container {
+          background: linear-gradient(to left, #8498c9, #4d6296) !important;
+          .countdownCircleCont {
+            background: #e1f5fe;
+            color: #29468d;
+          }
+        }
+        .onePointFast_historyContainer {
+          .opf_rechargeButton {
+            :global {
+              .buttonDesignOne {
+                background: linear-gradient(180deg, #FFFFFF 0%, #8AEAFF 100%) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .lotteryDice_mainWrapper {
+      .lotteryDiceSelectHeader {
+        background: linear-gradient(to left, #00000080, #00000080) !important;
+        color: #fff;
+        .activeDicelottery {
+          color: #fff !important;
+          background: linear-gradient(
+            to bottom,
+
+            #29468d,
+            #162752
+          ) !important;
+          border: #29468d solid 0.01rem;
+        }
+      }
+
+      .lotteryDiceFooterSection {
+        background: linear-gradient(to left, #8498c9, #4d6296) !important;
+        box-shadow: 0 0.01rem 0.01rem rgba(0, 0, 0, 0.25);
+        border-radius: 0.05;
+        .lotteryDiceFooterSelection {
+          .madeMyVerticalDivider {
+            border: 0.004rem solid #ededed;
+          }
+        }
+      }
+    }
+    .currentPeriod_dateContainer {
+      border-bottom: 1px solid #444444 !important;
+    }
+  }
+  &[data-theme="redGold"] {
+    background: #c9bebe;
+    .gameStart_mainContentWrapper {
+      .gameStart_leftMainContent {
+        background: linear-gradient(to right, #af0100, #771818);
+        .previousResultContainer {
+          .previousDiceContainer {
+            background: #00000080 !important;
+          }
+        }
+        .currentPeriod_section {
+          .cp_dateRectangle {
+            background-color: #00000080 !important;
+          }
+        }
+        .endoPeriod_container {
+          background: linear-gradient(to left, #47100f, #6a1211);
+          .countdownCircleCont {
+            background: #080008;
+          }
+        }
+      }
+    }
+
+    .lotteryDice_mainWrapper {
+      .lotteryDiceSelectHeader {
+        background: linear-gradient(to right, #fdf8f8, #f6eeee) !important;
+        color: #511a00;
+        .activeDicelottery {
+          color: #511a00;
+          background: linear-gradient(to bottom, #fbeeb1, #facf6b);
+        }
+      }
+
+      .lotteryDiceFooterSection {
+        background: #fdf8f8 !important;
+
+        .lotteryDiceFooterSelection {
+          .madeMyVerticalDivider {
+            background: #000000;
+            border: 0.004rem solid #444444;
+          }
+          
+          ul {
+            li:nth-child(8) {
+              input {
+                background: rgba(0, 0, 0, 0.5) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    .currentPeriod_dateContainer {
+      border-bottom: 1px solid #00000080 !important;
+    }
+  }
+  &[data-theme="whiteGold"] {
+    .inputUrBet {
+      background: rgba(0, 0, 0, 0.5) !important;
+    }
+    .gameStart_mainContentWrapper {
+      .gameStart_leftMainContent {
+        background: linear-gradient(to right, #ccd1e6, #fcfbfe);
+        border-right: 0.01rem #e9cb7b solid;
+        .previousResultContainer {
+          .previousDiceContainer {
+            background: #e9cb7b !important;
+          }
+        }
+        .currentPeriod_section {
+          .cp_dateRectangle {
+            color: #461d09;
+            background-color: #e9cb7b !important;
+          }
+        }
+        .endoPeriod_container {
+          background: #e9cb7b;
+          .countdownCircleCont {
+            background: #837145;
+          }
+        }
+      }
+    }
+
+    .lotteryDice_mainWrapper {
+      .lotteryDiceSelectHeader {
+        background: linear-gradient(to right, #fff, #fff) !important;
+        color: #435689;
+        .activeDicelottery {
+          color: #511a00;
+          background: linear-gradient(to bottom, #fbeeb1, #facf6b);
+          border: #facf6b solid 0.01rem;
+        }
+      }
+
+      .lotteryDiceFooterSection {
+        background: #f9f9f9 !important;
+
+        .lotteryDiceFooterSelection {
+          .madeMyVerticalDivider {
+            background: #000000;
+            border: 0.004rem solid #444444;
+          }
+        }
+      }
+    }
+    .currentPeriod_dateContainer {
+      border-bottom: 1px solid pink !important;
+    }
+  }
+}

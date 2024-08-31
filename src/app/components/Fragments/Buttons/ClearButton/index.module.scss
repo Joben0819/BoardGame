@@ -1,0 +1,83 @@
+.button {
+  border-radius: 0.2rem;
+  color: #511a00;
+  font-size: 0.13rem;
+  font-weight: 600;
+  // margin-top: 0.15rem;
+  padding: 0.01rem !important;
+  text-align: center;
+  width: 100%;
+  align-items: center;
+  background: linear-gradient(180deg, #ffe800, #e38c00);
+  border: none;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  span{
+    position: relative;
+    top: -0.008rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &[data-theme="blackGold"] {
+    background: linear-gradient(180deg, #ffe800, #e38c00) !important;
+    border: none;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    span {
+      color: #511a00;
+    }
+  }
+  &[data-theme="blackGold"] {
+    background: #00000080 !important;
+    color: white;
+
+    span {
+      color: #757575;
+    }
+  }
+  &[data-theme="whiteGold"] {
+    background: #00000080;
+    color: white;
+  }
+  &[data-theme="yellowWhite"] {
+    background: #161616;
+    color: white;
+
+    span {
+      color: #757575;
+    }
+  }
+
+  &[data-theme="greenYellow"] {
+    color: #ffffff;
+    background: url("./../../../../assets/greenYellow/fragments/borderbutton.png");
+    background-size: 100% 100%;
+  }
+  &[data-theme="redGold"] {
+    color: white;
+    background: #00000080;
+  }
+  &[data-theme="brownGold"] {
+    background: #ffffff;
+    span {
+      color: #c4a994;
+    }
+  }
+  &[data-theme="skyBlue"] {
+    background: #ffffff;
+    span {
+      color: #c4a994;
+    }
+  }
+  &[data-theme="darkBlue"] {
+    background: #00000080;
+    span {
+      color: white;
+    }
+  }
+}

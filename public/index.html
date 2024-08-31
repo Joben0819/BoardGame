@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./assets/8801/favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./assets/8801/favicon.ico"
+      type="image/x-icon"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=contain, maximum-scale=1, minimum-scale=1, user-scalable=no height=device-height"
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta name="apple-mobile-web-app-title" content="开元棋牌" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="description" content="王者绝非偶然 实力造就非凡" />
+    <link rel="apple-touch-icon" href="./assets/8801/favicon.ico" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script src="https://cstaticdun.126.net/load.min.js"></script>
+    <title>开元棋牌</title>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script>
+      
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- <script src="../src/scripts/yidun-captcha.js"></script> -->
+    <script
+      type="text/javascript"
+      src="https://speed-address.oss-cn-hangzhou.aliyuncs.com/common/js/openinstall.js"
+    ></script>
+    <script src="https://speed-address.oss-accelerate.aliyuncs.com/openinstall-js-domains/servers.js"></script>
+    <script>
+      var isLoggedIn = !!localStorage.getItem("loginNow");
+      if (!isLoggedIn) {
+        var data = OpenInstall.parseUrlParams();
+        new OpenInstall(
+          {
+            appKey: "6egdzp",
+            channelCode: "1001",
+            servers: servers,
+            apk: "",
+            ios: "",
+          },
+          data
+        );
+      }
+    </script>
+  </body>
+</html>

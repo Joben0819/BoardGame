@@ -1,0 +1,19 @@
+.iframeWrapper{
+    height: calc(100% - 0.4rem);
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    iframe {
+        height: 100%;
+        width: 100%;
+    }
+    .iframeDesktop {
+        height: 100%;
+        width: 50%;
+    }
+    .iframeMobile {
+        // transform: rotate(-90deg);
+    }
+}

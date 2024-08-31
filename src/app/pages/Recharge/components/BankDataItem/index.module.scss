@@ -1,0 +1,97 @@
+.bankDataItem {
+  height: 0.25rem;
+  width: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.2rem;
+  position: relative;
+  // overflow: hidden;
+  gap: 0.1rem;
+  .discount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0 0.02rem;
+    font-size: 0.08rem;
+    position: absolute;
+    border-radius: 0.1rem;
+    top: 0;
+    right: 0;
+    color: #fff;
+  }
+
+  &[data-theme="blackGold"] {
+    border: #dec18c solid 0.004rem;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  &[data-theme="brownGold"] {
+    border: #c4a994 solid 0.004rem;
+    background: #f7ede7;
+  }
+  &[data-theme="yellowWhite"] {
+    border: #dec18c solid 0.004rem;
+    background: #ebedf1;
+    color: #c5915a;
+  }
+  &[data-theme="greenYellow"] {
+    border: #ffea01 solid 0.004rem;
+    background: #3b8675;
+    color: #fff;
+  }
+  &[data-theme="skyBlue"] {
+    border: #0ca0e9 solid 0.004rem;
+    background: #f4f6f9;
+    color: #888888;
+  }
+  &[data-theme="darkBlue"] {
+    border: #8aeaff solid 0.004rem;
+    background: #f4f6f9;
+    color: #4d6296;
+  }
+  &[data-theme="redGold"] {
+    border: #dec18c solid 0.004rem;
+    background: linear-gradient(90deg, #f4e8e8 0%, #f1dbdb 100%);
+    color: rgba(0, 0, 0, 0.5);
+  }
+  &[data-theme="whiteGold"] {
+    border: #dec18c solid 0.004rem;
+    background: rgba(68, 68, 68, 0.5);
+    color: #fff;
+  }
+}
+
+.selectedBankItem {
+  &[data-theme="blackGold"] {
+    background: linear-gradient(to top, rgb(1, 139, 87), rgb(17, 211, 138));
+  }
+  &[data-theme="brownGold"] {
+    background: linear-gradient(to top, rgb(1, 139, 87), rgb(17, 211, 138));
+    color: #fff;
+  }
+  &[data-theme="yellowWhite"] {
+    background: linear-gradient(to top, rgb(1, 139, 87), rgb(17, 211, 138));
+    color: #fff;
+  }
+  &[data-theme="greenYellow"] {
+    background: linear-gradient(180deg, #ffe800 13.54%, #e39300 91.67%);
+    color: #511a00;
+  }
+  &[data-theme="skyBlue"] {
+    background: linear-gradient(to top, rgb(1, 139, 87), rgb(17, 211, 138));
+    color: #fff;
+  }
+  &[data-theme="darkBlue"] {
+    background: linear-gradient(to top, rgb(1, 139, 87), rgb(17, 211, 138));
+    color: #fff;
+  }
+  &[data-theme="redGold"] {
+    background: linear-gradient(to top, rgb(1, 139, 87), rgb(17, 211, 138));
+    color: #fff;
+  }
+  &[data-theme="whiteGold"] {
+    background: linear-gradient(to top, rgb(1, 139, 87), rgb(17, 211, 138));
+    color: #fff;
+  }
+}

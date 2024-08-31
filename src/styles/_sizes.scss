@@ -1,0 +1,118 @@
+$modifier: 1;
+
+@while $modifier < 801 {
+  .pdt-#{$modifier} {
+    padding-top: (0 + $modifier) + px !important;
+  }
+
+  .pdb-#{$modifier} {
+    padding-bottom: (0 + $modifier) + px !important;
+  }
+
+  .pdl-#{$modifier} {
+    padding-left: (0 + $modifier) + px !important;
+  }
+
+  .pdr-#{$modifier} {
+    padding-right: (0 + $modifier) + px !important;
+  }
+
+  .mgt-#{$modifier} {
+    margin-top: (0 + $modifier) + px !important;
+  }
+
+  .mgb-#{$modifier} {
+    margin-bottom: (0 + $modifier) + px !important;
+  }
+
+  .mgl-#{$modifier} {
+    margin-left: (0 + $modifier) + px !important;
+  }
+
+  .mgr-#{$modifier} {
+    margin-right: (0 + $modifier) + px !important;
+  }
+
+  .hgp-#{$modifier} {
+    height: (0 + $modifier) + px !important;
+  }
+
+  .wdp-#{$modifier} {
+    width: (0 + $modifier) + px !important;
+  }
+
+  $modifier: $modifier + 1;
+}
+
+@for $i from 0 through 100 {
+  .wd-#{$i} {
+    width: #{$i}#{'%'} !important;
+  }
+  .hg-#{$i} {
+    height: #{$i}#{'%'} !important;
+  }
+}
+
+$breakpoints: (
+  349: 43px,
+  360: 44.5px,
+  380: 47.25px,
+  400: 50px,
+  425: 52.8px,
+  450: 55.5px,
+  500: 61.7px,
+  525: 64.5px,
+  550: 66.2px,
+  575: 71.1px,
+  600: 74px,
+  625: 76.8px,
+  650: 79.5px,
+  664: 86px,
+  700: 86.3px,
+  750: 91.8px,
+  800: 98.6px,
+  811.5: 100px,
+  844: 104px,
+  896: 110px,
+  900: 110.9px,
+  950: 116.4px,
+  1000: 123.2px,
+  1050: 128.7px,
+  1075: 131.5px,
+  1100: 135.5px,
+  1150: 141px,
+  1200: 147.8px,
+  1250: 153.3px,
+  1300: 160.1px,
+  1350: 165.6px,
+  1400: 172.4px,
+  1450: 177.9px,
+  1500: 184.7px,
+  1550: 190.2px,
+  1600: 197px,
+  1650: 202.5px,
+  1700: 209.3px,
+  1750: 214.8px,
+);
+
+@function get-font-size($breakpoint) {
+  @return map-get($breakpoints, $breakpoint);
+}
+
+@mixin responsive-font-size($breakpoint, $orientation) {
+  @media only screen and (min-width: #{$breakpoint}px) and (orientation: #{$orientation}) {
+    html {
+      font-size: get-font-size($breakpoint);
+    }
+  }
+  @media only screen and (min-height: #{$breakpoint}px) and (orientation: #{$orientation}) {
+    html {
+      font-size: get-font-size($breakpoint);
+    }
+  }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include responsive-font-size($breakpoint, landscape);
+  @include responsive-font-size($breakpoint, portrait);
+}

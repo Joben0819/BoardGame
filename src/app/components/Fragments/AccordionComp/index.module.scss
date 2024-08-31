@@ -1,0 +1,230 @@
+.accordion {
+  .accordionHeader {
+    width: 100%;
+    height: 0.7rem;
+    background: #2c2c2c;
+    display: flex;
+    padding: 0.05rem 0.05rem 0.05rem 0;
+    border-radius: 0.04rem;
+    font-size: 0.15rem;
+    display: flex;
+
+    > div {
+      display: flex;
+      align-items: center;
+    }
+
+    .accordionImageHolder {
+      display: flex;
+      img {
+        margin-left: 0.08rem;
+        margin-right: 0.08rem;
+        width: 0.35rem;
+      }
+      .acRedCircle {
+        width: 0.08rem;
+        height: 0.08rem;
+        border-radius: 2rem;
+        background-color: #ff2422;
+        position: relative;
+        top: -0.11rem;
+        left: 0.45rem;
+      }
+    }
+
+    .accordionHeaderTitle {
+      padding: 0.05rem 0.05rem 0.05rem 0;
+      width: 7.6rem;
+      display: flex;
+      flex: 1;
+      .achTitleHolder {
+        flex: 1;
+        font-size: 0.15rem;
+        color: rgb(205, 202, 202);
+        margin-left: 0.1rem;
+      }
+
+      .createTimeHolder {
+        position: relative;
+        font-size: 0.13rem;
+        width: 1.4rem;
+        color: #ffffff80;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+  .accordionHeaderSymbol {
+    padding-top: 0.06rem;
+    margin-left: -0.2rem;
+    position: relative;
+    z-index: 10;
+    width: 0.3rem;
+    transition: all 0.5s ease;
+    img {
+      width: 0.2rem;
+    }
+  }
+
+  .accordionBody {
+    margin-top: -0.01rem;
+    width: 100%;
+    height: 0;
+    background: #222222;
+    border-bottom-left-radius: 0.04rem;
+    border-bottom-right-radius: 0.04rem;
+    overflow: hidden;
+    transition: height 0.5s ease, margin-top 0.5s ease;
+
+    .accordionBodyMessage {
+      padding: 0.15rem 0.2rem;
+      color: #435689;
+      font-size: 0.13rem;
+    }
+  }
+
+  &[data-theme='brownGold'] {
+    .accordionHeader {
+      background-color: #c4a994;
+    }
+    .accordionBody {
+      background-color: white;
+      color: #888888;
+    }
+    .accordionHeaderTitle {
+      .achTitleHolder {
+        color: white;
+      }
+    }
+    .createTimeHolder {
+      span {
+        color: #fff;
+      }
+    }
+  }
+  &[data-theme='yellowWhite'] {
+    .accordionHeader {
+      background-color: #0a0a0a;
+    }
+    .accordionBody {
+      background-color: white;
+      color: #c5915a;
+    }
+    .accordionHeaderTitle {
+      .achTitleHolder {
+        color: #ffc400;
+      }
+    }
+  }
+  &[data-theme='greenYellow'] {
+    .accordionHeader {
+      background-color: #0e9473;
+    }
+    .accordionBody {
+      background-color: #f2f2f2;
+      color: #511a00;
+    }
+    .accordionHeaderTitle {
+      .achTitleHolder {
+        color: #ffffff;
+      }
+    }
+    .createTimeHolder {
+      span {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+  &[data-theme='skyBlue'] {
+    .accordionHeader {
+      background-color: #0ca0e9;
+    }
+    .accordionBody {
+      background-color: #ffffff;
+      color: #888888;
+    }
+    .accordionHeaderTitle {
+      .achTitleHolder {
+        color: #ffffff;
+      }
+    }
+    .createTimeHolder {
+      span {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+  &[data-theme='darkBlue'] {
+    .accordionHeader {
+      background: linear-gradient(270deg, #29334b 0%, #4d6296 100%);
+    }
+    .accordionBody {
+      background-color: #3a496f;
+      color: #fff;
+    }
+    .accordionHeaderTitle {
+      .achTitleHolder {
+        color: #ffffff;
+      }
+    }
+    .createTimeHolder {
+      span {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+  &[data-theme='redGold'] {
+    .accordionHeader {
+      background: linear-gradient(270deg, #771818 0%, #af0100 100%);
+    }
+    .accordionBody {
+      background: linear-gradient(90deg, #fdf8f8 0%, #f7eeee 100%);
+      color: #080000;
+    }
+    .accordionHeaderTitle {
+      .achTitleHolder {
+        color: #ffffff;
+      }
+    }
+    .createTimeHolder {
+      span {
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+  &[data-theme='whiteGold'] {
+    .accordionHeader {
+      background: #e9cb7b;
+    }
+    .accordionBody {
+      background: #f9f9f9;
+      color: #435689;
+    }
+    .accordionHeaderTitle {
+      .achTitleHolder {
+        color: #461d09;
+      }
+    }
+    .createTimeHolder {
+      span {
+        color: #461d09;
+      }
+    }
+  }
+}
+
+// @media screen and (orientation: portrait) {
+//   .accordionHeaderSymbol {
+//     padding-top: 0.06rem;
+//     margin-left: -0.2rem;
+//     position: relative;
+//     z-index: 10;
+//     justify-content: center;
+//     img {
+//       position: relative;
+//       width: 0.2rem;
+//       left: -0.05rem;
+//       margin: 0 !important;
+//     }
+//   }
+// }

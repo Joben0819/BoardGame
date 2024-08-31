@@ -1,0 +1,344 @@
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  .performanceInquiry_wrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .pullToRefresh {
+      flex: 1;
+    }
+  }
+
+  .performanceInquiry_1stBox {
+    width: 100%;
+    padding-bottom: 6px;
+    display: flex;
+    justify-content: flex-end;
+    // margin-left: 0.2rem;
+    // height: 0.35rem;
+    // background:pink;
+
+    .pInquiry_inputHolder {
+      display: flex;
+      width: 2rem;
+      border-radius: 10rem;
+      background: transparent;
+      margin-right: 0.15rem;
+      margin-left: 3rem;
+      position: relative;
+      z-index: 0;
+      height: 0.25rem;
+
+      padding-left: 0.14rem;
+
+      input {
+        width: 1.8rem;
+        background: transparent;
+        border: none;
+        font-size: 0.1rem;
+        color: white;
+      }
+
+      input:focus {
+        outline: none;
+      }
+    }
+
+    .pInquiry_inputHolder::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      padding: 0.01rem;
+      border-radius: 15rem;
+      background: var(--var-gradient);
+      -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    .pInquiry_buttonHolder {
+      width: 1rem;
+      // height: 0.3rem;
+      // background-color: pink;;
+      display: flex;
+
+      button {
+        width: 0.9rem;
+        height: 0.25rem;
+        background: linear-gradient(to bottom, #ffe800, #e38c00);
+        border-radius: 0.2rem;
+        font-size: 0.14rem;
+        color: #511a00;
+        font-weight: 600;
+        border: none;
+      }
+    }
+  }
+
+  .PerfomanceInquiryTableContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: auto;
+    .dataSizeIndicator {
+      font-size: 0.14rem;
+      padding-top: 0.1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    :global {
+      .infinite-scroll-component__outerdiv {
+        .infinite-scroll-component {
+          overflow: unset !important;
+        }
+      }
+    }
+
+    .NodataCont {
+      height: 100%;
+      :global {
+        .noDataContainer {
+          height: 100%;
+          position: absolute;
+          top: 0;
+        }
+        .infinite-scroll-component__outerdiv {
+          .infinite-scroll-component {
+            overflow: unset !important;
+          }
+        }
+      }
+    }
+  }
+
+  .pInquiry_tableHolder {
+    .pInquiry_tableHeader {
+      width: 6.2rem;
+      margin: 0.02rem 0 0 0;
+      height: 0.2rem;
+      font-size: 0.15rem;
+      background: linear-gradient(to bottom, #2c2c2c, #1a1a1a);
+      // border-radius: 0.04rem;
+      color: #cdcaca;
+      padding: 0.025rem 0 0.025rem 0;
+
+      ul {
+        display: flex;
+        list-style: none;
+
+        li {
+          text-align: center;
+          width: 3rem;
+        }
+      }
+    }
+
+    .pInquiry_tableBody {
+      width: 6.2rem;
+      margin: 0;
+      height: 0.2rem;
+      font-size: 0.15rem;
+      background: linear-gradient(to bottom, #2c2c2c, #1a1a1a);
+      color: #cdcaca;
+      padding: 0.025rem 0 0.025rem 0;
+    }
+  }
+
+  &[data-theme="brownGold"] {
+    .performanceInquiry_1stBox {
+      .pInquiry_inputHolder {
+        input {
+          color: #888888;
+        }
+      }
+
+      .pInquiry_inputHolder::before {
+        content: "";
+        background: #ffffff;
+        -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+      }
+      .pInquiry_inputHolder {
+        background-color: #ffffff;
+      }
+    }
+  }
+  &[data-theme="skyBlue"] {
+    .performanceInquiry_1stBox {
+      .pInquiry_inputHolder {
+        input {
+          color: #888888;
+        }
+        &::before {
+          content: "";
+          background: #ffffff;
+          -webkit-mask: unset !important;
+        }
+      }
+    }
+  }
+  &[data-theme="greenYellow"] {
+    .performanceInquiry_1stBox {
+      .pInquiry_inputHolder {
+        background-color: #fff;
+        input {
+          color: #757575;
+        }
+      }
+    }
+  }
+  &[data-theme="yellowWhite"] {
+    .performanceInquiry_1stBox {
+      .pInquiry_inputHolder {
+        background: #fff;
+        input {
+          color: #a11300;
+        }
+        &::before {
+          background: #ffc400;
+        }
+      }
+    }
+    :global {
+      table {
+        thead {
+          tr {
+            th {
+              color: #ffc400 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  &[data-theme="whiteGold"] {
+    .performanceInquiry_1stBox {
+      .pInquiry_inputHolder {
+        input {
+          color: #29468d;
+        }
+        &::before {
+          content: "";
+          background: #ffffff;
+          -webkit-mask: unset !important;
+        }
+      }
+    }
+  }
+  &[data-theme="redGold"] {
+    .performanceInquiry_1stBox {
+      .pInquiry_inputHolder {
+        background: white;
+        input {
+          color: #080000;
+        }
+      }
+    }
+  }
+  &[data-theme="darkBlue"] {
+    .performanceInquiry_1stBox {
+      .pInquiry_inputHolder {
+        background: #fff;
+        input {
+          color: #29468d;
+        }
+      }
+
+      .pInquiry_inputHolder::before {
+        content: "";
+        background: linear-gradient(to bottom, #8aeaff, #29468d);
+        -webkit-mask: linear-gradient(rgb(255, 255, 255) 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+      }
+
+      .pInquiry_buttonHolder {
+        button {
+          background: linear-gradient(to bottom, #fff, #8aeaff);
+          color: #29468d;
+        }
+      }
+    }
+  }
+}
+.pullToRefresh {
+  :global {
+    .ptr__pull-down > div {
+      p {
+        font-size: 0.15rem;
+        color: #f6da85;
+        text-align: center !important;
+      }
+    }
+  }
+}
+.line {
+  margin: 0 0.1rem 4px;
+  border-bottom: solid 0.09px #444444;
+  &[data-theme="brownGold"] {
+    border-bottom: solid 0.09px #ffffff;
+  }
+  &[data-theme="yellowWhite"] {
+    border-bottom: solid 0.09px #444444;
+  }
+  &[data-theme="greenYellow"] {
+    border-bottom: solid 0.09px #ffea01;
+  }
+  &[data-theme="skyBlue"] {
+    border-bottom: solid 0.09px #ffffff;
+  }
+  &[data-theme="darkBlue"] {
+    border-bottom: solid 0.09px #4d6296;
+  }
+  &[data-theme="redGold"] {
+    border-bottom: solid 0.09px #444444;
+  }
+  &[data-theme="whiteGold"] {
+    border-bottom: solid 0.09px #d5a93d;
+  }
+}
+
+// @media screen and (min-height: 240px) {
+//   .container {
+//     height: 20%;
+//   }
+// }
+// @media screen and (min-height: 300px) {
+//   .container {
+//     height: 47%;
+//   }
+// }
+// @media screen and (min-height: 360px) {
+//   .container {
+//     height: 47%;
+//   }
+// }
+// @media screen and (min-height: 400px) {
+//   .container {
+//     height: 65%;
+//   }
+// }
+// @media screen and (min-height: 450px) {
+//   .container {
+//     height: 70%;
+//   }
+// }
+// @media screen and (min-height: 500px) {
+//   .myPromotion {
+//     height: 100%;
+//   }
+// }

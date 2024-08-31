@@ -1,0 +1,56 @@
+.container {
+  color: white;
+  font-size: 0.15rem;
+  width: 100%;
+  height: calc(100% - 0.4rem);
+  display: flex;
+  flex-direction: row;
+  overflow-y: scroll;
+}
+
+.wrapper {
+  display: flex;
+  // height:3rem;
+  overflow-y: scroll;
+  width: 100%;
+  height: 99.8%;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  // height: 100%;
+  padding: 0.1rem;
+
+  overflow-y: scroll;
+  &[data-item='0'] {
+    padding: 0.1rem 0 0 0;
+  }
+  // padding-bottom: 10%;
+  &[data-theme='blackGold'] {
+    background: #000;
+  }
+  &[data-theme='brownGold'] {
+    background: #ededed;
+  }
+  &[data-theme='yellowWhite'] {
+    background: #ebedf1;
+  }
+  &[data-theme='greenYellow'] {
+    background: #d6eae4;
+  }
+  &[data-theme='skyBlue'] {
+    background: #dff4ff;
+  }
+  &[data-theme='darkBlue'] {
+    background: #d7e8f0;
+  }
+  &[data-theme='redGold'] {
+    background: #c9bebe;
+  }
+  &[data-theme='whiteGold'] {
+    background: #dadce7;
+  }
+}

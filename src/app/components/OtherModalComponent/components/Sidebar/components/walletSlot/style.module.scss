@@ -1,0 +1,34 @@
+.walletContainer {
+  .inputFields {
+    width: 3.5rem;
+    margin-left: 0.3rem;
+    height: 1.4rem;
+    margin-top: 0.3rem;
+    display: flex;
+
+    ul {
+      list-style: none;
+
+      li {
+        .settings {
+          border: 1px solid red;
+        }
+        margin-bottom: 0.15rem;
+        .react-select {
+          outline: none;
+          border: none;
+          box-shadow: none;
+          display: inline;
+          margin: 0 !important;
+          width: 2.6rem !important;
+        }
+      }
+    }
+  }
+
+  .buttonHolder {
+    width: 0.8rem;
+    height: 0.35rem;
+    margin-top: 0.23rem;
+  }
+}

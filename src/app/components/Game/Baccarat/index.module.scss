@@ -1,0 +1,48 @@
+@import "src/styles/_helpers.scss";
+
+.bg {
+  @include flex-xy(space-between, center);
+  flex-direction: column;
+  width: calc(100% - 1.8rem);
+  height: 100%;
+  background: url("../../../assets/commons/baccarat/bg.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  .startBetting {
+    position: absolute;
+    margin: auto;
+    margin-top: size(11);
+    height: auto;
+    width: 100%;
+    z-index: 10;
+    animation: blinker 1s linear 4;
+    visibility: hidden;
+  }
+
+  .stopBetting {
+    position: absolute;
+    margin: auto;
+    margin-top: size(11);
+    height: auto;
+    width: 100%;
+    z-index: 10;
+    animation: blinker 1s linear 6;
+    visibility: hidden;
+  }
+
+  @keyframes blinker {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: visible;
+    }
+  }
+}

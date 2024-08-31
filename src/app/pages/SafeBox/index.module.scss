@@ -1,0 +1,672 @@
+@import '/src/styles/_helpers.scss';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .Safebox {
+    display: flex;
+    height: 100%;
+    .pc_sidebar2 {
+      width: 22%;
+      position: relative;
+      background-size: 101% 100% !important;
+      background-repeat: no-repeat !important;
+      overflow-y: scroll;
+      background: url('../../assets/blackGold/Sidebar/SidebarBg.png');
+      ul {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      li {
+        height: 0.58rem;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        padding-top: 0.125rem;
+        span {
+          flex: 1;
+          background: linear-gradient(180deg, #ffffff 0%, #fff6c2 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      .vipDivider {
+        width: 100%;
+      }
+      .vip_sectionTitle {
+        @include flex-xy;
+        font-size: 0.22rem;
+        padding-bottom: 0.12rem;
+        font-weight: 700;
+        height: 90%;
+        margin-top: -0.05rem;
+        padding-bottom: 0.12rem;
+        cursor: context-menu;
+      }
+    }
+
+    .vipSelect_one {
+      background: url('../../assets/blackGold/Sidebar/btn-vipactive.png');
+      background-position: center left !important;
+      background-size: 100% 100% !important;
+      background-repeat: no-repeat !important;
+      span {
+        background: -webkit-linear-gradient(#511a00, #511a00) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+      }
+      .vip_sectionTitle1 {
+        background: -webkit-linear-gradient(#511a00, #511a00);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .vipDivider {
+        display: none;
+      }
+    }
+    .pc_mainContent {
+      @include flex-xy(center, flex-start);
+      width: 78%;
+      color: #fff;
+      flex: 1 1;
+      position: relative;
+      // height: calc(100% - 0.4rem);
+      overflow-y: auto;
+      padding: 0.1rem;
+      .fundTransfer_wrapper {
+        width: 6.2rem;
+        font-size: 0.15rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        .ft_1stBox {
+          @include flex-xy;
+          position: relative;
+          height: 34%;
+          background: #2c2c2c;
+          border-top-left-radius: 0.08rem;
+          border-top-right-radius: 0.08rem;
+
+          .ft_1stlabelContainer {
+            @include flex-xy;
+            flex-direction: column;
+            height: 100%;
+            width: 22%;
+          }
+
+          .ft_2ndlabelContainer {
+            @include flex-xy;
+            flex-direction: column;
+            height: 100%;
+            width: 32%;
+          }
+
+          .ft_3rdlabelContainer {
+            @include flex-xy;
+            flex-direction: column;
+            height: 100%;
+            width: 22%;
+          }
+        }
+
+        .ft_2ndBox {
+          height: 58%;
+          background: #222222;
+          border-bottom-left-radius: 0.08rem;
+          border-bottom-right-radius: 0.08rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+        }
+      }
+      .ft2_yellowtext {
+        color: #fee587;
+        margin-left: 0.5rem;
+        padding-bottom: 0.1rem;
+      }
+      .circleTransferContainer {
+        @include flex-xy;
+        background: #222222;
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 100%;
+        font-size: 0.6rem;
+        img {
+          width: 0.2rem;
+          height: 0.2rem;
+        }
+      }
+      .inputTempHolder {
+        display: flex;
+        justify-content: center;
+        height: 0.3rem;
+      }
+      .ft2_buttonOutside {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .fundDetails_wrapper {
+      font-size: 0.15rem;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      .fd_header {
+        width: 6.1rem;
+        margin-left: 0.2rem;
+        height: 0.2rem;
+        padding: 0.05rem;
+        background: linear-gradient(to top, #1a1a1a, #2c2c2c);
+        border-radius: 0.04rem;
+
+        ul {
+          list-style: none;
+          display: flex;
+
+          li {
+            text-align: center;
+            width: 2rem;
+          }
+        }
+      }
+      .funDetailsHistoryTable {
+        .noDataWrapper {
+          position: absolute;
+          @include flex-xy;
+          top: 0;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+    &[data-theme='brownGold'] {
+      .pc_sidebar2 {
+        background: url('../../assets/brownGold/Sidebar/SidebarBg.png');
+      }
+      .vipSelect_one {
+        background: url('../../assets/brownGold/Sidebar/btn-vipactive.png');
+      }
+
+      .fundTransfer_wrapper {
+        .ft_1stBox {
+          background: #c4a994;
+          color: white;
+        }
+        .circleTransferContainer {
+          background: #b19076;
+          img {
+            width: 0.2rem;
+            height: 0.2rem;
+          }
+        }
+        .ft_2ndBox {
+          height: 2rem;
+          background: white;
+          border-bottom-left-radius: 0.08rem;
+          border-bottom-right-radius: 0.08rem;
+        }
+        .ft2_yellowtext {
+          color: #000000;
+          margin-left: 0.5rem;
+          padding-top: 0.25rem;
+          padding-bottom: 0.1rem;
+        }
+      }
+    }
+    &[data-theme='yellowWhite'] {
+      .pc_sidebar2 {
+        background: url('../../assets/yellowWhite/Sidebar/SidebarBg.png');
+
+        ul {
+          li {
+            span {
+              flex: 1;
+              color: #0a0a0a;
+              background: -webkit-linear-gradient(#0a0a0a, #0a0a0a);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+        }
+
+        .vip_sectionTitle {
+          font-size: 0.22rem;
+          color: #0a0a0a;
+          padding-bottom: 0.12rem;
+          font-weight: 700;
+          background: -webkit-linear-gradient(#0a0a0a, #0a0a0a);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      .vipSelect_one {
+        background: url('../../assets/yellowWhite/Sidebar/btn-vipactive.png');
+      }
+
+      .fundTransfer_wrapper {
+        .ft_1stBox {
+          background: #0a0a0a;
+          color: white;
+        }
+        .circleTransferContainer {
+          background: #222222;
+          img {
+            width: 0.2rem;
+            height: 0.2rem;
+          }
+        }
+        .ft_2ndBox {
+          height: 2rem;
+          background: #ffffff;
+          border-bottom-left-radius: 0.08rem;
+          border-bottom-right-radius: 0.08rem;
+        }
+        .ft2_yellowtext {
+          color: #a11300;
+          margin-left: 0.5rem;
+          padding-top: 0.25rem;
+          padding-bottom: 0.1rem;
+        }
+      }
+    }
+    &[data-theme='greenYellow'] {
+      .pc_sidebar2 {
+        background: url('../../assets/greenYellow/Sidebar/SidebarBg.png');
+      }
+
+      .vipSelect_one {
+        background: url('../../assets/greenYellow/Sidebar/btn-vipactive.png');
+      }
+
+      .fundTransfer_wrapper {
+        .ft_1stBox {
+          background: #0e9473;
+          color: white;
+        }
+        .circleTransferContainer {
+          background: #0b5642;
+          img {
+            width: 0.2rem;
+            height: 0.2rem;
+          }
+        }
+        .ft_2ndBox {
+          height: 2rem;
+          background: #04a17a;
+          border-bottom-left-radius: 0.08rem;
+          border-bottom-right-radius: 0.08rem;
+        }
+        .ft2_yellowtext {
+          color: #facd12;
+          margin-left: 0.5rem;
+          padding-top: 0.25rem;
+          padding-bottom: 0.1rem;
+        }
+      }
+      .inputTempHolder {
+        :global {
+          .buttonDesignOne {
+            background: linear-gradient(180deg, #ffffff 0%, #ffe800 13.54%, #e39300 91.67%, #ffffff 100%) !important;
+            span {
+              color: #511a00 !important;
+            }
+          }
+        }
+      }
+    }
+    &[data-theme='skyBlue'] {
+      .pc_sidebar2 {
+        background: url('../../assets/skyBlue/Sidebar/SidebarBg.png');
+      }
+
+      .vipSelect_one {
+        background: url('../../assets/skyBlue/Sidebar/btn-vipactive.png');
+      }
+
+      .fundTransfer_wrapper {
+        .ft_1stBox {
+          background: #0ca0e9;
+          color: white;
+        }
+        .circleTransferContainer {
+          background: #0071a980;
+          img {
+            width: 0.2rem;
+            height: 0.2rem;
+          }
+        }
+        .ft_2ndBox {
+          height: 2rem;
+          background: #f4f6f9;
+          border-bottom-left-radius: 0.08rem;
+          border-bottom-right-radius: 0.08rem;
+        }
+        .ft2_yellowtext {
+          color: #888888;
+          margin-left: 0.5rem;
+          padding-top: 0.25rem;
+          padding-bottom: 0.1rem;
+        }
+      }
+    }
+    &[data-theme='darkBlue'] {
+      .pc_sidebar2 {
+        background: url('../../assets/darkBlue/Sidebar/SidebarBg.png');
+        ul {
+          li {
+            span {
+              flex: 1;
+              background: linear-gradient(180deg, #ffffff 0%, #8aeaff 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+              text-fill-color: transparent;
+            }
+          }
+        }
+      }
+
+      .vipSelect_one {
+        background: url('../../assets/darkBlue/Sidebar/btn-vipactive.png');
+        span {
+          background: linear-gradient(180deg, #29468d 0%, #162752 100%) !important;
+          -webkit-background-clip: text !important;
+          -webkit-text-fill-color: transparent !important;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+      }
+
+      .fundTransfer_wrapper {
+        .ft_1stBox {
+          background: linear-gradient(to right, #4d6296, #29334b);
+          color: white;
+        }
+        .circleTransferContainer {
+          background: #ffffff;
+          img {
+            width: 0.2rem;
+            height: 0.2rem;
+          }
+        }
+        .ft_2ndBox {
+          height: 2rem;
+          background: linear-gradient(to right, #4d6296, #8498c9);
+          border-bottom-left-radius: 0.08rem;
+          border-bottom-right-radius: 0.08rem;
+        }
+        .ft2_yellowtext {
+          color: #fee587;
+          margin-left: 0.5rem;
+          padding-top: 0.25rem;
+          padding-bottom: 0.1rem;
+        }
+      }
+    }
+    &[data-theme='redGold'] {
+      .pc_sidebar2 {
+        background: url('../../assets/redGold/Sidebar/SidebarBg.png');
+      }
+
+      .vipSelect_one {
+        background: url('../../assets/redGold/Sidebar/btn-vipactive.png');
+      }
+
+      .fundTransfer_wrapper {
+        .ft_1stBox {
+          background: linear-gradient(to right, #af0100, #ff6b00);
+          color: white;
+        }
+        .circleTransferContainer {
+          background: #222222;
+          img {
+            width: 0.2rem;
+            height: 0.2rem;
+          }
+        }
+        .ft_2ndBox {
+          height: 2rem;
+          background: #ffffff;
+          border-bottom-left-radius: 0.08rem;
+          border-bottom-right-radius: 0.08rem;
+        }
+        .ft2_yellowtext {
+          color: #080000;
+          margin-left: 0.5rem;
+          padding-top: 0.25rem;
+          padding-bottom: 0.1rem;
+        }
+      }
+    }
+    &[data-theme='whiteGold'] {
+      .pc_sidebar2 {
+        background: url('../../assets/whiteGold/Sidebar/SidebarBg.png');
+
+        ul {
+          li {
+            span {
+              flex: 1;
+              background: linear-gradient(180deg, #435689 0%, #435689 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+              text-fill-color: transparent;
+            }
+          }
+        }
+      }
+
+      .vipSelect_one {
+        background: url('../../assets/whiteGold/Sidebar/btn-vipactive.png');
+      }
+
+      .fundTransfer_wrapper {
+        .ft_1stBox {
+          background: linear-gradient(to right, #d5a93d, #fff2c5);
+          color: white;
+        }
+        .circleTransferContainer {
+          background: #837145;
+          img {
+            width: 0.2rem;
+            height: 0.2rem;
+          }
+        }
+        .ft_2ndBox {
+          height: 2rem;
+          background: #ffffff;
+          border-bottom-left-radius: 0.08rem;
+          border-bottom-right-radius: 0.08rem;
+        }
+        .ft2_yellowtext {
+          color: #435689;
+          margin-left: 0.5rem;
+          padding-top: 0.25rem;
+          padding-bottom: 0.1rem;
+        }
+      }
+    }
+  }
+}
+
+.pullToRefresh {
+  :global {
+    .ptr__pull-down > div {
+      p {
+        font-size: 0.15rem;
+        color: #f6da85;
+        text-align: center !important;
+      }
+    }
+  }
+}
+.add {
+  display: flex;
+  flex-direction: column;
+  height: 35%;
+  justify-content: flex-end;
+}
+
+.funDetailsHistoryTable {
+  &[data-theme='blackGold'] {
+    :global {
+      table {
+        tbody {
+          tr {
+            td {
+              .agentLevel {
+                // color: red;
+                span {
+                  background: -webkit-linear-gradient(#ffffff, #fff);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                }
+              }
+            }
+            td:nth-child(2) {
+              span {
+                background: linear-gradient(180deg, #ffffff, #f9c423 70.71%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+            }
+            td:nth-child(3) {
+              span {
+                background: linear-gradient(180deg, #ffffff, #fff6c2 70.71%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='darkBlue'] {
+    :global {
+      table {
+        tbody {
+          tr {
+            td {
+              .agentLevel {
+                // color: red;
+                span {
+                  background: -webkit-linear-gradient(#ffffff, #fff);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                }
+              }
+            }
+            td:nth-child(2) {
+              span {
+                background: linear-gradient(180deg, #ffffff, #f9c423 70.71%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+            }
+            td:nth-child(3) {
+              span {
+                background: linear-gradient(180deg, #ffffff, #fff6c2 70.71%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='brownGold'] {
+    :global {
+      table {
+        tbody {
+          tr {
+            td {
+              span {
+                background: linear-gradient(180deg, #000, #000 70.71%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='redGold'] {
+    :global {
+      table {
+        tbody {
+          tr {
+            td {
+              span {
+                background: linear-gradient(180deg, #000, #000 70.71%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='whiteGold'] {
+    :global {
+      table {
+        tbody {
+          tr {
+            td {
+              span {
+                background: linear-gradient(180deg, #435689, #435689 70.71%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='skyBlue'] &[data-theme='redGold'] {
+    :global {
+      table {
+        tbody {
+          tr {
+            td {
+              span {
+                background: linear-gradient(180deg, #000, #000 70.71%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &[data-theme='greenYellow'] {
+    :global {
+      table {
+        tbody {
+          tr {
+            td {
+              span {
+                background: linear-gradient(180deg, #511a00, #511a00 70.71%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.announceContainer {
+  height: 0.15rem;
+  margin-left: 0.45rem;
+  width: 71%;
+  .announceBar {
+    position: relative;
+    top: 0;
+    left: 0;
+    color: #ffffff;
+    font-size: 0.12rem;
+    padding: 0;
+    width: 100%;
+    height: 0.15rem;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 0.25rem;
+      height: 0.25rem;
+      position: relative;
+      top: 0;
+    }
+    .announceTextWrapper {
+      overflow: hidden;
+      width: 100%;
+      margin-left: 0.04rem;
+      .moveTextItem {
+        color: var(--home-marquee);
+        display: flex;
+        align-items: center;
+        margin-left: 0.04rem;
+        white-space: nowrap;
+        width: fit-content;
+        box-sizing: border-box;
+        text-align: center;
+        animation: tickermt linear infinite;
+        &.pausedAnnounce {
+          animation-play-state: paused;
+        }
+      }
+    }
+  }
+}
+
+@keyframes tickermt {
+  0% {
+    transform: translateX(40%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
